@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button>
-            <TextBlock>Calculate Phase</TextBlock></Button>
+        <TextBlock HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
+
+        <TextBlock Margin="22,284,-22,-284">Calculate Phase</TextBlock>
     </Grid>
 </Window>
