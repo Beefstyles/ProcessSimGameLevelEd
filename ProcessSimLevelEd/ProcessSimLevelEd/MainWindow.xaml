@@ -5,10 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProcessSimLevelEd"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <TextBlock HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
-
-        <TextBlock Margin="22,284,-22,-284">Calculate Phase</TextBlock>
-    </Grid>
+        Title="ProcessSimLevelEd" Height="350" Width="525">
+    <DockPanel>
+        <TextBlock DockPanel.Dock ="Top" HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
+        <Grid DockPanel.Dock="Left" HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="1" Grid.Row="1">Methane</TextBlock>
+            <TextBox Grid.Column="2" Grid.Row="1" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+            <TextBlock Grid.Column="1" Grid.Row="2">Ethane</TextBlock>
+        </Grid>
+        <Button DockPanel.Dock ="Bottom" HorizontalAlignment="Center" VerticalAlignment="Bottom">Calculate Phase</Button>
+    </DockPanel>
+    
 </Window>
