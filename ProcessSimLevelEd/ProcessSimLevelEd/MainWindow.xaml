@@ -8,15 +8,16 @@
         Title="ProcessSimLevelEd" Height="350" Width="525">
     <DockPanel>
         <TextBlock DockPanel.Dock ="Top" HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
-        <Grid DockPanel.Dock="Left" HorizontalAlignment="Left">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="1" Grid.Row="1">Methane</TextBlock>
-            <TextBox Grid.Column="2" Grid.Row="1" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
-            <TextBlock Grid.Column="1" Grid.Row="2">Ethane</TextBlock>
-        </Grid>
+        <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Left">
+            <WrapPanel>
+                <TextBlock>Methane</TextBlock>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Width="55"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock>Ethane</TextBlock>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Width="55"></TextBox>
+            </WrapPanel>
+        </StackPanel>
         <Button DockPanel.Dock ="Bottom" HorizontalAlignment="Center" VerticalAlignment="Bottom">Calculate Phase</Button>
     </DockPanel>
     
