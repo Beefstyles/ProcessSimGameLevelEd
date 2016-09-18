@@ -46,6 +46,10 @@ namespace ProcessSimLevelEditor
         {
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
+            if (e.Handled)
+            {
+                MessageBox.Show("Enter only numerical values here");
+            }
         }
     }
 }
