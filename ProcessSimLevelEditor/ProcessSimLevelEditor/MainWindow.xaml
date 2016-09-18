@@ -12,6 +12,7 @@
             <Setter Property="Padding" Value="5"/>
             <Setter Property="Width" Value="55.0"/>
             <Setter Property="Height" Value="30"/>
+            <Setter Property="AcceptsReturn" Value="True"/>
         </Style>
     </Window.Resources>
     <DockPanel>
@@ -19,11 +20,11 @@
         <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Left">
             <WrapPanel Orientation="Horizontal">
                 <TextBlock Name="MethaneFrac">Methane</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
             <WrapPanel>
                 <TextBlock Name="EthaneFrac">Ethane</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
         </StackPanel>
         <Button DockPanel.Dock ="Bottom" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculatePhase">Calculate Phase</Button>

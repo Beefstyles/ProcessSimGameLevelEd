@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace ProcessSimLevelEditor
 {
@@ -31,14 +32,20 @@ namespace ProcessSimLevelEditor
         {
             try
             {
-                methaneFrac = Convert.ToInt32(MethaneFrac.Text);
-                ethaneFrac = Convert.ToInt32(EthaneFrac.Text);
+                Int32.TryParse(MethaneFrac.Text, out methaneFrac);
+                Int32.TryParse(EthaneFrac.Text, out ethaneFrac);
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Error " + ex.Message);
             }
             MessageBox.Show("Tried to parse values");
+        }
+
+        private void NunberValTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }
