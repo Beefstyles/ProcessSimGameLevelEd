@@ -27,6 +27,12 @@
                 <TextBox AcceptsReturn="True" TextWrapping="Wrap" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
         </StackPanel>
+        <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Left">
+            <WrapPanel Orientation="Horizontal">
+                <TextBlock>TotalFlow</TextBlock>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="False" Style="{StaticResource TextBoxStyle}"></TextBox>
+            </WrapPanel>
+        </StackPanel>
         <Button DockPanel.Dock ="Bottom" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculatePhase">Calculate Phase</Button>
     </DockPanel>
 </Window>

@@ -22,6 +22,7 @@ namespace ProcessSimLevelEditor
     public partial class MainWindow : Window
     {
         private int methaneFrac, ethaneFrac;
+        private int totalFlow = 0;
 
         public MainWindow()
         {
@@ -30,16 +31,29 @@ namespace ProcessSimLevelEditor
 
         private void CalculatePhase(object sender, RoutedEventArgs e)
         {
+            if (ParseTextBoxes())
+            {
+                totalFlow = methaneFrac + ethaneFrac;
+                MessageBox.Show("Total flow is " + totalFlow);
+                DisplayTotalFlow();
+            }
+        }
+
+        private bool ParseTextBoxes()
+        {
             try
             {
                 Int32.TryParse(MethaneFrac.Text, out methaneFrac);
+                MessageBox.Show(methaneFrac.ToString());
                 Int32.TryParse(EthaneFrac.Text, out ethaneFrac);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex.Message);
+                return false;
             }
-            MessageBox.Show("Tried to parse values");
+            MessageBox.Show("Parsing values done succesfully");
+            return true;
         }
 
         private void NunberValTextBox(object sender, TextCompositionEventArgs e)
@@ -50,6 +64,11 @@ namespace ProcessSimLevelEditor
             {
                 MessageBox.Show("Enter only numerical values here");
             }
+        }
+
+        private void DisplayTotalFlow()
+        {
+            TotalFlowCalc.Text = totalFlow.ToString();
         }
     }
 }
