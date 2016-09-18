@@ -20,9 +20,25 @@ namespace ProcessSimLevelEditor
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int methaneFrac, ethaneFrac;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void CalculatePhase(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                methaneFrac = Convert.ToInt32(MethaneFrac.Text);
+                ethaneFrac = Convert.ToInt32(EthaneFrac.Text);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
+            }
+            MessageBox.Show("Tried to parse values");
         }
     }
 }
