@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ProcessSimLevelEd
+namespace ProcessSimLevelEditor
 {
     /// <summary>
     /// Interaction logic for App.xaml

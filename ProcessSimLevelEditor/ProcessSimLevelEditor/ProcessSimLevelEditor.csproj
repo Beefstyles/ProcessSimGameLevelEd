@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6B4316F5-48A7-40E9-AF84-2836E995D8CA}</ProjectGuid>
+    <ProjectGuid>{F94233AC-89C8-4C1D-8309-4DD0691E6AFF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProcessSimLevelEd</RootNamespace>
-    <AssemblyName>ProcessSimLevelEd</AssemblyName>
+    <RootNamespace>ProcessSimLevelEditor</RootNamespace>
+    <AssemblyName>ProcessSimLevelEditor</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

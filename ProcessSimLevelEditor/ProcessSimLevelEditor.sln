@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessSimLevelEd", "ProcessSimLevelEd\ProcessSimLevelEd.csproj", "{6B4316F5-48A7-40E9-AF84-2836E995D8CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessSimLevelEditor", "ProcessSimLevelEditor\ProcessSimLevelEditor.csproj", "{F94233AC-89C8-4C1D-8309-4DD0691E6AFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6B4316F5-48A7-40E9-AF84-2836E995D8CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B4316F5-48A7-40E9-AF84-2836E995D8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B4316F5-48A7-40E9-AF84-2836E995D8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B4316F5-48A7-40E9-AF84-2836E995D8CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F94233AC-89C8-4C1D-8309-4DD0691E6AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94233AC-89C8-4C1D-8309-4DD0691E6AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F94233AC-89C8-4C1D-8309-4DD0691E6AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F94233AC-89C8-4C1D-8309-4DD0691E6AFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProcessSimLevelEd.Properties
+namespace ProcessSimLevelEditor.Properties
 {
 
 
