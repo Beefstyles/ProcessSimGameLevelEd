@@ -20,7 +20,7 @@
         <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Left">
             <WrapPanel Orientation="Horizontal">
                 <TextBlock Name="MethaneFrac">Methane</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="MethaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
             <WrapPanel>
                 <TextBlock Name="EthaneFrac">Ethane</TextBlock>

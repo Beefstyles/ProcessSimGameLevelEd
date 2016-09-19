@@ -33,10 +33,12 @@ namespace ProcessSimLevelEditor
         {
             if (ParseTextBoxes())
             {
+                var tb = sender as TextBox;
                 totalFlow = methaneFrac + ethaneFrac;
                 MessageBox.Show("Total flow is " + totalFlow);
                 DisplayTotalFlow();
             }
+                
         }
 
         private bool ParseTextBoxes()
@@ -63,6 +65,20 @@ namespace ProcessSimLevelEditor
             if (e.Handled)
             {
                 MessageBox.Show("Enter only numerical values here");
+            }
+        }
+
+        private void MethaneTBChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                var textBox = sender as TextBox;
+                Int32.TryParse(textBox.Text, out methaneFrac);
+                //MessageBox.Show(methaneFrac.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
             }
         }
 
