@@ -21,7 +21,7 @@ namespace ProcessSimLevelEditor
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int methaneFrac, ethaneFrac;
+        private int methaneFrac, ethaneFrac, propaneFrac;
         private int totalFlow = 0;
 
         public MainWindow()
@@ -33,25 +33,8 @@ namespace ProcessSimLevelEditor
         {
              var tb = sender as TextBox;
              totalFlow = methaneFrac + ethaneFrac;
-             MessageBox.Show("Total flow is " + totalFlow);
+             //MessageBox.Show("Total flow is " + totalFlow);
              DisplayTotalFlow();   
-        }
-
-        private bool ParseTextBoxes()
-        {
-            try
-            {
-                Int32.TryParse(MethaneFrac.Text, out methaneFrac);
-                MessageBox.Show(methaneFrac.ToString());
-                Int32.TryParse(EthaneFrac.Text, out ethaneFrac);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error " + ex.Message);
-                return false;
-            }
-            MessageBox.Show("Parsing values done succesfully");
-            return true;
         }
 
         private void NunberValTextBox(object sender, TextCompositionEventArgs e)
@@ -68,10 +51,8 @@ namespace ProcessSimLevelEditor
         {
             try
             {
-                var textBox = sender as TextBox;
+                var textBox = sender as TextBox; 
                 Int32.TryParse(textBox.Text, out methaneFrac);
-                DisplayTotalFlow();
-                //MessageBox.Show(methaneFrac.ToString());
             }
             catch (Exception ex)
             {
@@ -85,8 +66,19 @@ namespace ProcessSimLevelEditor
             {
                 var textBox = sender as TextBox;
                 Int32.TryParse(textBox.Text, out ethaneFrac);
-                DisplayTotalFlow();
-                //MessageBox.Show(methaneFrac.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
+            }
+        }
+
+        private void PropaneTBChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                var textBox = sender as TextBox;
+                Int32.TryParse(textBox.Text, out propaneFrac);
             }
             catch (Exception ex)
             {

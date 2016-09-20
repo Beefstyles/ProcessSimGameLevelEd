@@ -26,6 +26,10 @@
                 <TextBlock Name="EthaneFrac">Ethane</TextBlock>
                 <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="EthaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
+            <WrapPanel>
+                <TextBlock Name="PropaneFrac">Propane</TextBlock>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+            </WrapPanel>
         </StackPanel>
         <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Left">
             <WrapPanel Orientation="Horizontal">
