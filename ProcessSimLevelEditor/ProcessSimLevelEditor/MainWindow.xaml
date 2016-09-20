@@ -17,21 +17,53 @@
     </Window.Resources>
     <DockPanel>
         <TextBlock DockPanel.Dock ="Top" HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
-        <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Left">
-            <WrapPanel Orientation="Horizontal">
-                <TextBlock Name="MethaneFrac">Methane</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="MethaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock Name="EthaneFrac">Ethane</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="EthaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock Name="PropaneFrac">Propane</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-            </WrapPanel>
-        </StackPanel>
-        <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Left">
+        <DockPanel Dock="Left">
+            <ScrollViewer IsTabStop="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <StackPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock Name="MethaneFrac">Methane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="MethaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock Name="EthaneFrac">Ethane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="EthaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock Name="PropaneFrac">Propane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock Name="NButane">NButane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock Name="IButane">NButane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>NButane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>NButane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>NButane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>NButane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>NButane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                </StackPanel>
+            </ScrollViewer>
+            </DockPanel>
+            <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Left">
             <WrapPanel Orientation="Horizontal">
                 <TextBlock>TotalFlow</TextBlock>
                 <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="False" Style="{StaticResource TextBoxStyle}"></TextBox>
