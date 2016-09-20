@@ -21,23 +21,15 @@
             <ScrollViewer IsTabStop="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <StackPanel>
                     <WrapPanel Orientation="Horizontal">
-                        <TextBlock Name="MethaneFrac">Methane</TextBlock>
+                        <TextBlock>Methane</TextBlock>
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="MethaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
-                        <TextBlock Name="EthaneFrac">Ethane</TextBlock>
+                        <TextBlock>Ethane</TextBlock>
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="EthaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
-                        <TextBlock Name="PropaneFrac">Propane</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                    </WrapPanel>
-                    <WrapPanel>
-                        <TextBlock Name="NButane">NButane</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                    </WrapPanel>
-                    <WrapPanel>
-                        <TextBlock Name="IButane">NButane</TextBlock>
+                        <TextBlock>Propane</TextBlock>
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
@@ -45,19 +37,55 @@
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
-                        <TextBlock>NButane</TextBlock>
+                        <TextBlock>IButane</TextBlock>
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
-                        <TextBlock>NButane</TextBlock>
+                        <TextBlock>NPentane</TextBlock>
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
-                        <TextBlock>NButane</TextBlock>
+                        <TextBlock>IPentane</TextBlock>
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
-                        <TextBlock>NButane</TextBlock>
+                        <TextBlock>Hexane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>Benzene</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>Heptane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>Octane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>Nonane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>Decane</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>Water</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>Nitrogen</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>CO2</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock>H2S</TextBlock>
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                 </StackPanel>
