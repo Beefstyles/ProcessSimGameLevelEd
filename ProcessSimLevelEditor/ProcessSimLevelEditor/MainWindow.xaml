@@ -13,6 +13,7 @@
             <Setter Property="Width" Value="55.0"/>
             <Setter Property="Height" Value="30"/>
             <Setter Property="AcceptsReturn" Value="True"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
     </Window.Resources>
     <DockPanel>
@@ -34,7 +35,7 @@
                     </WrapPanel>
                     <WrapPanel>
                         <TextBlock>NButane</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="NButaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
                         <TextBlock>IButane</TextBlock>
