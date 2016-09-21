@@ -17,7 +17,12 @@
         </Style>
     </Window.Resources>
     <DockPanel>
-        <TextBlock DockPanel.Dock ="Top" HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
+        <DockPanel DockPanel.Dock="Top">
+            <StackPanel>
+            <TextBlock HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
+            </StackPanel>
+        </DockPanel>
+        
         <DockPanel Dock="Left">
             <ScrollViewer IsTabStop="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <StackPanel>
@@ -98,6 +103,11 @@
                 <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
         </StackPanel>
-        <Button DockPanel.Dock ="Bottom" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculatePhase">Calculate Phase</Button>
+        <StackPanel>
+            <DataGrid Height="281"></DataGrid>
+        <DockPanel DockPanel.Dock="Bottom">
+        <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculatePhase">Calculate Phase</Button>
+        </DockPanel>
+        </StackPanel>
     </DockPanel>
 </Window>
