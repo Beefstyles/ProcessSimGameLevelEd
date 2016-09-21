@@ -23,18 +23,46 @@ namespace ProcessSimLevelEditor
     {
         private int methaneFrac, ethaneFrac, propaneFrac;
         private int totalFlow = 0;
+        public Dictionary<string, int> ComponentDictionary = new Dictionary<string, int>();
 
         public MainWindow()
         {
             InitializeComponent();
+            InitiliaseCompDictionary();
+        }
+
+        private void InitiliaseCompDictionary()
+        {
+            ComponentDictionary.Add("Methane", 0);
+            ComponentDictionary.Add("Ethane", 0);
+            ComponentDictionary.Add("Propane", 0);
+            ComponentDictionary.Add("NButane", 0);
+            ComponentDictionary.Add("IButane", 0);
+            ComponentDictionary.Add("NPentane", 0);
+            ComponentDictionary.Add("IPentane", 0);
+            ComponentDictionary.Add("Hexane", 0);
+            ComponentDictionary.Add("Benzene", 0);
+            ComponentDictionary.Add("Heptane", 0);
+            ComponentDictionary.Add("Octane", 0);
+            ComponentDictionary.Add("Nonane", 0);
+            ComponentDictionary.Add("Decane", 0);
+            ComponentDictionary.Add("Water", 0);
+            ComponentDictionary.Add("Nitrogen", 0);
+            ComponentDictionary.Add("CO2", 0);
+            ComponentDictionary.Add("H2S", 0);
         }
 
         private void CalculatePhase(object sender, RoutedEventArgs e)
         {
              var tb = sender as TextBox;
-             totalFlow = methaneFrac + ethaneFrac;
-             //MessageBox.Show("Total flow is " + totalFlow);
-             DisplayTotalFlow();   
+            CalculateTotalFlow();
+            //MessageBox.Show("Total flow is " + totalFlow);
+            DisplayTotalFlow();   
+        }
+
+        private void CalculateTotalFlow()
+        {
+            totalFlow = ComponentDictionary.Sum(x => x.Value);
         }
 
         private void NunberValTextBox(object sender, TextCompositionEventArgs e)
@@ -47,44 +75,33 @@ namespace ProcessSimLevelEditor
             }
         }
 
-        private void MethaneTBChanged(object sender, TextChangedEventArgs e)
+        private void ComponentTextBoxChange(object sender, TextChangedEventArgs e)
         {
-            try
-            {
-                var textBox = sender as TextBox; 
-                Int32.TryParse(textBox.Text, out methaneFrac);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error " + ex.Message);
-            }
-        }
-
-        private void EthaneTBChanged(object sender, TextChangedEventArgs e)
-        {
+            int componentFrac;
             try
             {
                 var textBox = sender as TextBox;
-                Int32.TryParse(textBox.Text, out ethaneFrac);
+                if (textBox != null)
+                {
+                    MessageBox.Show(textBox.Name);
+                }
+                Int32.TryParse(textBox.Text, out componentFrac);
+                try
+                {
+                    ComponentDictionary[textBox.Name] = componentFrac;
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Error in adding to component dictionary " + ex.Message);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error " + ex.Message);
+                MessageBox.Show("Error in parsing " + ex.Message);
             }
         }
 
-        private void PropaneTBChanged(object sender, TextChangedEventArgs e)
-        {
-            try
-            {
-                var textBox = sender as TextBox;
-                Int32.TryParse(textBox.Text, out propaneFrac);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error " + ex.Message);
-            }
-        }
+        
 
         private void DisplayTotalFlow()
         {

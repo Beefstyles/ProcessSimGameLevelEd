@@ -23,7 +23,7 @@
                 <StackPanel>
                     <WrapPanel Orientation="Horizontal">
                         <TextBlock>Methane</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="MethaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Name="Methane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="MethaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
                         <TextBlock>Ethane</TextBlock>
@@ -35,7 +35,7 @@
                     </WrapPanel>
                     <WrapPanel>
                         <TextBlock>NButane</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="NButaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" TextChanged="PropaneTBChanged" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
                         <TextBlock>IButane</TextBlock>
