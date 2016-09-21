@@ -81,10 +81,6 @@ namespace ProcessSimLevelEditor
             try
             {
                 var textBox = sender as TextBox;
-                if (textBox != null)
-                {
-                    MessageBox.Show(textBox.Name);
-                }
                 Int32.TryParse(textBox.Text, out componentFrac);
                 try
                 {
