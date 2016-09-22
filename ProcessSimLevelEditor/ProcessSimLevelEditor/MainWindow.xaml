@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:ProcessSimLevelEditor"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+
     <Window.Resources>
         <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Margin" Value="5"/>
@@ -15,6 +16,7 @@
             <Setter Property="AcceptsReturn" Value="True"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
+        
     </Window.Resources>
     <DockPanel>
         <DockPanel DockPanel.Dock="Top">
@@ -97,7 +99,9 @@
                 </StackPanel>
             </ScrollViewer>
             </DockPanel>
-            <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Left">
+        <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Left">
+            <TextBlock FontSize="14" FontStyle="Oblique">Input Values</TextBlock>
+            <TextBlock FontSize="14" FontStyle="Oblique">Caclulated Values</TextBlock>
             <WrapPanel Orientation="Horizontal">
                 <TextBlock>TotalFlow</TextBlock>
                 <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
