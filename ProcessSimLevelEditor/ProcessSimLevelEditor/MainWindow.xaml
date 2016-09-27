@@ -16,6 +16,12 @@
             <Setter Property="AcceptsReturn" Value="True"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
+
+        <Style x:Key="MinorHeading" TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="10"/>
+        </Style>
         
     </Window.Resources>
     <DockPanel>
@@ -100,7 +106,7 @@
             </ScrollViewer>
             </DockPanel>
         <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Left">
-            <TextBlock FontSize="14" FontStyle="Oblique">Input Values</TextBlock>
+            <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
             <WrapPanel Orientation="Horizontal">
                 <TextBlock>Temp</TextBlock>
                 <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
@@ -109,7 +115,7 @@
                 <TextBlock>Pressure</TextBlock>
                 <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
-            <TextBlock FontSize="14" FontStyle="Oblique">Caclulated Values</TextBlock>
+            <TextBlock Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
             <WrapPanel Orientation="Horizontal">
                 <TextBlock>TotalFlow</TextBlock>
                 <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
