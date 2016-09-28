@@ -73,7 +73,17 @@ namespace ProcessSimLevelEditor
              var tb = sender as TextBox;
             CalculateTotalFlow();
             //MessageBox.Show("Total flow is " + totalFlow);
+            IterateThroughGrid();
             DisplayTotalFlow();   
+        }
+
+        private void IterateThroughGrid()
+        {
+            /*foreach(System.Data.DataRowView dr in gameGrid.ItemsSource)
+            {
+                MessageBox.Show(dr[0].ToString());
+            }
+            */
         }
 
         private void CalculateTotalFlow()
