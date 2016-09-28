@@ -122,7 +122,15 @@
             </WrapPanel>
         </StackPanel>
         <StackPanel>
-            <DataGrid Height="281"></DataGrid>
+            <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="0"/>
+                    <DataGridTextColumn Header="1"/>
+                    <DataGridTextColumn Header="2"/>
+                    <DataGridTextColumn Header="3"/>
+                    <DataGridTextColumn Header="4"/>
+                </DataGrid.Columns>
+            </DataGrid>
         <DockPanel DockPanel.Dock="Bottom">
         <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculatePhase">Calculate Phase</Button>
         </DockPanel>
