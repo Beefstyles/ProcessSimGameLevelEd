@@ -29,6 +29,7 @@ namespace ProcessSimLevelEditor
         {
             InitializeComponent();
             InitiliaseCompDictionary();
+            DataGrid();
         }
 
         private void InitiliaseCompDictionary()
@@ -52,6 +53,21 @@ namespace ProcessSimLevelEditor
             ComponentDictionary.Add("H2S", 0);
         }
 
+        private void DataGrid()
+        {
+            List <DataGridClass> dg = new List<DataGridClass>();
+            for (int i = 1; i <= 10; i++)
+            {
+                dg.Add(new DataGridClass() { Pos = i });
+            }
+            gameGrid.ItemsSource = dg;
+
+        }
+
+        public class DataGridClass
+        {
+            public int Pos { get; set; }
+        }
         private void CalculatePhase(object sender, RoutedEventArgs e)
         {
              var tb = sender as TextBox;

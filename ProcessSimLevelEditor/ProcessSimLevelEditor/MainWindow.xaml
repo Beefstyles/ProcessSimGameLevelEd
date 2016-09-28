@@ -124,11 +124,16 @@
         <StackPanel>
             <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="0"/>
                     <DataGridTextColumn Header="1"/>
                     <DataGridTextColumn Header="2"/>
                     <DataGridTextColumn Header="3"/>
                     <DataGridTextColumn Header="4"/>
+                    <DataGridTextColumn Header="5"/>
+                    <DataGridTextColumn Header="6"/>
+                    <DataGridTextColumn Header="7"/>
+                    <DataGridTextColumn Header="8"/>
+                    <DataGridTextColumn Header="9"/>
+                    <DataGridTextColumn Header="10"/>
                 </DataGrid.Columns>
             </DataGrid>
         <DockPanel DockPanel.Dock="Bottom">
