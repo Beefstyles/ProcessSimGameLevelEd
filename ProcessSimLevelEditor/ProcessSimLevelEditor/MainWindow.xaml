@@ -121,6 +121,10 @@
                 <TextBlock>TotalFlow</TextBlock>
                 <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
+            <WrapPanel Orientation="Horizontal">
+                <TextBlock>Phase</TextBlock>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+            </WrapPanel>
         </StackPanel>
         <StackPanel>
             <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281">
@@ -138,7 +142,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         <DockPanel DockPanel.Dock="Bottom">
-        <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculatePhase">Calculate Phase</Button>
+                <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues">Calculate Values</Button>
         </DockPanel>
         </StackPanel>
     </DockPanel>

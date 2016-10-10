@@ -68,7 +68,8 @@ namespace ProcessSimLevelEditor
         {
             public int Pos { get; set; }
         }
-        private void CalculatePhase(object sender, RoutedEventArgs e)
+
+        private void CalculateValues(object sender, RoutedEventArgs e)
         {
              var tb = sender as TextBox;
             CalculateTotalFlow();
