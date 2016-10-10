@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProcessSimLevelEditor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="367" Width="530">
 
     <Window.Resources>
         <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}">
@@ -14,7 +14,7 @@
             <Setter Property="Width" Value="55.0"/>
             <Setter Property="Height" Value="30"/>
             <Setter Property="AcceptsReturn" Value="True"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
         </Style>
 
         <Style x:Key="MinorHeading" TargetType="{x:Type TextBlock}">
@@ -23,15 +23,15 @@
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
-        
+
     </Window.Resources>
     <DockPanel>
         <DockPanel DockPanel.Dock="Top">
             <StackPanel>
-            <TextBlock HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
+                <TextBlock HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
             </StackPanel>
         </DockPanel>
-        
+
         <DockPanel Dock="Left">
             <ScrollViewer IsTabStop="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <StackPanel>
@@ -105,7 +105,7 @@
                     </WrapPanel>
                 </StackPanel>
             </ScrollViewer>
-            </DockPanel>
+        </DockPanel>
         <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Left">
             <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
             <WrapPanel Orientation="Horizontal">
@@ -141,9 +141,9 @@
                     <DataGridTextColumn Header="10"/>
                 </DataGrid.Columns>
             </DataGrid>
-        <DockPanel DockPanel.Dock="Bottom">
-                <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues">Calculate Values</Button>
-        </DockPanel>
+            <DockPanel DockPanel.Dock="Bottom">
+                <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues" Margin="5">Calculate Values</Button>
+            </DockPanel>
         </StackPanel>
     </DockPanel>
 </Window>
