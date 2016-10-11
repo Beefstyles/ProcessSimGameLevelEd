@@ -24,6 +24,8 @@ namespace ProcessSimLevelEditor
         private int methaneFrac, ethaneFrac, propaneFrac;
         private int totalFlow = 0;
         public Dictionary<string, int> ComponentDictionary = new Dictionary<string, int>();
+        public Dictionary<string, int> ConditionsDictionary = new Dictionary<string, int>();
+        public Dictionary<string, int> GridDictionary = new Dictionary<string, int>();
 
         public MainWindow()
         {
