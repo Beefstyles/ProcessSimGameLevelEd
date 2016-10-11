@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProcessSimLevelEditor"
+        xmlns:dc="GridHelper"
         mc:Ignorable="d"
         Title="MainWindow" Height="367" Width="530">
 
@@ -116,6 +117,14 @@
                 <TextBlock>Pressure</TextBlock>
                 <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
+            <WrapPanel Orientation="Horizontal">
+                <TextBlock>XGrid</TextBlock>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="XGrid" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal">
+                <TextBlock>YGrid</TextBlock>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="YGrid" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+            </WrapPanel>
             <TextBlock Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
             <WrapPanel Orientation="Horizontal">
                 <TextBlock>TotalFlow</TextBlock>
@@ -127,7 +136,7 @@
             </WrapPanel>
         </StackPanel>
         <StackPanel>
-            <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281">
+            <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281" local:GridHelper.RowCount="6">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="1"/>
                     <DataGridTextColumn Header="2"/>
