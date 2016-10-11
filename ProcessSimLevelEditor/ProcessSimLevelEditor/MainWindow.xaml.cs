@@ -21,39 +21,22 @@ namespace ProcessSimLevelEditor
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int methaneFrac, ethaneFrac, propaneFrac;
         private int totalFlow = 0;
-        public Dictionary<string, int> ComponentDictionary = new Dictionary<string, int>();
-        public Dictionary<string, int> ConditionsDictionary = new Dictionary<string, int>();
+        ComponentDict componentDictionary = new ComponentDict();
+        ConditionsDict conditionsDictionary = new ConditionsDict();
+
         public Dictionary<string, int> GridDictionary = new Dictionary<string, int>();
 
         public MainWindow()
         {
+            
             InitializeComponent();
-            InitiliaseCompDictionary();
+            componentDictionary.InitiliaseCompDictionary();
+            
             DataGrid();
         }
 
-        private void InitiliaseCompDictionary()
-        {
-            ComponentDictionary.Add("Methane", 0);
-            ComponentDictionary.Add("Ethane", 0);
-            ComponentDictionary.Add("Propane", 0);
-            ComponentDictionary.Add("NButane", 0);
-            ComponentDictionary.Add("IButane", 0);
-            ComponentDictionary.Add("NPentane", 0);
-            ComponentDictionary.Add("IPentane", 0);
-            ComponentDictionary.Add("Hexane", 0);
-            ComponentDictionary.Add("Benzene", 0);
-            ComponentDictionary.Add("Heptane", 0);
-            ComponentDictionary.Add("Octane", 0);
-            ComponentDictionary.Add("Nonane", 0);
-            ComponentDictionary.Add("Decane", 0);
-            ComponentDictionary.Add("Water", 0);
-            ComponentDictionary.Add("Nitrogen", 0);
-            ComponentDictionary.Add("CO2", 0);
-            ComponentDictionary.Add("H2S", 0);
-        }
+        
 
         private void DataGrid()
         {
@@ -91,7 +74,7 @@ namespace ProcessSimLevelEditor
 
         private void CalculateTotalFlow()
         {
-            totalFlow = ComponentDictionary.Sum(x => x.Value);
+            totalFlow = componentDictionary.ComponentDictionary.Sum(x => x.Value);
         }
 
         private void NunberValTextBox(object sender, TextCompositionEventArgs e)
@@ -113,7 +96,7 @@ namespace ProcessSimLevelEditor
                 Int32.TryParse(textBox.Text, out componentFrac);
                 try
                 {
-                    ComponentDictionary[textBox.Name] = componentFrac;
+                    componentDictionary.ComponentDictionary[textBox.Name] = componentFrac;
                 }
                 catch(Exception ex)
                 {
@@ -126,7 +109,29 @@ namespace ProcessSimLevelEditor
             }
         }
 
-        
+        private void ConditionsTextBoxChange(object sender, TextChangedEventArgs e)
+        {
+            int conditon;
+            try
+            {
+                var textBox = sender as TextBox;
+                Int32.TryParse(textBox.Text, out conditon);
+                try
+                {
+                    conditionsDictionary.ConditionsDictionary[textBox.Name] = conditon;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error in adding to conditions dictionary " + ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in parsing " + ex.Message);
+            }
+        }
+
+
 
         private void DisplayTotalFlow()
         {
