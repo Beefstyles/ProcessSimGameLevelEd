@@ -29,7 +29,6 @@ namespace ProcessSimLevelEditor
 
         public MainWindow()
         {
-            
             InitializeComponent();
             componentDictionary.InitiliaseCompDictionary();
 

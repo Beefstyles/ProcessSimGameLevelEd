@@ -111,11 +111,11 @@
             <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
             <WrapPanel Orientation="Horizontal">
                 <TextBlock>Temp</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
             <WrapPanel Orientation="Horizontal">
                 <TextBlock>Pressure</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
             <WrapPanel Orientation="Horizontal">
                 <TextBlock>XGrid</TextBlock>
