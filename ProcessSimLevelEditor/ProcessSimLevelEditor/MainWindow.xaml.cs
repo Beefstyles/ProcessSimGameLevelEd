@@ -32,7 +32,7 @@ namespace ProcessSimLevelEditor
             
             InitializeComponent();
             componentDictionary.InitiliaseCompDictionary();
-            
+
             DataGrid();
         }
 

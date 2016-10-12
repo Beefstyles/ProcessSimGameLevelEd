@@ -119,11 +119,11 @@
             </WrapPanel>
             <WrapPanel Orientation="Horizontal">
                 <TextBlock>XGrid</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="XGrid" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="XGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
             <WrapPanel Orientation="Horizontal">
                 <TextBlock>YGrid</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="YGrid" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
             </WrapPanel>
             <TextBlock Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
             <WrapPanel Orientation="Horizontal">
@@ -136,7 +136,7 @@
             </WrapPanel>
         </StackPanel>
         <StackPanel>
-            <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281" local:GridHelper.RowCount="6">
+            <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281" local:GridHelper.RowCount="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged,ElementName=XGrid}" local:GridHelper.ColumnCount="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged,ElementName=YGrid}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="1"/>
                     <DataGridTextColumn Header="2"/>
