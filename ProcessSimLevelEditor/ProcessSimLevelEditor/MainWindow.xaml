@@ -136,7 +136,7 @@
             </WrapPanel>
         </StackPanel>
         <StackPanel>
-            <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281" local:GridHelper.RowCount="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged,ElementName=XGrid}" local:GridHelper.ColumnCount="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged,ElementName=YGrid}">
+            <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281" local:GridHelper.RowCount="{Binding XGrid}" local:GridHelper.ColumnCount="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged,ElementName=YGrid}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="1"/>
                     <DataGridTextColumn Header="2"/>
