@@ -59,7 +59,9 @@ namespace ProcessSimLevelEditor
             CalculateTotalFlow();
             //MessageBox.Show("Total flow is " + totalFlow);
             IterateThroughGrid();
-            DisplayTotalFlow();   
+            DisplayTotalFlow();
+            PhaseGraph pg = new PhaseGraph();
+            pg.Show();   
         }
 
         private void IterateThroughGrid()
