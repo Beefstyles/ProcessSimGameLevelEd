@@ -9,6 +9,12 @@ namespace ProcessSimLevelEditor
     public class ConditionsDict
     {
         public Dictionary<string, int> ConditionsDictionary = new Dictionary<string, int>();
+
+        public void InitCondDict()
+        {
+            ConditionsDictionary.Add("Temperature", 0);
+            ConditionsDictionary.Add("Pressure", 0);
+        }
     }
 
     
