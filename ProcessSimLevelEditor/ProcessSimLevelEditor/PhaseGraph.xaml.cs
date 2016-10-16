@@ -27,8 +27,10 @@ namespace ProcessSimLevelEditor
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             const double margin = 10;
-            double xmin = margin;
-            double xmax = canGraph.Width - margin;
+            //double xmin = margin;
+            double xmin = 0;
+            //double xmax = canGraph.Width - margin;
+            double xmax = 200;
             double ymin = margin;
             double ymax = canGraph.Height - margin;
             const double step = 10;
