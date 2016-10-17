@@ -76,6 +76,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PhaseCalc.cs" />
     <Compile Include="PhaseGraph.xaml.cs">
       <DependentUpon>PhaseGraph.xaml</DependentUpon>
     </Compile>
