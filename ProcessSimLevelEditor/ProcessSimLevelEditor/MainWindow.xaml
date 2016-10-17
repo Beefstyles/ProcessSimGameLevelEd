@@ -36,6 +36,9 @@
         <DockPanel Dock="Left">
             <ScrollViewer IsTabStop="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <StackPanel>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock>Mass Flow Input</TextBlock>
+                    </WrapPanel>
                     <WrapPanel Orientation="Horizontal">
                         <TextBlock>Methane</TextBlock>
                         <TextBox Name="Methane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>

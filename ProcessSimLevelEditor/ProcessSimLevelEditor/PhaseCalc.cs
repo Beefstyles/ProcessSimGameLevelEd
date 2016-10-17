@@ -14,14 +14,10 @@ namespace ProcessSimLevelEditor
             switch (componentName)
             {
                 case "Methane":
-                    if (setPressure <= (0.5491 * Math.Pow(setTemp, 2) - 109.38 * setTemp + 5337.2))
-                    {
-                        returnPhase = 1;
-                    }
-                    else
-                    {
-                        returnPhase = 0;
-                    }
+                    returnPhase = (setPressure <= (0.5491 * Math.Pow(setTemp, 2) - 109.38 * setTemp + 5337.2)) ? 1 : 0;
+                    break;
+                case "Ethane":
+                    returnPhase = (Math.Log10(setPressure) <= -4E-05 * Math.Pow(setTemp, 2) + .0198 * setTemp + 1.3108) ? 1 : 0;
                     break;
             }
             
