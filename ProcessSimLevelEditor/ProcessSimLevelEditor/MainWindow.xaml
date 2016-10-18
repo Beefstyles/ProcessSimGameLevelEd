@@ -38,7 +38,7 @@
                     <MenuItem Header="_Exit" />
                 </MenuItem>
             </Menu>
-            <TextBox AcceptsReturn="True" />
+
             <StackPanel>
                 <TextBlock HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
             </StackPanel>
@@ -122,34 +122,39 @@
                 </StackPanel>
             </ScrollViewer>
         </DockPanel>
-        <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Left">
-            <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
-            <WrapPanel Orientation="Horizontal">
-                <TextBlock>Temp</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
-            </WrapPanel>
-            <WrapPanel Orientation="Horizontal">
-                <TextBlock>Pressure</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" Style="{StaticResource TextBoxStyle}"></TextBox>
-            </WrapPanel>
-            <WrapPanel Orientation="Horizontal">
-                <TextBlock>XGrid</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="XGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
-            </WrapPanel>
-            <WrapPanel Orientation="Horizontal">
-                <TextBlock>YGrid</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
-            </WrapPanel>
-            <TextBlock Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
-            <WrapPanel Orientation="Horizontal">
-                <TextBlock>TotalFlow</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
-            </WrapPanel>
-            <WrapPanel Orientation="Horizontal">
-                <TextBlock>Phase</TextBlock>
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
-            </WrapPanel>
-        </StackPanel>
+        <DockPanel Dock="Right">
+            <ScrollViewer>
+            <StackPanel HorizontalAlignment="Left">
+                <ScrollViewer></ScrollViewer>
+                <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>Temp</TextBlock>
+                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>Pressure</TextBlock>
+                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" Style="{StaticResource TextBoxStyle}"></TextBox>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>XGrid</TextBlock>
+                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="XGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>YGrid</TextBlock>
+                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
+                </WrapPanel>
+                <TextBlock Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>TotalFlow</TextBlock>
+                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock>Phase</TextBlock>
+                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+                </WrapPanel>
+            </StackPanel>
+            </ScrollViewer>
+        </DockPanel>
         <StackPanel>
             
             <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281" local:GridHelper.RowCount="{Binding XGrid}" local:GridHelper.ColumnCount="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged,ElementName=YGrid}">
