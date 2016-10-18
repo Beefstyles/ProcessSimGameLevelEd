@@ -7,7 +7,7 @@
         xmlns:dc="GridHelper"
         mc:Ignorable="d"
         Title="MainWindow" Height="367" Width="530">
-
+    
     <Window.Resources>
         <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Margin" Value="5"/>
@@ -26,8 +26,19 @@
         </Style>
 
     </Window.Resources>
+    
     <DockPanel>
         <DockPanel DockPanel.Dock="Top">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New" />
+                    <MenuItem Header="_Open" />
+                    <MenuItem Header="_Save" />
+                    <Separator />
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+            </Menu>
+            <TextBox AcceptsReturn="True" />
             <StackPanel>
                 <TextBlock HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
             </StackPanel>
@@ -38,6 +49,7 @@
                 <StackPanel>
                     <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock>Mass Flow Input</TextBlock>
+                        <TextBlock></TextBlock>
                     </WrapPanel>
                     <WrapPanel Orientation="Horizontal">
                         <TextBlock>Methane</TextBlock>
@@ -139,6 +151,7 @@
             </WrapPanel>
         </StackPanel>
         <StackPanel>
+            
             <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281" local:GridHelper.RowCount="{Binding XGrid}" local:GridHelper.ColumnCount="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged,ElementName=YGrid}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="1"/>
