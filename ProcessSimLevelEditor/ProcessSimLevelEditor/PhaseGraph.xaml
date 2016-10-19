@@ -4,11 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProcessSimLevelEditor"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         Title="PhaseGraph" Height="300" Width="300" Loaded="Window_Loaded">
     <Grid Background="LightBlue">
         <Canvas Name="canGraph" Background="Wheat"
                 Width="300" Height="200"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Right">
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="Pressure (kPa)" LabelFormatter="{Binding YFormatter}"></lvc:Axis>
+            </lvc:CartesianChart.AxisY>
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="Temperature degC" Labels="{Binding Labels}"></lvc:Axis>
+            </lvc:CartesianChart.AxisX>
+        </lvc:CartesianChart> 
     </Grid>
 </Window>
