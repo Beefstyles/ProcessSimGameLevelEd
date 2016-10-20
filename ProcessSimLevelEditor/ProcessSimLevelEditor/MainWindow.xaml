@@ -40,7 +40,7 @@
             </Menu>
 
             <StackPanel>
-                <TextBlock HorizontalAlignment="Center">ProcessSim Game Level Editor V0.1</TextBlock>
+                <TextBlock HorizontalAlignment="Center">ProcessSim Game Level Editor V0.2</TextBlock>
             </StackPanel>
         </DockPanel>
 
