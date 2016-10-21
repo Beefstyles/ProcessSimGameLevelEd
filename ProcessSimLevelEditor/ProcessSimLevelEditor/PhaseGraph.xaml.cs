@@ -28,6 +28,7 @@ namespace ProcessSimLevelEditor
         public PhaseGraph()
         {
             InitializeComponent();
+            //returnPhase = (setPressure <= (0.5491 * Math.Pow(setTemp, 2) - 109.38 * setTemp + 5337.2)) ? 1 : 0;
             SeriesCollection = new SeriesCollection
             {
                 new LineSeries
@@ -49,7 +50,14 @@ namespace ProcessSimLevelEditor
                     PointGeometrySize = 15
                 }
             };
-            Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May" };
+
+            List<string> LabelArray = new List<string>();
+            for (int i = 70; i < 200; i++)
+            {
+                LabelArray.Add(i.ToString());
+            }
+            Labels = LabelArray.ToArray();
+            //Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May" };
             YFormatter = value => value.ToString("C");
 
             //modifying the series collection will animate and update the chart
