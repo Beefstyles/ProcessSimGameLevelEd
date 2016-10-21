@@ -31,12 +31,13 @@ namespace ProcessSimLevelEditor
             //returnPhase = (setPressure <= (0.5491 * Math.Pow(setTemp, 2) - 109.38 * setTemp + 5337.2)) ? 1 : 0;
             SeriesCollection = new SeriesCollection
             {
+                /*
                 new LineSeries
                 {
                     Title = "Series 1",
                     Values = new ChartValues<double> { 4, 6, 5, 2 ,4 }
-                },
-                new LineSeries
+                }
+                /*new LineSeries
                 {
                     Title = "Series 2",
                     Values = new ChartValues<double> { 6, 7, 3, 4 ,6 },
@@ -49,7 +50,25 @@ namespace ProcessSimLevelEditor
                     PointGeometry = DefaultGeometries.Square,
                     PointGeometrySize = 15
                 }
+                */
             };
+
+            List<double> ValList = new List<double>();
+            
+
+            for (int i = 70; i < 200; i++)
+            {
+                ValList.Add(i);
+            }
+            SeriesCollection.Add(new LineSeries
+            {
+                Title="Methane",
+                Values = new ChartValues<double> { ValList.ToArray() },
+                LineSmoothness = 0, //0: rect lines, 1: really smooth lines
+                PointGeometry = Geometry.Parse("m 25 70.36218 20 -28 -20 22 -8 -6 z"),
+                PointGeometrySize = 50,
+                PointForeround = Brushes.Gray
+            });
 
             List<string> LabelArray = new List<string>();
             for (int i = 70; i < 200; i++)
@@ -72,7 +91,7 @@ namespace ProcessSimLevelEditor
             });
 
             //modifying any series values will also animate and update the chart
-            SeriesCollection[3].Values.Add(5d);
+            //SeriesCollection[3].Values.Add(5d);
 
             DataContext = this;
         }
