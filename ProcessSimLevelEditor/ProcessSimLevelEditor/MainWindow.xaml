@@ -48,12 +48,15 @@
             <ScrollViewer IsTabStop="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <StackPanel>
                     <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <TextBlock>Mass Flow Input</TextBlock>
+                        <TextBlock Margin="5">Mass Flow Input</TextBlock>
+
+                        <TextBlock Margin="5">VapourFrac</TextBlock>
                         <TextBlock></TextBlock>
                     </WrapPanel>
                     <WrapPanel Orientation="Horizontal">
-                        <TextBlock>Methane</TextBlock>
+                        <TextBlock VerticalAlignment="Center">Methane</TextBlock>
                         <TextBox Name="Methane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Name="MethaneVapFrac" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <WrapPanel>
                         <TextBlock>Ethane</TextBlock>
