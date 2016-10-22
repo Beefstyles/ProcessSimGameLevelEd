@@ -60,10 +60,12 @@ namespace ProcessSimLevelEditor
             {
                 ValList.Add(i);
             }
+
+        
             SeriesCollection.Add(new LineSeries
             {
                 Title="Methane",
-                Values = new ChartValues<double> { ValList.ToArray() },
+                //Values = myValues,
                 LineSmoothness = 0, //0: rect lines, 1: really smooth lines
                 PointGeometry = Geometry.Parse("m 25 70.36218 20 -28 -20 22 -8 -6 z"),
                 PointGeometrySize = 50,

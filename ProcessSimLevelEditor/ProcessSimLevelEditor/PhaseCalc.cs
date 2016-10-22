@@ -19,6 +19,9 @@ namespace ProcessSimLevelEditor
                 case "Ethane":
                     returnPhase = (Math.Log10(setPressure) <= -4E-05 * Math.Pow(setTemp, 2) + .0198 * setTemp + 1.3108) ? 1 : 0;
                     break;
+                case "Propane":
+                    returnPhase = setPressure <= (9835.1 * Math.Log(setTemp) - 48464) ? 1 : 0;
+                    break;
             }
             
             return returnPhase;
