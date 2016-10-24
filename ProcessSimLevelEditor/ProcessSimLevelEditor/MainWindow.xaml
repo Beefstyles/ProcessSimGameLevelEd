@@ -45,6 +45,7 @@
         </DockPanel>
 
         <DockPanel Dock="Left">
+            <ScrollViewer>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -74,18 +75,14 @@
                 <TextBox Grid.Column="1" Grid.Row="2" Name="Ethane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                 <TextBlock Grid.Column="0" Grid.Row="3">Propane</TextBlock>
                 <TextBox  Grid.Column="1" Grid.Row="3" Name="Propane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-
-                            <TextBlock>NButane</TextBlock>
-                            <TextBox Name="NButane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-
-                            <TextBlock>IButane</TextBlock>
-                            <TextBox Name="IButane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-
-                            <TextBlock>NPentane</TextBlock>
-                            <TextBox Name="NPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-
-                            <TextBlock>IPentane</TextBlock>
-                            <TextBox Name="IPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="4">NButane</TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="4" Name="NButane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="5">IButane</TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="5" Name="IButane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="6">NPentane</TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="6" Name="NPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="7">IPentane</TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="7" Name="IPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
 
                             <TextBlock>Hexane</TextBlock>
                             <TextBox Name="Hexane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
@@ -117,6 +114,7 @@
                             <TextBlock>H2S</TextBlock>
                             <TextBox Name="H2S" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
             </Grid>
+            </ScrollViewer>
         </DockPanel>
         <DockPanel Dock="Right">
             <ScrollViewer>
