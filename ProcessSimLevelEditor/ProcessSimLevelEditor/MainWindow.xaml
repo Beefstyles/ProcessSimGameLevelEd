@@ -47,14 +47,23 @@
         <DockPanel Dock="Left">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row ="0" Margin="5">Mass Flow Input</TextBlock>
                     <TextBlock Grid.Column="1" Grid.Row="0" Margin="5">VapourFrac</TextBlock>
@@ -62,68 +71,51 @@
                         <TextBox Grid.Column="1" Grid.Row="1" Name="Methane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                 <TextBox Grid.Column="2" Grid.Row="1" Name="MethaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
                 <TextBlock Grid.Column="0" Grid.Row="2">Ethane</TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="2" Name="Ethane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBox Grid.Column="1" Grid.Row="2" Name="Ethane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="3">Propane</TextBlock>
+                <TextBox  Grid.Column="1" Grid.Row="3" Name="Propane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
 
-                        <WrapPanel>
-                            <TextBlock>Propane</TextBlock>
-                            <TextBox Name="Propane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
                             <TextBlock>NButane</TextBlock>
                             <TextBox Name="NButane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+
                             <TextBlock>IButane</TextBlock>
                             <TextBox Name="IButane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+
                             <TextBlock>NPentane</TextBlock>
                             <TextBox Name="NPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+
                             <TextBlock>IPentane</TextBlock>
                             <TextBox Name="IPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+
                             <TextBlock>Hexane</TextBlock>
                             <TextBox Name="Hexane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+
                             <TextBlock>Benzene</TextBlock>
                             <TextBox Name="Benzene" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+   
                             <TextBlock>Heptane</TextBlock>
                             <TextBox Name="Heptane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+        
                             <TextBlock>Octane</TextBlock>
                             <TextBox Name="Octane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+              
                             <TextBlock>Nonane</TextBlock>
                             <TextBox Name="Nonane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+           
                             <TextBlock>Decane</TextBlock>
                             <TextBox Name="Decane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+              
                             <TextBlock>Water</TextBlock>
                             <TextBox Name="Water" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+                     
                             <TextBlock>Nitrogen</TextBlock>
                             <TextBox Name="Nitrogen" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+              
                             <TextBlock>CO2</TextBlock>
                             <TextBox Name="CO2" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel>
+              
                             <TextBlock>H2S</TextBlock>
                             <TextBox Name="H2S" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
             </Grid>
         </DockPanel>
         <DockPanel Dock="Right">
