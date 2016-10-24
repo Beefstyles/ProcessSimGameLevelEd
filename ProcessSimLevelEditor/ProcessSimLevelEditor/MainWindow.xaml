@@ -7,7 +7,7 @@
         xmlns:dc="GridHelper"
         mc:Ignorable="d"
         Title="MainWindow" Height="367" Width="530">
-    
+
     <Window.Resources>
         <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Margin" Value="5"/>
@@ -26,7 +26,7 @@
         </Style>
 
     </Window.Resources>
-    
+
     <DockPanel>
         <DockPanel DockPanel.Dock="Top">
             <Menu DockPanel.Dock="Top">
@@ -47,27 +47,22 @@
         <DockPanel Dock="Left">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <ScrollViewer IsTabStop="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                <StackPanel>
-
-                        <TextBlock Grid.Column="1" Grid.Row="1" Margin="5">Mass Flow Input</TextBlock>
-                        <TextBlock Grid.Column="2" Grid.Row="1" Margin="5">VapourFrac</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row ="0" Margin="5">Mass Flow Input</TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="0" Margin="5">VapourFrac</TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="1">Methane</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="1" Name="Methane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="2" Grid.Row="1" Name="MethaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
 
                         <WrapPanel Orientation="Horizontal" Width="200">
-                            <TextBlock VerticalAlignment="Center">Methane</TextBlock>
-                        <TextBox Grid.Column="1" Name="Methane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                            <TextBox Name="MethaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                    <WrapPanel Orientation="Horizontal" Width="200">
                             <TextBlock>Ethane</TextBlock>
                             <TextBox Name="Ethane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                         </WrapPanel>
@@ -131,46 +126,43 @@
                             <TextBlock>H2S</TextBlock>
                             <TextBox Name="H2S" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                         </WrapPanel>
-                    </StackPanel>
-                
-                </ScrollViewer>
             </Grid>
         </DockPanel>
         <DockPanel Dock="Right">
             <ScrollViewer>
-            <StackPanel HorizontalAlignment="Left">
-                <ScrollViewer></ScrollViewer>
-                <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
-                <WrapPanel Orientation="Horizontal">
-                    <TextBlock>Temp</TextBlock>
-                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
-                </WrapPanel>
-                <WrapPanel Orientation="Horizontal">
-                    <TextBlock>Pressure</TextBlock>
-                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" Style="{StaticResource TextBoxStyle}"></TextBox>
-                </WrapPanel>
-                <WrapPanel Orientation="Horizontal">
-                    <TextBlock>XGrid</TextBlock>
-                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="XGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
-                </WrapPanel>
-                <WrapPanel Orientation="Horizontal">
-                    <TextBlock>YGrid</TextBlock>
-                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
-                </WrapPanel>
-                <TextBlock Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
-                <WrapPanel Orientation="Horizontal">
-                    <TextBlock>TotalFlow</TextBlock>
-                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
-                </WrapPanel>
-                <WrapPanel Orientation="Horizontal">
-                    <TextBlock>Phase</TextBlock>
-                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
-                </WrapPanel>
-            </StackPanel>
+                <StackPanel HorizontalAlignment="Left">
+                    <ScrollViewer></ScrollViewer>
+                    <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock>Temp</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock>Pressure</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock>XGrid</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="XGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock>YGrid</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <TextBlock Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock>TotalFlow</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock>Phase</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
+                </StackPanel>
             </ScrollViewer>
         </DockPanel>
         <StackPanel>
-            
+
             <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281" local:GridHelper.RowCount="{Binding XGrid}" local:GridHelper.ColumnCount="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged,ElementName=YGrid}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="1"/>
