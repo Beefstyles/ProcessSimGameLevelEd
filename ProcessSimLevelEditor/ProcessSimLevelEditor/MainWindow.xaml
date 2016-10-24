@@ -60,12 +60,10 @@
                     <TextBlock Grid.Column="1" Grid.Row="0" Margin="5">VapourFrac</TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="1">Methane</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="1" Name="Methane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        <TextBox Grid.Column="2" Grid.Row="1" Name="MethaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBox Grid.Column="2" Grid.Row="1" Name="MethaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
+                <TextBlock Grid.Column="0" Grid.Row="2">Ethane</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="2" Name="Ethane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
 
-                        <WrapPanel Orientation="Horizontal" Width="200">
-                            <TextBlock>Ethane</TextBlock>
-                            <TextBox Name="Ethane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
                         <WrapPanel>
                             <TextBlock>Propane</TextBlock>
                             <TextBox Name="Propane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
