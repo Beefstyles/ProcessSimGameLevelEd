@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProcessSimLevelEditor"
         xmlns:dc="GridHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="367" Width="530">
+        Title="MainWindow" Height="768" Width="768">
 
     <Window.Resources>
         <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}">
@@ -65,7 +65,11 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row ="0" Margin="5">Mass Flow Input</TextBlock>
                     <TextBlock Grid.Column="1" Grid.Row="0" Margin="5">VapourFrac</TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="1">Methane</TextBlock>
@@ -83,22 +87,17 @@
                 <TextBox Grid.Column="1" Grid.Row="6" Name="NPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                 <TextBlock Grid.Column="0" Grid.Row="7">IPentane</TextBlock>
                 <TextBox Grid.Column="1" Grid.Row="7" Name="IPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-
-                            <TextBlock>Hexane</TextBlock>
-                            <TextBox Name="Hexane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-
-                            <TextBlock>Benzene</TextBlock>
-                            <TextBox Name="Benzene" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-   
-                            <TextBlock>Heptane</TextBlock>
-                            <TextBox Name="Heptane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-        
-                            <TextBlock>Octane</TextBlock>
-                            <TextBox Name="Octane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-              
-                            <TextBlock>Nonane</TextBlock>
-                            <TextBox Name="Nonane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-           
+                <TextBlock Grid.Column="0" Grid.Row="8">Hexane</TextBlock>
+                <TextBox Name="Hexane" Grid.Column="1" Grid.Row="8" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="9">Benzene</TextBlock>
+                <TextBox Name="Benzene" Grid.Column="1" Grid.Row="9" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="10">Heptane</TextBlock>
+                <TextBox Name="Heptane" Grid.Column="1" Grid.Row="10" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                <TextBlock Grid.Column="0" Grid.Row="11">Octane</TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="11" Name="Octane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="12">Nonane</TextBlock>
+                <TextBox Name="Nonane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+          
                             <TextBlock>Decane</TextBlock>
                             <TextBox Name="Decane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
               
