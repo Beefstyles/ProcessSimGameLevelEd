@@ -30,6 +30,19 @@
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
+        <DataTemplate x:Key="DataTemplate_Level2">
+            <TextBox HorizontalContentAlignment="{Binding}" Height="40" Width="50" Margin="4,4,4,4"/>
+        </DataTemplate>
+        <DataTemplate x:Key="DataTemplate_Level1">
+            <ItemsControl ItemsSource="{Binding}" ItemTemplate="{DynamicResource DataTemplate_Level2}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </DataTemplate>
+
 
     </Window.Resources>
 
@@ -157,19 +170,11 @@
         </DockPanel>
         <StackPanel>
 
+            <Grid>
+                
+            </Grid>
             <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281" local:GridHelper.RowCount="{Binding XGrid}" local:GridHelper.ColumnCount="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged,ElementName=YGrid}">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="1"/>
-                    <DataGridTextColumn Header="2"/>
-                    <DataGridTextColumn Header="3"/>
-                    <DataGridTextColumn Header="4"/>
-                    <DataGridTextColumn Header="5"/>
-                    <DataGridTextColumn Header="6"/>
-                    <DataGridTextColumn Header="7"/>
-                    <DataGridTextColumn Header="8"/>
-                    <DataGridTextColumn Header="9"/>
-                    <DataGridTextColumn Header="10"/>
-                </DataGrid.Columns>
+                
             </DataGrid>
             <DockPanel DockPanel.Dock="Bottom">
                 <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues" Margin="5">Calculate Values</Button>
