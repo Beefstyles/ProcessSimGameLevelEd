@@ -172,12 +172,11 @@
         </DockPanel>
         <StackPanel>
 
+
             <Grid>
-                
+                <ItemsControl x:Name="lst" ItemTemplate="{DynamicResource DataTemplate_Level1}"/>
             </Grid>
-            <DataGrid Name ="gameGrid" CanUserAddRows="False" Height="281" local:GridHelper.RowCount="{Binding XGrid}" local:GridHelper.ColumnCount="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged,ElementName=YGrid}">
-                
-            </DataGrid>
+
             <DockPanel DockPanel.Dock="Bottom">
                 <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues" Margin="5">Calculate Values</Button>
             </DockPanel>
