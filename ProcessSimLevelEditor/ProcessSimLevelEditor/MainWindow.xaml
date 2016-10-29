@@ -171,14 +171,12 @@
             </ScrollViewer>
         </DockPanel>
         <StackPanel>
-
-
             <Grid>
                 <ItemsControl x:Name="lst" ItemTemplate="{DynamicResource DataTemplate_Level1}"/>
             </Grid>
-
             <DockPanel DockPanel.Dock="Bottom">
                 <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues" Margin="5">Calculate Values</Button>
+                <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="IterateThroughList" Margin="5">Iter</Button>
             </DockPanel>
         </StackPanel>
     </DockPanel>

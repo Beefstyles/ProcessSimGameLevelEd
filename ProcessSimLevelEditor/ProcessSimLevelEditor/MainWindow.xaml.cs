@@ -24,6 +24,7 @@ namespace ProcessSimLevelEditor
         private int totalFlow = 0;
         ComponentDict componentDictionary = new ComponentDict();
         ConditionsDict conditionsDictionary = new ConditionsDict();
+        private List<List<int>> lsts = new List<List<int>>();
 
         public Dictionary<string, int> GridDictionary = new Dictionary<string, int>();
 
@@ -33,20 +34,19 @@ namespace ProcessSimLevelEditor
             componentDictionary.InitiliaseCompDictionary();
             
             //DataGrid();
-            TestList();
+            TestList(10,10);
         }
 
-        private void TestList()
+        private void TestList(int xSize, int ySize)
         {
-            List<List<int>> lsts = new List<List<int>>();
 
-            for (int i = 0; i < 5; i++)
+            for (int x = 0; x < xSize; x++)
             {
                 lsts.Add(new List<int>());
 
-                for (int j = 0; j < 5; j++)
+                for (int y = 0; y < ySize; y++)
                 {
-                    lsts[i].Add(i * 10 + j);
+                    lsts[x].Add(y * 10 + y);
                 }
             }
 
@@ -155,6 +155,14 @@ namespace ProcessSimLevelEditor
         private void DisplayTotalFlow()
         {
             TotalFlowCalc.Text = totalFlow.ToString();
+        }
+
+        private void IterateThroughList(object sender, RoutedEventArgs e)
+        {
+            foreach(var listVal in lsts)
+            {
+                MessageBox.Show(listVal.ToString());
+            }
         }
     }
 }
