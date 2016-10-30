@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
+using System.Data;
 
 namespace ProcessSimLevelEditor
 {
@@ -82,6 +83,32 @@ namespace ProcessSimLevelEditor
             pg.Show();   
         }
 
+        public static DataView GetBindable2DArray<T>(T[,] array)
+        {
+            DataTable dt = new DataTable();
+            for (int i = 0; i < array.GetLength(1); i++)
+            {
+                dt.Columns.Add(i.ToString(), typeof(Ref<T>));
+            }
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                DataRow dr = dt.NewRow();
+                dt.Rows.Add(dr);
+            }
+            DataView dv = new DataView(dt);
+
+            for (int i = 0; i < array.GetLength(0); i++) 
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    int a = i;
+                    int b = j;
+                    Ref<T> refT = new Ref<T>(() => array[a, b], z => { array[a, b] = z; });
+                    dv[i][j] = refT;
+                }
+            }
+            return dv;
+        }
         private void IterateThroughGrid()
         {
             /*foreach(System.Data.DataRowView dr in gameGrid.ItemsSource)
@@ -163,6 +190,13 @@ namespace ProcessSimLevelEditor
             {
                 MessageBox.Show(listVal.ToString());
             }
+        }
+
+        private void levelGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            DataGridTextColumn column = e.Column as DataGridTextColumn;
+            Binding binding = column.Binding as Binding;
+            binding.Path = new PropertyPath(binding.Path.Path + ".Value");
         }
     }
 }

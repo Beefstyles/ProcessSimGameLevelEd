@@ -171,6 +171,11 @@
             </ScrollViewer>
         </DockPanel>
         <StackPanel>
+            <DataGrid Name="levelGrid"
+                      RowHeaderWidth="0"
+                      ColumnHeaderHeight="0"
+                      AutoGenerateColumns="True"
+                      AutoGeneratingColumn="levelGrid_AutoGeneratingColumn"/>
             <Grid>
                 <ItemsControl x:Name="lst" ItemTemplate="{DynamicResource DataTemplate_Level1}"/>
             </Grid>
