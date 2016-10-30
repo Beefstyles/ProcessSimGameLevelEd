@@ -170,19 +170,17 @@
                 </StackPanel>
             </ScrollViewer>
         </DockPanel>
-        <StackPanel>
-            <DataGrid Name="levelGrid"
+
+            <Grid>
+                <DataGrid Name="levelGrid"
                       RowHeaderWidth="0"
                       ColumnHeaderHeight="0"
                       AutoGenerateColumns="True"
                       AutoGeneratingColumn="levelGrid_AutoGeneratingColumn"/>
-            <Grid>
-                <ItemsControl x:Name="lst" ItemTemplate="{DynamicResource DataTemplate_Level1}"/>
             </Grid>
-            <DockPanel DockPanel.Dock="Bottom">
-                <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues" Margin="5">Calculate Values</Button>
-                <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="IterateThroughList" Margin="5">Iter</Button>
-            </DockPanel>
-        </StackPanel>
+        <DockPanel DockPanel.Dock="Bottom">
+            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues" Margin="5">Calculate Values</Button>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="IterateThroughList" Margin="5">Iter</Button>
+        </DockPanel>
     </DockPanel>
 </Window>

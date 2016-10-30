@@ -26,6 +26,8 @@ namespace ProcessSimLevelEditor
         ComponentDict componentDictionary = new ComponentDict();
         ConditionsDict conditionsDictionary = new ConditionsDict();
         private List<List<int>> lsts = new List<List<int>>();
+        private int[,] m_intArray = new int[5, 5];
+
 
         public Dictionary<string, int> GridDictionary = new Dictionary<string, int>();
 
@@ -33,25 +35,22 @@ namespace ProcessSimLevelEditor
         {
             InitializeComponent();
             componentDictionary.InitiliaseCompDictionary();
-            
+
             //DataGrid();
-            TestList(10,10);
+            //TestList(10,10);
+            InitArray();
         }
 
-        private void TestList(int xSize, int ySize)
+        private void InitArray()
         {
-
-            for (int x = 0; x < xSize; x++)
+            for (int i = 0; i < 5; i++)
             {
-                lsts.Add(new List<int>());
-
-                for (int y = 0; y < ySize; y++)
+                for (int j = 0; j < 5; j++)
                 {
-                    lsts[x].Add(y * 10 + y);
+                    m_intArray[i, j] = (i * 10 + j);
                 }
             }
-
-            lst.ItemsSource = lsts;
+            levelGrid.ItemsSource = GetBindable2DArray<int>(m_intArray);
         }
 
         
@@ -111,11 +110,7 @@ namespace ProcessSimLevelEditor
         }
         private void IterateThroughGrid()
         {
-            /*foreach(System.Data.DataRowView dr in gameGrid.ItemsSource)
-            {
-                MessageBox.Show(dr[0].ToString());
-            }
-            */
+                MessageBox.Show(m_intArray[0,0].ToString());
         }
 
         private void CalculateTotalFlow()
