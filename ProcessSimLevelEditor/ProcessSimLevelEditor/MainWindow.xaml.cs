@@ -76,7 +76,7 @@ namespace ProcessSimLevelEditor
              var tb = sender as TextBox;
             CalculateTotalFlow();
             //MessageBox.Show("Total flow is " + totalFlow);
-            IterateThroughGrid();
+            //IterateThroughGrid();
             DisplayTotalFlow();
             PhaseGraph pg = new PhaseGraph();
             pg.Show();   
@@ -107,10 +107,6 @@ namespace ProcessSimLevelEditor
                 }
             }
             return dv;
-        }
-        private void IterateThroughGrid()
-        {
-                MessageBox.Show(m_intArray[0,0].ToString());
         }
 
         private void CalculateTotalFlow()
@@ -181,10 +177,7 @@ namespace ProcessSimLevelEditor
 
         private void IterateThroughList(object sender, RoutedEventArgs e)
         {
-            foreach(var listVal in lsts)
-            {
-                MessageBox.Show(listVal.ToString());
-            }
+            MessageBox.Show(m_intArray[0, 0].ToString());
         }
 
         private void levelGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
