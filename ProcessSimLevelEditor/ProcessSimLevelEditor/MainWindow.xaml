@@ -175,7 +175,11 @@
                 <DataGrid Name="levelGrid"
                       RowHeaderWidth="0"
                       ColumnHeaderHeight="0"
+                      CanUserResizeColumns="False"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
                       AutoGenerateColumns="True"
+
                       AutoGeneratingColumn="levelGrid_AutoGeneratingColumn"/>
             </Grid>
         <DockPanel DockPanel.Dock="Bottom">

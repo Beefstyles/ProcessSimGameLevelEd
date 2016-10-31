@@ -62,8 +62,6 @@ namespace ProcessSimLevelEditor
             {
                 dg.Add(new DataGridClass() { Pos = i });
             }
-
-
         }
 
         public class DataGridClass
@@ -167,8 +165,6 @@ namespace ProcessSimLevelEditor
                 MessageBox.Show("Error in parsing " + ex.Message);
             }
         }
-
-
 
         private void DisplayTotalFlow()
         {
