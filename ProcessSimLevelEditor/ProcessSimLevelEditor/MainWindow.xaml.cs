@@ -176,6 +176,11 @@ namespace ProcessSimLevelEditor
             MessageBox.Show(m_intArray[0, 0].ToString());
         }
 
+        private void ClearValues(object sender, RoutedEventArgs e)
+        {
+            m_intArray[0, 3] = 0;
+        }
+
         private void levelGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
             DataGridTextColumn column = e.Column as DataGridTextColumn;
