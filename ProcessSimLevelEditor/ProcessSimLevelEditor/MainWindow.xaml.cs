@@ -176,9 +176,15 @@ namespace ProcessSimLevelEditor
             MessageBox.Show(m_intArray[0, 0].ToString());
         }
 
-        private void ClearValues(object sender, RoutedEventArgs e)
+        private void ClearGraphValues(object sender, RoutedEventArgs e)
         {
-            m_intArray[0, 3] = 0;
+            for (int i = 0; i < m_intArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < m_intArray.GetLength(1); j++)
+                {
+                    m_intArray[i, j] = 0;
+                }
+            }
             levelGrid.Items.Refresh();
         }
 

@@ -200,7 +200,7 @@
         </Grid>
         <DockPanel DockPanel.Dock="Bottom">
             <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues" Margin="5">Calculate Values</Button>
-            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ClearValues" Margin="5">ClearValues</Button>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ClearGraphValues" Margin="5">ClearValues</Button>
         </DockPanel>
     </DockPanel>
 </Window>
