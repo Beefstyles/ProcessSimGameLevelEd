@@ -131,7 +131,8 @@
                     <TextBox Grid.Column="2" Grid.Row="11" Name="OctaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
                     <TextBlock Grid.Column="0" Grid.Row="12" Style="{StaticResource TextBlockCompStyle}">Nonane</TextBlock>
                 <TextBox Name="Nonane" Grid.Column="1" Grid.Row="12" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-                    <TextBlock Grid.Column="0" Grid.Row="13" Style="{StaticResource TextBlockCompStyle}">Decane</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="12" Name="NonaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
+                <TextBlock Grid.Column="0" Grid.Row="13" Style="{StaticResource TextBlockCompStyle}">Decane</TextBlock>
                     <TextBox Grid.Column="1" Grid.Row="13" Name="Decane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="14" Style="{StaticResource TextBlockCompStyle}">Water</TextBlock>
                     <TextBox Grid.Column="1" Grid.Row="14" Name="Water" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>

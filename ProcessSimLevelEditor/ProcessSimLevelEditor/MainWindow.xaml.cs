@@ -179,6 +179,7 @@ namespace ProcessSimLevelEditor
         private void ClearValues(object sender, RoutedEventArgs e)
         {
             m_intArray[0, 3] = 0;
+            levelGrid.Items.Refresh();
         }
 
         private void levelGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
