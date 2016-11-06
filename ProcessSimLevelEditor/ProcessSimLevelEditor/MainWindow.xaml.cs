@@ -194,5 +194,10 @@ namespace ProcessSimLevelEditor
             Binding binding = column.Binding as Binding;
             binding.Path = new PropertyPath(binding.Path.Path + ".Value");
         }
+
+        private void OutputJson(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
