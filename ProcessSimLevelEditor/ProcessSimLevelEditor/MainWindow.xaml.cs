@@ -197,7 +197,7 @@ namespace ProcessSimLevelEditor
 
         private void OutputJson(object sender, RoutedEventArgs e)
         {
-
+            string jsonData = JsonConvert.
         }
     }
 }
