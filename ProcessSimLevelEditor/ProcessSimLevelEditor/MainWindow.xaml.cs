@@ -207,6 +207,7 @@ namespace ProcessSimLevelEditor
             using (StreamWriter sw = new StreamWriter(myDocsPath + @"\jsonTest.txt"))
                 using (JsonWriter writer = new JsonTextWriter(sw))
             {
+                serialiser.Formatting = Formatting.Indented;
                 serialiser.Serialize(writer, levelOutput);
             }
         }
