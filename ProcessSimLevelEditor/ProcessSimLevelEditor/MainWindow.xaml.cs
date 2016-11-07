@@ -197,19 +197,47 @@ namespace ProcessSimLevelEditor
             binding.Path = new PropertyPath(binding.Path.Path + ".Value");
         }
 
+        
+
         private void OutputJson(object sender, RoutedEventArgs e)
         {
             LevelOutputJSON levelOutput = new LevelOutputJSON();
+
+            try
+            {
+                SetJsonDetails(levelOutput);
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Setting JsonValues did not work correctly, error code is " + error.Message);
+            }
+
+            try
+            {
+                WriteJsonFile(levelOutput);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Wring JsonValue output did not work correctly, error code is " + error.Message);
+            }
+        }
+        private void SetJsonDetails(LevelOutputJSON levelOutput)
+        {
             levelOutput.Title = "TestTitle";
+        }
+
+        private void WriteJsonFile(LevelOutputJSON levelOutput)
+        {
             JsonSerializer serialiser = new JsonSerializer();
             serialiser.NullValueHandling = NullValueHandling.Ignore;
             string myDocsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             using (StreamWriter sw = new StreamWriter(myDocsPath + @"\jsonTest.txt"))
-                using (JsonWriter writer = new JsonTextWriter(sw))
+            using (JsonWriter writer = new JsonTextWriter(sw))
             {
                 serialiser.Formatting = Formatting.Indented;
                 serialiser.Serialize(writer, levelOutput);
             }
         }
+
     }
 }
