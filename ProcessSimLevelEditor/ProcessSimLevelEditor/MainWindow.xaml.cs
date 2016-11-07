@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
 using System.Data;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace ProcessSimLevelEditor
 {
@@ -197,7 +199,16 @@ namespace ProcessSimLevelEditor
 
         private void OutputJson(object sender, RoutedEventArgs e)
         {
-            string jsonData = JsonConvert.
+            LevelOutputJSON levelOutput = new LevelOutputJSON();
+            levelOutput.Title = "TestTitle";
+            JsonSerializer serialiser = new JsonSerializer();
+            serialiser.NullValueHandling = NullValueHandling.Ignore;
+            string myDocsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            using (StreamWriter sw = new StreamWriter(myDocsPath + @"\jsonTest.txt"))
+                using (JsonWriter writer = new JsonTextWriter(sw))
+            {
+                serialiser.Serialize(writer, levelOutput);
+            }
         }
     }
 }
