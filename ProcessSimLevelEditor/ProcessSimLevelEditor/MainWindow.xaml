@@ -176,8 +176,7 @@
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
                     <TextBlock Style="{StaticResource MinorHeading}">Level Attributes</TextBlock>
-                    <TextBlock>Level Title</TextBlock>
-                        <Grid>
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
@@ -185,11 +184,21 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Column="0" Grid.Row="0">Level Title</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="0" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="1">Capex</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="1" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="2">Objective 1 Text</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="2" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="3">Objective 2 Text</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="3" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="4">Objective 3 Text</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="4" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         </Grid>
                 </StackPanel>
             </ScrollViewer>
