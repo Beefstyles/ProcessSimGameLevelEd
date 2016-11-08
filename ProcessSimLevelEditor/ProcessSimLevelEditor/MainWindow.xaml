@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProcessSimLevelEditor"
         xmlns:dc="GridHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="768" Width="768">
+        Title="MainWindow" Height="1024" Width="768">
 
     <Window.Resources>
         <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}">
@@ -150,6 +150,10 @@
                 <StackPanel HorizontalAlignment="Left">
                     <ScrollViewer></ScrollViewer>
                     <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock>Level Title</TextBlock>
+                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </WrapPanel>
                     <WrapPanel Orientation="Horizontal">
                         <TextBlock>Temp</TextBlock>
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
