@@ -148,12 +148,8 @@
         <DockPanel Dock="Right">
             <ScrollViewer>
                 <StackPanel HorizontalAlignment="Left">
-                    <ScrollViewer></ScrollViewer>
                     <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
-                    <WrapPanel Orientation="Horizontal">
-                        <TextBlock>Level Title</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
-                    </WrapPanel>
+
                     <WrapPanel Orientation="Horizontal">
                         <TextBlock>Temp</TextBlock>
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
@@ -179,6 +175,22 @@
                         <TextBlock>Phase</TextBlock>
                         <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </WrapPanel>
+                    <TextBlock Style="{StaticResource MinorHeading}">Level Attributes</TextBlock>
+                    <TextBlock>Level Title</TextBlock>
+                        <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0">Level Title</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="0" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="1">Capex</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="1" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        </Grid>
                 </StackPanel>
             </ScrollViewer>
         </DockPanel>
