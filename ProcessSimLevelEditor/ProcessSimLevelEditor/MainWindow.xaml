@@ -65,29 +65,29 @@
 
         <DockPanel Dock="Left">
             <ScrollViewer>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
@@ -95,44 +95,44 @@
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Column="0" Grid.Row ="0" Margin="5">Component</TextBlock>
                     <TextBlock Grid.Column="1" Grid.Row ="0" Margin="5">Mass Flow Input</TextBlock>
-                <TextBlock Grid.Column="2" Grid.Row="0" Margin="5">VapourFrac</TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="0" Margin="5">VapourFrac</TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource TextBlockCompStyle}">Methane</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="1" Name="Methane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}" HorizontalAlignment="Stretch" Margin="36,5,5,5" Width="Auto"></TextBox>
-                <TextBox Grid.Column="2" Grid.Row="1" Name="MethaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" Name="Methane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}" HorizontalAlignment="Stretch" Margin="36,5,5,5" Width="Auto"></TextBox>
+                    <TextBox Grid.Column="2" Grid.Row="1" Name="MethaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
                     <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource TextBlockCompStyle}">Ethane</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="2" Name="Ethane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="2" Name="Ethane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBox Grid.Column="2" Grid.Row="2" Name="EthaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
-                <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource TextBlockCompStyle}">Propane</TextBlock>
-                <TextBox  Grid.Column="1" Grid.Row="3" Name="Propane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource TextBlockCompStyle}">Propane</TextBlock>
+                    <TextBox  Grid.Column="1" Grid.Row="3" Name="Propane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBox Grid.Column="2" Grid.Row="3" Name="PropaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
                     <TextBlock Grid.Column="0" Grid.Row="4" Style="{StaticResource TextBlockCompStyle}">NButane</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="4" Name="NButane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="4" Name="NButane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBox Grid.Column="2" Grid.Row="4" Name="NButaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
-                <TextBlock Grid.Column="0" Grid.Row="5" Style="{StaticResource TextBlockCompStyle}">IButane</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="5" Name="IButane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="5" Style="{StaticResource TextBlockCompStyle}">IButane</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="5" Name="IButane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBox Grid.Column="2" Grid.Row="5" Name="IButaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
                     <TextBlock Grid.Column="0" Grid.Row="6">NPentane</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="6" Name="NPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="6" Name="NPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBox Grid.Column="2" Grid.Row="6" Name="NPentaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
                     <TextBlock Grid.Column="0" Grid.Row="7" Style="{StaticResource TextBlockCompStyle}">IPentane</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="7" Name="IPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBox Grid.Column="1" Grid.Row="7" Name="IPentane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBox Grid.Column="2" Grid.Row="7" Name="IPentaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
                     <TextBlock Grid.Column="0" Grid.Row="8" Style="{StaticResource TextBlockCompStyle}">Hexane</TextBlock>
-                <TextBox Name="Hexane" Grid.Column="1" Grid.Row="8" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBox Name="Hexane" Grid.Column="1" Grid.Row="8" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBox Grid.Column="2" Grid.Row="8" Name="HexaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
-                <TextBlock Grid.Column="0" Grid.Row="9" Style="{StaticResource TextBlockCompStyle}">Benzene</TextBlock>
-                <TextBox Name="Benzene" Grid.Column="1" Grid.Row="9" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="9" Style="{StaticResource TextBlockCompStyle}">Benzene</TextBlock>
+                    <TextBox Name="Benzene" Grid.Column="1" Grid.Row="9" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBox Grid.Column="2" Grid.Row="9" Name="BenzeneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
                     <TextBlock Grid.Column="0" Grid.Row="10" Style="{StaticResource TextBlockCompStyle}">Heptane</TextBlock>
-                <TextBox Name="Heptane" Grid.Column="1" Grid.Row="10" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBox Name="Heptane" Grid.Column="1" Grid.Row="10" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBox Grid.Column="2" Grid.Row="10" Name="HeptaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
-                <TextBlock Grid.Column="0" Grid.Row="11" Style="{StaticResource TextBlockCompStyle}">Octane</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="11" Name="Octane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}" Margin="0,5,5,0" VerticalAlignment="Top"></TextBox>
+                    <TextBlock Grid.Column="0" Grid.Row="11" Style="{StaticResource TextBlockCompStyle}">Octane</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="11" Name="Octane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}" Margin="0,5,5,0" VerticalAlignment="Top"></TextBox>
                     <TextBox Grid.Column="2" Grid.Row="11" Name="OctaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
                     <TextBlock Grid.Column="0" Grid.Row="12" Style="{StaticResource TextBlockCompStyle}">Nonane</TextBlock>
-                <TextBox Name="Nonane" Grid.Column="1" Grid.Row="12" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    <TextBox Name="Nonane" Grid.Column="1" Grid.Row="12" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBox Grid.Column="2" Grid.Row="12" Name="NonaneVapFrac" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" TextChanged="ConditionsTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"/>
-                <TextBlock Grid.Column="0" Grid.Row="13" Style="{StaticResource TextBlockCompStyle}">Decane</TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="13" Style="{StaticResource TextBlockCompStyle}">Decane</TextBlock>
                     <TextBox Grid.Column="1" Grid.Row="13" Name="Decane" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="14" Style="{StaticResource TextBlockCompStyle}">Water</TextBlock>
                     <TextBox Grid.Column="1" Grid.Row="14" Name="Water" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
@@ -142,7 +142,7 @@
                     <TextBox Grid.Column="1" Grid.Row="16" Name="CO2" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     <TextBlock Grid.Column="0" Grid.Row="17" Style="{StaticResource TextBlockCompStyle}">H2S</TextBlock>
                     <TextBox Grid.Column="1" Grid.Row="17" Name="H2S" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="ComponentTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
-            </Grid>
+                </Grid>
             </ScrollViewer>
         </DockPanel>
         <DockPanel Dock="Right">
@@ -188,18 +188,21 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Column="0" Grid.Row="0">Level Title</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="0" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="1">Capex</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="1" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        <TextBlock Grid.Column="0" Grid.Row="2">Objective 1 Text</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="2" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        <TextBlock Grid.Column="0" Grid.Row="3">Objective 2 Text</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="3" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        <TextBlock Grid.Column="0" Grid.Row="4">Objective 3 Text</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="4" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </Grid>
+                        <TextBlock Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">Objective 1 Text</TextBlock>
+                        <TextBox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="0,5,53,5"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" >Objective 2 Text</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBlock Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2">Objective 3 Text</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                    </Grid>
                 </StackPanel>
             </ScrollViewer>
         </DockPanel>
@@ -218,7 +221,7 @@
                         <Setter Property="Width" Value="75"/>
                         <Setter Property="Height" Value="50"/>
                         <Setter Property="FontSize" Value="20"/>
-                        
+
                     </Style>
                 </DataGrid.CellStyle>
             </DataGrid>
