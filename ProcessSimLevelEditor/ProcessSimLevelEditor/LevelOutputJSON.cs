@@ -14,6 +14,8 @@ namespace ProcessSimLevelEditor
         public int Capex;
         public int LevelInletTemp;
         public int LevelInletPress;
+        public int AtmosphericTemp;
+        public int AtmosphericPress;
         public string Objective1Text;
         public string Objective2Text;
         public string Objective3Text;

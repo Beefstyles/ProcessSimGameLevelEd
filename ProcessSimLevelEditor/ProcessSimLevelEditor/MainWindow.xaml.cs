@@ -40,10 +40,10 @@ namespace ProcessSimLevelEditor
 
             //DataGrid();
             //TestList(10,10);
-            InitArray();
+            InitGridArray();
         }
 
-        private void InitArray()
+        private void InitGridArray()
         {
             for (int i = 0; i < 5; i++)
             {
