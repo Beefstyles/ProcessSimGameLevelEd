@@ -14,6 +14,8 @@ namespace ProcessSimLevelEditor
         {
             ConditionsDictionary.Add("Temperature", 0);
             ConditionsDictionary.Add("Pressure", 0);
+            ConditionsDictionary.Add("AtmosphericTemp", 0);
+            ConditionsDictionary.Add("AtmosphericPress",0)
         }
     }
 
