@@ -148,14 +148,14 @@ namespace ProcessSimLevelEditor
 
         private void ConditionsTextBoxChange(object sender, TextChangedEventArgs e)
         {
-            int conditon;
+            int condition;
             try
             {
                 var textBox = sender as TextBox;
-                Int32.TryParse(textBox.Text, out conditon);
+                Int32.TryParse(textBox.Text, out condition);
                 try
                 {
-                    conditionsDictionary.ConditionsDictionary[textBox.Name] = conditon;
+                    conditionsDictionary.ConditionsDictionary[textBox.Name] = condition;
                 }
                 catch (Exception ex)
                 {
