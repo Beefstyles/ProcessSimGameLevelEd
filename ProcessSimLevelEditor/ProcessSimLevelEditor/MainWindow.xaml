@@ -153,33 +153,53 @@
         <DockPanel Dock="Right">
             <ScrollViewer>
                 <StackPanel HorizontalAlignment="Left">
-                    <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
 
-                    <WrapPanel Orientation="Horizontal">
-                        <TextBlock>Temp</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
-                    </WrapPanel>
-                    <WrapPanel Orientation="Horizontal">
-                        <TextBlock>Pressure</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" Style="{StaticResource TextBoxStyle}"></TextBox>
-                    </WrapPanel>
-                    <WrapPanel Orientation="Horizontal">
-                        <TextBlock>XGrid</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="XGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
-                    </WrapPanel>
-                    <WrapPanel Orientation="Horizontal">
-                        <TextBlock>YGrid</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
-                    </WrapPanel>
-                    <TextBlock Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
-                    <WrapPanel Orientation="Horizontal">
-                        <TextBlock>TotalFlow</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
-                    </WrapPanel>
-                    <WrapPanel Orientation="Horizontal">
-                        <TextBlock>Phase</TextBlock>
-                        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
-                    </WrapPanel>
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock>Temp</TextBlock>
+                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock>Pressure</TextBlock>
+                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock>XGrid</TextBlock>
+                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="XGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock>YGrid</TextBlock>
+                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        </WrapPanel>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock>TotalFlow</TextBlock>
+                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        </WrapPanel>
+                        <WrapPanel Orientation="Horizontal">
+                            <TextBlock>Phase</TextBlock>
+                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        </WrapPanel>
+                    </Grid>
                     <TextBlock Style="{StaticResource MinorHeading}">Level Attributes</TextBlock>
                     <Grid>
                         <Grid.ColumnDefinitions>
