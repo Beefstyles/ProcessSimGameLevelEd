@@ -161,25 +161,23 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <TextBlock Style="{StaticResource MinorHeading}">Input Values</TextBlock>
+                        <TextBlock HorizontalAlignment ="Center" Grid.ColumnSpan ="2" Grid.Column ="0" Grid.Row ="0"  Style="{StaticResource MinorHeading}">Input Values</TextBlock>
 
-                        <WrapPanel Orientation="Horizontal">
-                            <TextBlock>Temp</TextBlock>
-                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel Orientation="Horizontal">
-                            <TextBlock>Pressure</TextBlock>
-                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel Orientation="Horizontal">
-                            <TextBlock>XGrid</TextBlock>
-                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="XGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel Orientation="Horizontal">
-                            <TextBlock>YGrid</TextBlock>
-                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
+                        <TextBlock Grid.Column ="0" Grid.Row ="1">Temp</TextBlock>
+                        <TextBox Grid.Column ="1" Grid.Row ="1" AcceptsReturn="True" TextWrapping="Wrap" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBlock Grid.Column ="0" Grid.Row ="2">Pressure</TextBlock>
+                        <TextBox  Grid.Column ="1" Grid.Row ="2" AcceptsReturn="True" TextWrapping="Wrap" Name="Pressure" Style="{StaticResource TextBoxStyle}"></TextBox>
+
+                        <TextBlock Grid.Column ="0" Grid.Row ="3">XGrid</TextBlock>
+                        <TextBox Grid.Column ="1" Grid.Row ="3" AcceptsReturn="True" TextWrapping="Wrap" Name="XGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
+
+                        <TextBlock Grid.Column ="0" Grid.Row ="4">YGrid</TextBlock>
+                        <TextBox Grid.Column ="1" Grid.Row ="4" AcceptsReturn="True" TextWrapping="Wrap" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
+
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
