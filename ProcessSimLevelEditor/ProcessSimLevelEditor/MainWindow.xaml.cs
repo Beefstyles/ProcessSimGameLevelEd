@@ -114,14 +114,12 @@ namespace ProcessSimLevelEditor
             totalFlow = componentDictionary.ComponentDictionary.Sum(x => x.Value);
         }
 
+    
+        //Added to textbox input that do not allow for input of anything other than numerical values
         private void NunberValTextBox(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+");
-            e.Handled = regex.IsMatch(e.Text);
-            if (e.Handled)
-            {
-                MessageBox.Show("Enter only numerical values here");
-            }
+            Regex rgx = new Regex("[^0-9.0]+");
+            e.Handled = rgx.IsMatch(e.Text);
         }
 
         private void ComponentTextBoxChange(object sender, TextChangedEventArgs e)
