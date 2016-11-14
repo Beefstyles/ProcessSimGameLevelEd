@@ -189,16 +189,15 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <TextBlock Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
-                        <WrapPanel Orientation="Horizontal">
-                            <TextBlock>TotalFlow</TextBlock>
-                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
-                        <WrapPanel Orientation="Horizontal">
-                            <TextBlock>Phase</TextBlock>
-                            <TextBox AcceptsReturn="True" TextWrapping="Wrap" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        </WrapPanel>
+                        <TextBlock Grid.Column ="0" Grid.Row ="0" Grid.ColumnSpan ="2" Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
+
+                        <TextBlock Grid.Column ="0" Grid.Row ="1">TotalFlow</TextBlock>
+                        <TextBox Grid.Column ="1" Grid.Row ="1" AcceptsReturn="True" TextWrapping="Wrap" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
+
+                        <TextBlock Grid.Column ="0" Grid.Row ="2">Phase</TextBlock>
+                        <TextBox Grid.Column ="1" Grid.Row ="2" AcceptsReturn="True" TextWrapping="Wrap" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </Grid>
                     <TextBlock Style="{StaticResource MinorHeading}">Level Attributes</TextBlock>
                     <Grid>
