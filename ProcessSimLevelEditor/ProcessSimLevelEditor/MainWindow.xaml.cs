@@ -16,6 +16,7 @@ using System.Text.RegularExpressions;
 using System.Data;
 using Newtonsoft.Json;
 using System.IO;
+using Microsoft.Win32;
 
 namespace ProcessSimLevelEditor
 {
@@ -260,5 +261,14 @@ namespace ProcessSimLevelEditor
             }
         }
 
+        private void OpenFileButton(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.json*)|All files (*.*)";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                MessageBox.Show("Open!");
+            }
+        }
     }
 }
