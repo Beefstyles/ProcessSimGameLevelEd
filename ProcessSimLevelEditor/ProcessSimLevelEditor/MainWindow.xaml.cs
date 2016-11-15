@@ -28,6 +28,7 @@ namespace ProcessSimLevelEditor
         private int totalFlow = 0;
         ComponentDict componentDictionary = new ComponentDict();
         ConditionsDict conditionsDictionary = new ConditionsDict();
+        LevelAttribStringsDict levelAttribStringsDictionary = new LevelAttribStringsDict();
         private List<List<int>> lsts = new List<List<int>>();
         private int[,] m_intArray = new int[5, 5];
 
@@ -38,6 +39,8 @@ namespace ProcessSimLevelEditor
         {
             InitializeComponent();
             componentDictionary.InitiliaseCompDictionary();
+            conditionsDictionary.InitCondDict();
+            levelAttribStringsDictionary.InitLevelAttribStringsDictionary();
 
             //DataGrid();
             //TestList(10,10);
@@ -167,6 +170,28 @@ namespace ProcessSimLevelEditor
             }
         }
 
+        private void LevelAttribStringTextBoxChange(object sender, TextChangedEventArgs e)
+        {
+            string attrib;
+            try
+            {
+                var textBox = sender as TextBox;
+                attrib = textBox.Text;
+                try
+                {
+                    levelAttribStringsDictionary.LevelAttribStringsDictionary[textBox.Name] = attrib;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error in adding to level attribs string dictionary " + ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in parsing " + ex.Message);
+            }
+        }
+
         private void DisplayTotalFlow()
         {
             TotalFlowCalc.Text = totalFlow.ToString();
@@ -245,7 +270,7 @@ namespace ProcessSimLevelEditor
             IPentane, Hexane, Benzene, Heptane, Octane, Nonane, Decane,
             Water, Nitrogen, CO2, H2S;
             */
-            levelOutput.Title = Title;
+            //levelOutput.Title = ;
             
             
         }
