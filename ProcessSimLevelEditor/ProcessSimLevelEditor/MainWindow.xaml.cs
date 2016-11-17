@@ -28,7 +28,7 @@ namespace ProcessSimLevelEditor
         private int totalFlow = 0;
         ComponentDict componentDictionary = new ComponentDict();
         ConditionsDict conditionsDictionary = new ConditionsDict();
-        LevelAttribStringsDict levelAttribStringsDictionary = new LevelAttribStringsDict();
+        LevelAttribDicts levelAttribDictionary = new LevelAttribDicts();
         private List<List<int>> lsts = new List<List<int>>();
         private int[,] m_intArray = new int[10, 10];
 
@@ -38,15 +38,19 @@ namespace ProcessSimLevelEditor
         public MainWindow()
         {
             InitializeComponent();
-            componentDictionary.InitiliaseCompDictionary();
-            conditionsDictionary.InitCondDict();
-            levelAttribStringsDictionary.InitLevelAttribStringsDictionary();
-
+            
             //DataGrid();
             //TestList(10,10);
             InitGridArray(10, 10);
         }
 
+        private void InitialiseAllDictionaries()
+        {
+            componentDictionary.InitiliaseCompDictionary();
+            conditionsDictionary.InitCondDict();
+            levelAttribDictionary.InitLevelAttribStringsDictionary();
+            levelAttribDictionary.InitLevelAttribFloatsDictionary();
+        }
         private void InitGridArray(int maxX, int maxY)
         {
             for (int i = 0; i < maxX; i++)

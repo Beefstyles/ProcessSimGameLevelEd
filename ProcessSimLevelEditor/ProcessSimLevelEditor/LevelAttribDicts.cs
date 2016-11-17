@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProcessSimLevelEditor
 {
-    class LevelAttribStringsDict
+    class LevelAttribDicts
     {
         public Dictionary<string, string> LevelAttribStringsDictionary = new Dictionary<string, string>();
+        public Dictionary<string, string> LevelAttribFloatDictionary = new Dictionary<string, string>();
 
         public void InitLevelAttribStringsDictionary()
         {
@@ -16,6 +17,11 @@ namespace ProcessSimLevelEditor
             LevelAttribStringsDictionary.Add("Objective1Text", "");
             LevelAttribStringsDictionary.Add("Objective2Text", "");
             LevelAttribStringsDictionary.Add("Objective3Text", "");
+        }
+
+        public void InitLevelAttribFloatsDictionary()
+        {
+
         }
     }
 }
