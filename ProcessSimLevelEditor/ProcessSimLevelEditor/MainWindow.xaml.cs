@@ -31,6 +31,8 @@ namespace ProcessSimLevelEditor
         LevelAttribDicts levelAttribDictionary = new LevelAttribDicts();
         private List<List<int>> lsts = new List<List<int>>();
         private int[,] m_intArray = new int[10, 10];
+        private int xGridValue = 10;
+        private int yGridValue = 10;
 
 
         public Dictionary<string, int> GridDictionary = new Dictionary<string, int>();
@@ -38,10 +40,12 @@ namespace ProcessSimLevelEditor
         public MainWindow()
         {
             InitializeComponent();
-            
+
             //DataGrid();
             //TestList(10,10);
-            InitGridArray(10, 10);
+            ResizeGrid();
+            //m_intArray = new int[11, 11];
+            //InitGridArray(11, 11);
         }
 
         private void InitialiseAllDictionaries()
@@ -81,13 +85,26 @@ namespace ProcessSimLevelEditor
 
         private void CalculateValues(object sender, RoutedEventArgs e)
         {
-             var tb = sender as TextBox;
+            
+            var tb = sender as TextBox;
             CalculateTotalFlow();
             //MessageBox.Show("Total flow is " + totalFlow);
             //IterateThroughGrid();
             DisplayTotalFlow();
             PhaseGraph pg = new PhaseGraph();
-            pg.Show();   
+            pg.Show();
+        }
+
+        private void ResizeGridHandler(object sender, RoutedEventArgs e)
+        {
+
+            ResizeGrid();
+        }
+
+        private void ResizeGrid()
+        {
+            m_intArray = new int[xGridValue, yGridValue];
+            InitGridArray(xGridValue, yGridValue);
         }
 
         public static DataView GetBindable2DArray<T>(T[,] array)
@@ -128,6 +145,37 @@ namespace ProcessSimLevelEditor
         {
             Regex rgx = new Regex("[^0-9.0]+");
             e.Handled = rgx.IsMatch(e.Text);
+        }
+
+        private void GridValuesChanged(object sender, TextChangedEventArgs e)
+        {
+            int gridVal;
+            try
+            {
+                var textBox = sender as TextBox;
+                Int32.TryParse(textBox.Text, out gridVal);
+                try
+                {
+                    switch (textBox.Name)
+                    {
+                        case ("XGrid"):
+                            xGridValue = gridVal;
+                            break;
+                        case ("YGrid"):
+                            yGridValue = gridVal;
+                            break;
+                    }
+                    conditionsDictionary.ConditionsDictionary[textBox.Name] = gridVal;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error in adding to conditions dictionary " + ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in parsing " + ex.Message);
+            }
         }
 
         private void ComponentTextBoxChange(object sender, TextChangedEventArgs e)
@@ -183,7 +231,7 @@ namespace ProcessSimLevelEditor
                 attrib = textBox.Text;
                 try
                 {
-                    levelAttribStringsDictionary.LevelAttribStringsDictionary[textBox.Name] = attrib;
+                    levelAttribDictionary.LevelAttribStringsDictionary[textBox.Name] = attrib;
                 }
                 catch (Exception ex)
                 {
@@ -253,10 +301,10 @@ namespace ProcessSimLevelEditor
         {
             try
             {
-                levelOutput.Title = levelAttribStringsDictionary.LevelAttribStringsDictionary["Title"];
-                levelOutput.Objective1Text = levelAttribStringsDictionary.LevelAttribStringsDictionary["Objective1Text"];
-                levelOutput.Objective1Text = levelAttribStringsDictionary.LevelAttribStringsDictionary["Objective2Text"];
-                levelOutput.Objective1Text = levelAttribStringsDictionary.LevelAttribStringsDictionary["Objective3Text"];
+                levelOutput.Title = levelAttribDictionary.LevelAttribStringsDictionary["Title"];
+                levelOutput.Objective1Text = levelAttribDictionary.LevelAttribStringsDictionary["Objective1Text"];
+                levelOutput.Objective1Text = levelAttribDictionary.LevelAttribStringsDictionary["Objective2Text"];
+                levelOutput.Objective1Text = levelAttribDictionary.LevelAttribStringsDictionary["Objective3Text"];
             }
 
             catch (Exception e)

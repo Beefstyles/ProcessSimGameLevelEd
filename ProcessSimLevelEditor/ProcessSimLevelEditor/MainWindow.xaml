@@ -279,6 +279,7 @@
             <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues" Margin="5">Calculate Values</Button>
             <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ClearGraphValues" Margin="5">ClearValues</Button>
             <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="OutputJson" Margin="5">Output Json</Button>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ResizeGridHandler" Margin="5" Content="Resize Grid"/>
         </DockPanel>
     </DockPanel>
 </Window>

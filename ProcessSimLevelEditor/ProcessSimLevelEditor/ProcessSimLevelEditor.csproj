@@ -67,7 +67,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="LevelAttribStringsDict.cs" />
+    <Compile Include="LevelAttribDicts.cs" />
     <Compile Include="LevelOutputJSON.cs" />
     <Compile Include="Ref.cs" />
     <Page Include="MainWindow.xaml">

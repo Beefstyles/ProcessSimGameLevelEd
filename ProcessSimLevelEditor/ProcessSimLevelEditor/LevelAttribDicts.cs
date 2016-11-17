@@ -21,7 +21,7 @@ namespace ProcessSimLevelEditor
 
         public void InitLevelAttribFloatsDictionary()
         {
-
+            LevelAttribFloatDictionary.Add("Title", "");
         }
     }
 }
