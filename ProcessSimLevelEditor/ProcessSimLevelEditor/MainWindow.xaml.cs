@@ -30,7 +30,7 @@ namespace ProcessSimLevelEditor
         ConditionsDict conditionsDictionary = new ConditionsDict();
         LevelAttribStringsDict levelAttribStringsDictionary = new LevelAttribStringsDict();
         private List<List<int>> lsts = new List<List<int>>();
-        private int[,] m_intArray = new int[5, 5];
+        private int[,] m_intArray = new int[10, 10];
 
 
         public Dictionary<string, int> GridDictionary = new Dictionary<string, int>();
@@ -44,14 +44,14 @@ namespace ProcessSimLevelEditor
 
             //DataGrid();
             //TestList(10,10);
-            InitGridArray();
+            InitGridArray(10, 10);
         }
 
-        private void InitGridArray()
+        private void InitGridArray(int maxX, int maxY)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < maxX; i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < maxY; j++)
                 {
                     m_intArray[i, j] = (i * 10 + j);
                 }
@@ -242,7 +242,7 @@ namespace ProcessSimLevelEditor
             }
             catch (Exception error)
             {
-                MessageBox.Show("Wring JsonValue output did not work correctly, error code is " + error.Message);
+                MessageBox.Show("Writing JsonValue output did not work correctly, error code is " + error.Message);
             }
         }
         private void SetJsonDetails(LevelOutputJSON levelOutput)
@@ -255,9 +255,9 @@ namespace ProcessSimLevelEditor
                 levelOutput.Objective1Text = levelAttribStringsDictionary.LevelAttribStringsDictionary["Objective3Text"];
             }
 
-            catch
+            catch (Exception e)
             {
-                MessageBox.Show("Error in setting the json details, look into the SetJsonDetails func");
+                MessageBox.Show("Error in setting the json details, look into the SetJsonDetails func: " + e.Message);
             }
             
             /*
@@ -284,8 +284,6 @@ namespace ProcessSimLevelEditor
             Water, Nitrogen, CO2, H2S;
             */
             //levelOutput.Title = ;
-
-
         }
 
         private void WriteJsonFile(LevelOutputJSON levelOutput)
