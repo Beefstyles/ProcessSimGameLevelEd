@@ -247,6 +247,19 @@ namespace ProcessSimLevelEditor
         }
         private void SetJsonDetails(LevelOutputJSON levelOutput)
         {
+            try
+            {
+                levelOutput.Title = levelAttribStringsDictionary.LevelAttribStringsDictionary["Title"];
+                levelOutput.Objective1Text = levelAttribStringsDictionary.LevelAttribStringsDictionary["Objective1Text"];
+                levelOutput.Objective1Text = levelAttribStringsDictionary.LevelAttribStringsDictionary["Objective2Text"];
+                levelOutput.Objective1Text = levelAttribStringsDictionary.LevelAttribStringsDictionary["Objective3Text"];
+            }
+
+            catch
+            {
+                MessageBox.Show("Error in setting the json details, look into the SetJsonDetails func");
+            }
+            
             /*
             public string Title;
             public int GridXSize;
@@ -271,8 +284,8 @@ namespace ProcessSimLevelEditor
             Water, Nitrogen, CO2, H2S;
             */
             //levelOutput.Title = ;
-            
-            
+
+
         }
 
         private void WriteJsonFile(LevelOutputJSON levelOutput)
