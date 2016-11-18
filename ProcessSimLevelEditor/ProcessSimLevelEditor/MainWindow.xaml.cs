@@ -335,7 +335,6 @@ namespace ProcessSimLevelEditor
             IPentane, Hexane, Benzene, Heptane, Octane, Nonane, Decane,
             Water, Nitrogen, CO2, H2S;
             */
-            //levelOutput.Title = ;
         }
 
         private void WriteJsonFile(LevelOutputJSON levelOutput)
