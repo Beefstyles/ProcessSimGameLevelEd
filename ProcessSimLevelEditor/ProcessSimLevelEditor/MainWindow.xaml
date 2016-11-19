@@ -56,6 +56,10 @@
                     <Separator />
                     <MenuItem Header="_Exit" />
                 </MenuItem>
+                <MenuItem Header="_Edit">
+                    <MenuItem Header="_Clear Grid Values" Click="ClearGraphValues" />
+
+                </MenuItem>
             </Menu>
 
             <StackPanel>
@@ -178,7 +182,7 @@
 
                         <TextBlock Grid.Column ="0" Grid.Row ="4">YGrid</TextBlock>
                         <TextBox Grid.Column ="1" Grid.Row ="4" AcceptsReturn="False" TextWrapping="NoWrap" TextChanged="GridValuesChanged" PreviewTextInput="NunberValTextBox" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        <Button Grid.Column ="0" Grid.Row ="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ResizeGridHandler" Margin="5" Content="Resize Grid"/>
+                        <Button Grid.Column ="0" Grid.Row ="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ResizeGridHandler" Margin="5" Content="Resize Grid"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>

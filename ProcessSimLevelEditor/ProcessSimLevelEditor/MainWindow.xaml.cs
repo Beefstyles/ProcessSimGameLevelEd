@@ -169,7 +169,7 @@ namespace ProcessSimLevelEditor
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error in adding to conditions dictionary " + ex.Message);
+                    MessageBox.Show("Error in parsing grid val " + ex.Message);
                 }
             }
             catch (Exception ex)
