@@ -58,6 +58,7 @@
                 </MenuItem>
                 <MenuItem Header="_Edit">
                     <MenuItem Header="_Clear Grid Values" Click="ClearGraphValues" />
+                    <MenuItem Header="_Resize Grid" Click="ResizeGridHandler"/>
 
                 </MenuItem>
             </Menu>
