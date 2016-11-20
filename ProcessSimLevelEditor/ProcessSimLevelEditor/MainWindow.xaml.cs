@@ -359,5 +359,11 @@ namespace ProcessSimLevelEditor
                 MessageBox.Show("Open!");
             }
         }
+
+        private void DisplayItemLegend(object sender, RoutedEventArgs e)
+        {
+            PhaseGraph pg = new PhaseGraph();
+            pg.Show();
+        }
     }
 }

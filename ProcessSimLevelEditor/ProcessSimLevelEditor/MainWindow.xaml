@@ -61,6 +61,11 @@
                     <MenuItem Header="_Resize Grid" Click="ResizeGridHandler"/>
                     <MenuItem Header="_CalculateValues" Click="CalculateValues"/>
                 </MenuItem>
+                <MenuItem Header="_Display Legend" Click="MenuItem_Click">
+                    <MenuItem Header="_Clear Grid Values" Click="ClearGraphValues" />
+                    <MenuItem Header="_Resize Grid" Click="ResizeGridHandler"/>
+                    <MenuItem Header="_CalculateValues" Click="CalculateValues"/>
+                </MenuItem>
             </Menu>
 
             <StackPanel>
@@ -280,8 +285,6 @@
                 </DataGrid.CellStyle>
             </DataGrid>
         </Grid>
-        <DockPanel DockPanel.Dock="Bottom">
-            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues" Margin="5">Calculate Values</Button>
-        </DockPanel>
+        <DockPanel DockPanel.Dock="Bottom"/>
     </DockPanel>
 </Window>
