@@ -52,14 +52,14 @@
                 <MenuItem Header="_File">
                     <MenuItem Header="_New" />
                     <MenuItem Header="_Open" Click="OpenFileButton"/>
-                    <MenuItem Header="_Save" />
+                    <MenuItem Header="_Save" Click ="OutputJson"/>
                     <Separator />
                     <MenuItem Header="_Exit" />
                 </MenuItem>
                 <MenuItem Header="_Edit">
                     <MenuItem Header="_Clear Grid Values" Click="ClearGraphValues" />
                     <MenuItem Header="_Resize Grid" Click="ResizeGridHandler"/>
-
+                    <MenuItem Header="_CalculateValues" Click="CalculateValues"/>
                 </MenuItem>
             </Menu>
 
@@ -183,7 +183,6 @@
 
                         <TextBlock Grid.Column ="0" Grid.Row ="4">YGrid</TextBlock>
                         <TextBox Grid.Column ="1" Grid.Row ="4" AcceptsReturn="False" TextWrapping="NoWrap" TextChanged="GridValuesChanged" PreviewTextInput="NunberValTextBox" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        <Button Grid.Column ="0" Grid.Row ="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ResizeGridHandler" Margin="5" Content="Resize Grid"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -283,8 +282,6 @@
         </Grid>
         <DockPanel DockPanel.Dock="Bottom">
             <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="CalculateValues" Margin="5">Calculate Values</Button>
-            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ClearGraphValues" Margin="5">ClearValues</Button>
-            <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="OutputJson" Margin="5">Output Json</Button>
         </DockPanel>
     </DockPanel>
 </Window>
