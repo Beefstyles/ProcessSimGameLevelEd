@@ -67,9 +67,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GridLegend.xaml.cs">
+      <DependentUpon>GridLegend.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LevelAttribDicts.cs" />
     <Compile Include="LevelOutputJSON.cs" />
     <Compile Include="Ref.cs" />
+    <Page Include="GridLegend.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
