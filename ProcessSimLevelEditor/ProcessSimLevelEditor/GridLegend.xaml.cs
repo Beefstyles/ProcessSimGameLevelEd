@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,15 @@ namespace ProcessSimLevelEditor
     /// </summary>
     public partial class GridLegend : Window
     {
+
+        public MainWindow mw;
+
         public GridLegend()
         {
             InitializeComponent();
         }
+
+
+
     }
 }

@@ -17,6 +17,7 @@ using System.Data;
 using Newtonsoft.Json;
 using System.IO;
 using Microsoft.Win32;
+using System.ComponentModel;
 
 namespace ProcessSimLevelEditor
 {
@@ -40,7 +41,7 @@ namespace ProcessSimLevelEditor
         public MainWindow()
         {
             InitializeComponent();
-            gridLegend = new GridLegend();
+            
             //DataGrid();
             //TestList(10,10);
             ResizeGrid();
@@ -361,8 +362,15 @@ namespace ProcessSimLevelEditor
         }
 
         private void DisplayGridLegend(object sender, RoutedEventArgs e)
-        { 
+        {
+            SetDisplayGridLegend();
             gridLegend.Show();
         }
+
+        public void SetDisplayGridLegend()
+        {
+            gridLegend = new GridLegend();
+        }
+
     }
 }
