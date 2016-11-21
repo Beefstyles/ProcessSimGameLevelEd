@@ -17,6 +17,13 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
+        <TextBlock Grid.Column="0" Grid.Row="0">Legend Symbol</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="0">Legend Description</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1">S</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="1">Start Block - Can only have 1</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="2">E</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="2">Exit Block - Can only have 1</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="3">R</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="3">Random Rock Block</TextBlock>
     </Grid>
 </Window>

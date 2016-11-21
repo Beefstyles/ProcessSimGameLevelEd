@@ -61,10 +61,7 @@
                     <MenuItem Header="_Resize Grid" Click="ResizeGridHandler"/>
                     <MenuItem Header="_CalculateValues" Click="CalculateValues"/>
                 </MenuItem>
-                <MenuItem Header="_Display Legend" Click="MenuItem_Click">
-                    <MenuItem Header="_Clear Grid Values" Click="ClearGraphValues" />
-                    <MenuItem Header="_Resize Grid" Click="ResizeGridHandler"/>
-                    <MenuItem Header="_CalculateValues" Click="CalculateValues"/>
+                <MenuItem Header="_Display Legend" Click="DisplayGridLegend">
                 </MenuItem>
             </Menu>
 

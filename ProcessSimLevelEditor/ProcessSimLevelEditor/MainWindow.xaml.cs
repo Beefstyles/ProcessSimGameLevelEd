@@ -33,14 +33,14 @@ namespace ProcessSimLevelEditor
         private int[,] m_intArray = new int[10, 10];
         private int xGridValue = 10;
         private int yGridValue = 10;
-
+        GridLegend gridLegend;
 
         public Dictionary<string, int> GridDictionary = new Dictionary<string, int>();
 
         public MainWindow()
         {
             InitializeComponent();
-
+            gridLegend = new GridLegend();
             //DataGrid();
             //TestList(10,10);
             ResizeGrid();
@@ -360,10 +360,9 @@ namespace ProcessSimLevelEditor
             }
         }
 
-        private void DisplayItemLegend(object sender, RoutedEventArgs e)
-        {
-            PhaseGraph pg = new PhaseGraph();
-            pg.Show();
+        private void DisplayGridLegend(object sender, RoutedEventArgs e)
+        { 
+            gridLegend.Show();
         }
     }
 }
