@@ -41,12 +41,7 @@ namespace ProcessSimLevelEditor
         public MainWindow()
         {
             InitializeComponent();
-            
-            //DataGrid();
-            //TestList(10,10);
             ResizeGrid();
-            //m_intArray = new int[11, 11];
-            //InitGridArray(11, 11);
         }
 
         private void InitialiseAllDictionaries()
