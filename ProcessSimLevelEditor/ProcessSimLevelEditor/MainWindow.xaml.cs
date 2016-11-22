@@ -35,12 +35,14 @@ namespace ProcessSimLevelEditor
         private int xGridValue = 10;
         private int yGridValue = 10;
         GridLegend gridLegend;
+       
 
         public Dictionary<string, int> GridDictionary = new Dictionary<string, int>();
 
         public MainWindow()
         {
             InitializeComponent();
+ 
             ResizeGrid();
         }
 
@@ -62,8 +64,6 @@ namespace ProcessSimLevelEditor
             }
             levelGrid.ItemsSource = GetBindable2DArray<int>(m_intArray);
         }
-
-        
 
         private void DataGrid()
         {
@@ -93,7 +93,6 @@ namespace ProcessSimLevelEditor
 
         private void ResizeGridHandler(object sender, RoutedEventArgs e)
         {
-
             ResizeGrid();
         }
 
@@ -267,9 +266,7 @@ namespace ProcessSimLevelEditor
             DataGridTextColumn column = e.Column as DataGridTextColumn;
             Binding binding = column.Binding as Binding;
             binding.Path = new PropertyPath(binding.Path.Path + ".Value");
-        }
-
-        
+        } 
 
         private void OutputJson(object sender, RoutedEventArgs e)
         {
@@ -367,5 +364,9 @@ namespace ProcessSimLevelEditor
             gridLegend = new GridLegend();
         }
 
+        private void InputConditionsChanged(object sender, TextChangedEventArgs e)
+        {
+            MethaneVapFrac.Text = "23";
+        }
     }
 }

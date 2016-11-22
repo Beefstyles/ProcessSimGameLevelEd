@@ -178,7 +178,7 @@
                         <TextBlock Grid.Column ="0" Grid.Row ="1">Temp</TextBlock>
                         <TextBox Grid.Column ="1" Grid.Row ="1" AcceptsReturn="False" TextWrapping="NoWrap"  PreviewTextInput="NunberValTextBox" Name="Temperature" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column ="0" Grid.Row ="2">Pressure</TextBlock>
-                        <TextBox  Grid.Column ="1" Grid.Row ="2" AcceptsReturn="False" TextWrapping="NoWrap" PreviewTextInput="NunberValTextBox" Name="Pressure" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox  Grid.Column ="1" Grid.Row ="2" AcceptsReturn="False" TextWrapping="NoWrap" PreviewTextInput="NunberValTextBox" Name="Pressure" TextChanged="InputConditionsChanged" Style="{StaticResource TextBoxStyle}"></TextBox>
 
                         <TextBlock Grid.Column ="0" Grid.Row ="3">XGrid</TextBlock>
                         <TextBox Grid.Column ="1" Grid.Row ="3" AcceptsReturn="False" TextWrapping="NoWrap" TextChanged="GridValuesChanged" PreviewTextInput="NunberValTextBox" Name="XGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
