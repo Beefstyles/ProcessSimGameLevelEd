@@ -30,6 +30,7 @@ namespace ProcessSimLevelEditor
         ComponentDict componentDictionary = new ComponentDict();
         ConditionsDict conditionsDictionary = new ConditionsDict();
         LevelAttribDicts levelAttribDictionary = new LevelAttribDicts();
+        PhaseCalc phaseCalculation = new PhaseCalc();
         private List<List<int>> lsts = new List<List<int>>();
         private int[,] m_intArray = new int[10, 10];
         private int xGridValue = 10;
@@ -366,7 +367,7 @@ namespace ProcessSimLevelEditor
 
         private void InputConditionsChanged(object sender, TextChangedEventArgs e)
         {
-            MethaneVapFrac.Text = "23";
+            MethaneVapFrac.Text = phaseCalculation.ReturnPhase("Methane",10,10).ToString();
         }
     }
 }

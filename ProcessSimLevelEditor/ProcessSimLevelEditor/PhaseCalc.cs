@@ -8,7 +8,7 @@ namespace ProcessSimLevelEditor
 {
     class PhaseCalc
     {
-        public int ReturnPhase(Dictionary<string,float> CompDict, string componentName, int setTemp, int setPressure)
+        public int ReturnPhase(string componentName, int setTemp, int setPressure)
         {
             int returnPhase = 0;
             switch (componentName)
