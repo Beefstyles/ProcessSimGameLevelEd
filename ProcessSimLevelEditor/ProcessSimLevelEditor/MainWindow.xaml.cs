@@ -209,10 +209,11 @@ namespace ProcessSimLevelEditor
                     conditionsDictionary.ConditionsDictionary[textBox.Name] = condition;
                     switch (textBox.Text)
                     {
-                        case ("Pressure"):
+                        case ("InputPressure"):
                             currentPressure = condition;
+                            MessageBox.Show(currentPressure.ToString());
                             break;
-                        case ("Temperature"):
+                        case ("InputTemperature"):
                             currentTemperature = condition;
                             break;
                     }
@@ -377,6 +378,7 @@ namespace ProcessSimLevelEditor
 
         private void InputConditionsChanged(object sender, TextChangedEventArgs e)
         {
+            //MessageBox.Show("Current Temp is " + currentTemperature +" and " + currentPressure + " is pressure");
             MethaneVapFrac.Text = phaseCalculation.ReturnPhase("Methane", currentTemperature, currentPressure).ToString();
         }
     }
