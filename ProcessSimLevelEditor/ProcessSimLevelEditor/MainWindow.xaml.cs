@@ -35,6 +35,7 @@ namespace ProcessSimLevelEditor
         private int[,] m_intArray = new int[10, 10];
         private int xGridValue = 10;
         private int yGridValue = 10;
+        private int currentTemperature, currentPressure;
         GridLegend gridLegend;
        
 
@@ -206,6 +207,15 @@ namespace ProcessSimLevelEditor
                 try
                 {
                     conditionsDictionary.ConditionsDictionary[textBox.Name] = condition;
+                    switch (textBox.Text)
+                    {
+                        case ("Pressure"):
+                            currentPressure = condition;
+                            break;
+                        case ("Temperature"):
+                            currentTemperature = condition;
+                            break;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -367,7 +377,7 @@ namespace ProcessSimLevelEditor
 
         private void InputConditionsChanged(object sender, TextChangedEventArgs e)
         {
-            MethaneVapFrac.Text = phaseCalculation.ReturnPhase("Methane",10,10).ToString();
+            MethaneVapFrac.Text = phaseCalculation.ReturnPhase("Methane", currentTemperature, currentPressure).ToString();
         }
     }
 }
