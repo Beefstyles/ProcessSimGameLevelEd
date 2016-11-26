@@ -197,6 +197,19 @@ namespace ProcessSimLevelEditor
                             MessageBox.Show("Error in adding to component dictionary " + ex.Message);
                         }
                         break;
+                    case ("Cond_"):
+                        try
+                        {
+                            Int32.TryParse(textBox.Text, out condition);
+                            string outputComponent = textBox.Name.Remove(0, 5);
+                            conditionsDictionary.ConditionsDictionary[outputComponent] = condition;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error in adding to component dictionary " + ex.Message);
+                        }
+                        break;
+
                 }
                 
             }
