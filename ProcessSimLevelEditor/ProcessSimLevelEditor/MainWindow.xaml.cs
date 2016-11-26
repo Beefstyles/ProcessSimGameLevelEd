@@ -175,21 +175,30 @@ namespace ProcessSimLevelEditor
             }
         }
 
-        private void ComponentTextBoxChange(object sender, TextChangedEventArgs e)
+        private void ConditionTextBoxChange(object sender, TextChangedEventArgs e)
         {
-            int componentFrac;
+            int condition;
             try
             {
                 var textBox = sender as TextBox;
-                Int32.TryParse(textBox.Text, out componentFrac);
-                try
+                string origin = textBox.Name.Substring(0, 5);
+                
+                switch (origin)
                 {
-                    componentDictionary.ComponentDictionary[textBox.Name] = componentFrac;
+                    case ("Comp_"):
+                        try
+                        {
+                            Int32.TryParse(textBox.Text, out condition);
+                            string outputComponent = textBox.Name.Remove(0, 5);
+                            componentDictionary.ComponentDictionary[outputComponent] = condition;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error in adding to component dictionary " + ex.Message);
+                        }
+                        break;
                 }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Error in adding to component dictionary " + ex.Message);
-                }
+                
             }
             catch (Exception ex)
             {
