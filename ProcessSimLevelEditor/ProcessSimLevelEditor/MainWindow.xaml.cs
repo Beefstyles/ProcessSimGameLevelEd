@@ -231,38 +231,7 @@ namespace ProcessSimLevelEditor
             }
         }
 
-        private void ConditionsTextBoxChange(object sender, TextChangedEventArgs e)
-        {
-            int condition;
-            try
-            {
-                var textBox = sender as TextBox;
-                Int32.TryParse(textBox.Text, out condition);
-                try
-                {
-                    conditionsDictionary.ConditionsDictionary[textBox.Name] = condition;
-                    switch (textBox.Text)
-                    {
-                        case ("InputPressure"):
-                            currentPressure = condition;
-                            MessageBox.Show(currentPressure.ToString());
-                            break;
-                        case ("InputTemperature"):
-                            currentTemperature = condition;
-                            break;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error in adding to conditions dictionary " + ex.Message);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error in parsing " + ex.Message);
-            }
-        }
-
+      
         private void LevelAttribStringTextBoxChange(object sender, TextChangedEventArgs e)
         {
             string attrib;
@@ -412,7 +381,6 @@ namespace ProcessSimLevelEditor
 
         private void CalculatePhaseForComponents(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Current Temp is " + currentTemperature +" and " + currentPressure + " is pressure");
             MethaneVapFrac.Text = phaseCalculation.ReturnPhase("Methane", currentTemperature, currentPressure).ToString();
         }
     }
