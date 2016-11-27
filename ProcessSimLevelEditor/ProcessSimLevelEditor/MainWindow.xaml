@@ -187,10 +187,10 @@
                         <TextBox  Grid.Column ="1" Grid.Row ="4" AcceptsReturn="False" TextWrapping="NoWrap" PreviewTextInput="NunberValTextBox" Name="Cond_AtmosphericPress" TextChanged="ConditionTextBoxChange" Style="{StaticResource TextBoxStyle}"></TextBox>
 
                         <TextBlock Grid.Column ="0" Grid.Row ="5">XGrid</TextBlock>
-                        <TextBox Grid.Column ="1" Grid.Row ="5" AcceptsReturn="False" TextWrapping="NoWrap" TextChanged="GridValuesChanged" PreviewTextInput="NunberValTextBox" Name="XGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column ="1" Grid.Row ="5" AcceptsReturn="False" Name ="AtbS_XGrid" TextWrapping="NoWrap" TextChanged="ConditionTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
 
                         <TextBlock Grid.Column ="0" Grid.Row ="6">YGrid</TextBlock>
-                        <TextBox Grid.Column ="1" Grid.Row ="6" AcceptsReturn="False" TextWrapping="NoWrap" TextChanged="GridValuesChanged" PreviewTextInput="NunberValTextBox" Name="YGrid" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column ="1" Grid.Row ="6" AcceptsReturn="False" Name ="AtbS_YGrid" TextWrapping="NoWrap" TextChanged="ConditionTextBoxChange" PreviewTextInput="NunberValTextBox" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -239,13 +239,13 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Column="0" Grid.Row="0">Level Title</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="0" AcceptsReturn="False" TextWrapping="Wrap" TextChanged="ConditionTextBoxChange" Name ="Atrb_LevelTitle" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="0" AcceptsReturn="False" TextWrapping="Wrap" TextChanged="ConditionTextBoxChange" Name ="AtbS_LevelTitle" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="1">Capex</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="1" AcceptsReturn="False" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1" AcceptsReturn="False" TextWrapping="Wrap" Name ="AtbS_Capex" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">Objective 1 Text</TextBlock>
-                        <TextBox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="10,5,0,5" Width="134" Height="Auto" HorizontalAlignment="Left"></TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2" Name ="AtbS_Objective1Text" AcceptsReturn="False" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="10,5,0,5" Width="134" Height="Auto" HorizontalAlignment="Left"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" >Objective 2 Text</TextBlock>
-                        <TextBox Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="0,5,5,5" Width="103"></TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Name ="AtbS_Objective2Text" AcceptsReturn="False" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="0,5,5,5" Width="103"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2">Objective 3 Text</TextBlock>
                         <TextBox Grid.Row="8" Grid.ColumnSpan="2" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="0,5,5,5" Width="103"/>
                         <TextBlock Grid.Column="0" Grid.Row="8">Objective 1 Val</TextBlock>

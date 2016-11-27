@@ -17,7 +17,8 @@ namespace ProcessSimLevelEditor
             LevelAttribStringsDictionary.Add("Objective1Text", "");
             LevelAttribStringsDictionary.Add("Objective2Text", "");
             LevelAttribStringsDictionary.Add("Objective3Text", "");
-
+            LevelAttribStringsDictionary.Add("XGrid", "");
+            LevelAttribStringsDictionary.Add("YGrid", "");
         }
 
         public void InitLevelAttribFloatsDictionary()

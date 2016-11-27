@@ -155,12 +155,7 @@ namespace ProcessSimLevelEditor
                 {
                     switch (textBox.Name)
                     {
-                        case ("XGrid"):
-                            xGridValue = gridVal;
-                            break;
-                        case ("YGrid"):
-                            yGridValue = gridVal;
-                            break;
+                        
                     }
                     conditionsDictionary.ConditionsDictionary[textBox.Name] = gridVal;
                 }
@@ -182,7 +177,7 @@ namespace ProcessSimLevelEditor
             {
                 var textBox = sender as TextBox;
                 string origin = textBox.Name.Substring(0, 5);
-                
+
                 switch (origin)
                 {
                     case ("Comp_"):
@@ -213,6 +208,38 @@ namespace ProcessSimLevelEditor
                                     break;
                                 default:
                                     MessageBox.Show("Error in altering currentTemperature or currentPressure");
+                                    break;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error in adding to component dictionary " + ex.Message);
+                        }
+                        break;
+
+                    case ("AtbS_"):
+                        try
+                        {
+                            string conditionString;
+
+                            conditionString = textBox.Text;
+                            string outputComponent = textBox.Name.Remove(0, 5);
+                            levelAttribDictionary.LevelAttribStringsDictionary[outputComponent] = conditionString;
+
+                            switch (outputComponent)
+                            {
+                                case ("XGrid"):
+                                    int xGrid;
+                                    Int32.TryParse(conditionString, out xGrid);
+                                    xGridValue = xGrid;
+                                    break;
+                                case ("YGrid"):
+                                    int yGrid;
+                                    Int32.TryParse(conditionString, out yGrid);
+                                    yGridValue = yGrid;
+                                    break;
+                                default:
+                                    MessageBox.Show("Error in altering xGrid and YGrid");
                                     break;
                             }
                         }
