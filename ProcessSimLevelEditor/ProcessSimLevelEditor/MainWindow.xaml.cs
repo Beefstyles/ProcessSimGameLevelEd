@@ -203,6 +203,18 @@ namespace ProcessSimLevelEditor
                             Int32.TryParse(textBox.Text, out condition);
                             string outputComponent = textBox.Name.Remove(0, 5);
                             conditionsDictionary.ConditionsDictionary[outputComponent] = condition;
+                            switch (outputComponent)
+                            {
+                                case ("Pressure"):
+                                    currentPressure = condition;
+                                    break;
+                                case ("Temperature"):
+                                    currentTemperature = condition;
+                                    break;
+                                default:
+                                    MessageBox.Show("Error in altering currentTemperature or currentPressure");
+                                    break;
+                            }
                         }
                         catch (Exception ex)
                         {
@@ -398,9 +410,9 @@ namespace ProcessSimLevelEditor
             gridLegend = new GridLegend();
         }
 
-        private void InputConditionsChanged(object sender, TextChangedEventArgs e)
+        private void CalculatePhaseForComponents(object sender, RoutedEventArgs e)
         {
-            //MessageBox.Show("Current Temp is " + currentTemperature +" and " + currentPressure + " is pressure");
+            MessageBox.Show("Current Temp is " + currentTemperature +" and " + currentPressure + " is pressure");
             MethaneVapFrac.Text = phaseCalculation.ReturnPhase("Methane", currentTemperature, currentPressure).ToString();
         }
     }
