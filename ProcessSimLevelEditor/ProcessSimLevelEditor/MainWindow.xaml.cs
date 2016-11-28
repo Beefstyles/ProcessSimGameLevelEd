@@ -249,8 +249,20 @@ namespace ProcessSimLevelEditor
                         }
                         break;
 
-                }
-                
+                case ("AtbF_"):
+                        try
+                        {
+                            Int32.TryParse(textBox.Text, out condition);
+                            string outputComponent = textBox.Name.Remove(0, 5);
+                            levelAttribDictionary.LevelAttribFloatDictionary[outputComponent] = condition;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error in adding to component dictionary " + ex.Message);
+                        }
+                        break;
+            }
+
             }
             catch (Exception ex)
             {

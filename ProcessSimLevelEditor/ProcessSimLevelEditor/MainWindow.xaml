@@ -241,29 +241,29 @@
                         <TextBlock Grid.Column="0" Grid.Row="0">Level Title</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="0" AcceptsReturn="False" TextWrapping="Wrap" TextChanged="ConditionTextBoxChange" Name ="AtbS_LevelTitle" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="1">Capex</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="1" AcceptsReturn="False" TextWrapping="Wrap" Name ="AtbS_Capex" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1" AcceptsReturn="False" TextWrapping="Wrap" TextChanged="ConditionTextBoxChange" Name ="AtbS_Capex" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">Objective 1 Text</TextBlock>
-                        <TextBox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2" Name ="AtbS_Objective1Text" AcceptsReturn="False" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="10,5,0,5" Width="134" Height="Auto" HorizontalAlignment="Left"></TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2" TextChanged="ConditionTextBoxChange" Name ="AtbS_Objective1Text" AcceptsReturn="False" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="10,5,0,5" Width="134" Height="Auto" HorizontalAlignment="Left"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" >Objective 2 Text</TextBlock>
-                        <TextBox Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Name ="AtbS_Objective2Text" AcceptsReturn="False" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="0,5,5,5" Width="103"></TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Name ="AtbS_Objective2Text" TextChanged="ConditionTextBoxChange" AcceptsReturn="False" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="0,5,5,5" Width="103"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2">Objective 3 Text</TextBlock>
-                        <TextBox Grid.Row="8" Grid.ColumnSpan="2" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="0,5,5,5" Width="103"/>
+                        <TextBox Grid.Row="8" Grid.ColumnSpan="2" TextWrapping="Wrap" TextChanged="ConditionTextBoxChange" Name ="AtbS_Objective3Text" Style="{StaticResource TextBoxStyle}" Margin="0,5,5,5" Width="103"/>
                         <TextBlock Grid.Column="0" Grid.Row="8">Objective 1 Val</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="8" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="8" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="AtbF_Objective1Value" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="9">Objective 2 Val</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="9" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="9" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="AtbF_Objective2Value" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="10">Objective 3 Val</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="10" AcceptsReturn="True" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="10" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="AtbF_Objective3Value" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="11">Cost Plat Max</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="11" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="11" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="CostPlatMax" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="12">Cost Gold Max</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="12" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="12" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="CostGoldMax" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="13">Cost Silver Max</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="13" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="13" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="CostSilverMax" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="14">Cost Bronze Max</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="14" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="14" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="CostBronzeMax" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="15">Cost Pass Max</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="15" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="15" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="CostPassMax" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </Grid>
                 </StackPanel>
             </ScrollViewer>
