@@ -22,9 +22,14 @@ namespace ProcessSimLevelEditor
                 case "Propane":
                     returnPhase = setPressure <= (9835.1 * Math.Log(setTemp) - 48464) ? 1 : 0;
                     break;
+                default:
+                    returnPhase = 999; //Phase not implemented
+                    break;
             }
             
             return returnPhase;
         }
+
+
     }
 }

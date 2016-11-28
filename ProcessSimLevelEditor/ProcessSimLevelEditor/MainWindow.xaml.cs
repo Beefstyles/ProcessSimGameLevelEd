@@ -421,6 +421,8 @@ namespace ProcessSimLevelEditor
         private void CalculatePhaseForComponents(object sender, RoutedEventArgs e)
         {
             MethaneVapFrac.Text = phaseCalculation.ReturnPhase("Methane", currentTemperature, currentPressure).ToString();
+            EthaneVapFrac.Text = phaseCalculation.ReturnPhase("Ethane", currentTemperature, currentPressure).ToString();
+            PropaneVapFrac.Text = phaseCalculation.ReturnPhase("Propane", currentTemperature, currentPressure).ToString();
         }
     }
 }
