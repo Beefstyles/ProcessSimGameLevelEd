@@ -30,8 +30,10 @@ namespace ProcessSimLevelEditor
         ComponentDict componentDictionary = new ComponentDict();
         ConditionsDict conditionsDictionary = new ConditionsDict();
         LevelAttribDicts levelAttribDictionary = new LevelAttribDicts();
+        JSONWriter jswriter = new JSONWriter();
         PhaseCalc phaseCalculation = new PhaseCalc();
         private List<List<int>> lsts = new List<List<int>>();
+        private bool settingJsonValuesFailed;
         private int[,] m_intArray = new int[10, 10];
         private int xGridValue = 10;
         private int yGridValue = 10;
@@ -44,7 +46,7 @@ namespace ProcessSimLevelEditor
         public MainWindow()
         {
             InitializeComponent();
- 
+            InitialiseAllDictionaries();
             ResizeGrid();
         }
 
@@ -329,21 +331,21 @@ namespace ProcessSimLevelEditor
             try
             {
                 SetJsonDetails(levelOutput);
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show("Setting JsonValues did not work correctly, error code is " + error.Message);
+                settingJsonValuesFailed = false;
             }
 
-            try
+            catch(Exception ex)
             {
-                WriteJsonFile(levelOutput);
+                MessageBox.Show("Setting Json Details failed horribly");
+                settingJsonValuesFailed = true;
             }
-            catch (Exception error)
+
+            if (!settingJsonValuesFailed)
             {
-                MessageBox.Show("Writing JsonValue output did not work correctly, error code is " + error.Message);
+                jswriter.OutputJson(levelOutput);
             }
         }
+
         private void SetJsonDetails(LevelOutputJSON levelOutput)
         {
             try
@@ -382,19 +384,6 @@ namespace ProcessSimLevelEditor
             IPentane, Hexane, Benzene, Heptane, Octane, Nonane, Decane,
             Water, Nitrogen, CO2, H2S;
             */
-        }
-
-        private void WriteJsonFile(LevelOutputJSON levelOutput)
-        {
-            JsonSerializer serialiser = new JsonSerializer();
-            serialiser.NullValueHandling = NullValueHandling.Ignore;
-            string myDocsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            using (StreamWriter sw = new StreamWriter(myDocsPath + @"\jsonTest.txt"))
-            using (JsonWriter writer = new JsonTextWriter(sw))
-            {
-                serialiser.Formatting = Formatting.Indented;
-                serialiser.Serialize(writer, levelOutput);
-            }
         }
 
         private void OpenFileButton(object sender, RoutedEventArgs e)

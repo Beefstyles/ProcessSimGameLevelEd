@@ -70,6 +70,7 @@
     <Compile Include="GridLegend.xaml.cs">
       <DependentUpon>GridLegend.xaml</DependentUpon>
     </Compile>
+    <Compile Include="JSONWriter.cs" />
     <Compile Include="LevelAttribDicts.cs" />
     <Compile Include="LevelOutputJSON.cs" />
     <Compile Include="Ref.cs" />
