@@ -336,7 +336,7 @@ namespace ProcessSimLevelEditor
 
             catch(Exception ex)
             {
-                MessageBox.Show("Setting Json Details failed horribly");
+                MessageBox.Show("Setting Json Details failed horribly: " + ex.Message);
                 settingJsonValuesFailed = true;
             }
 
