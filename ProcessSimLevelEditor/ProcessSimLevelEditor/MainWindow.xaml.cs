@@ -27,7 +27,7 @@ namespace ProcessSimLevelEditor
     public partial class MainWindow : Window
     {
         private int totalFlow = 0;
-        ComponentDict componentDictionary = new ComponentDict();
+
         ConditionsDict conditionsDictionary = new ConditionsDict();
         LevelAttribDicts levelAttribDictionary = new LevelAttribDicts();
         JSONWriter jswriter = new JSONWriter();
@@ -52,7 +52,7 @@ namespace ProcessSimLevelEditor
 
         private void InitialiseAllDictionaries()
         {
-            componentDictionary.InitiliaseCompDictionary();
+            levelAttribDictionary.InitiliaseCompDictionary();
             conditionsDictionary.InitCondDict();
             levelAttribDictionary.InitLevelAttribStringsDictionary();
             levelAttribDictionary.InitLevelAttribDecimalDictionary();
@@ -135,7 +135,7 @@ namespace ProcessSimLevelEditor
 
         private void CalculateTotalFlow()
         {
-            totalFlow = componentDictionary.ComponentDictionary.Sum(x => x.Value);
+            totalFlow = levelAttribDictionary.ComponentDictionary.Sum(x => x.Value);
         }
 
     
@@ -187,7 +187,7 @@ namespace ProcessSimLevelEditor
                         {
                             Int32.TryParse(textBox.Text, out condition);
                             string outputComponent = textBox.Name.Remove(0, 5);
-                            componentDictionary.ComponentDictionary[outputComponent] = condition;
+                            levelAttribDictionary.ComponentDictionary[outputComponent] = condition;
                         }
                         catch (Exception ex)
                         {
