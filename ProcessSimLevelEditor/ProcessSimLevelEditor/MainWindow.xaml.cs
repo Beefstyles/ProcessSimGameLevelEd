@@ -296,6 +296,28 @@ namespace ProcessSimLevelEditor
                 levelOutput.AtmosphericPress = levelAttribDictionary.ConditionsDictionary["AtmosphericPress"];
                 levelOutput.GridXSize = levelAttribDictionary.ConditionsDictionary["XGrid"];
                 levelOutput.GridYSize = levelAttribDictionary.ConditionsDictionary["YGrid"];
+
+                levelOutput.Capex = levelAttribDictionary.LevelAttribDecimalDictionary["Capex"];
+                levelOutput.Objective1Value = levelAttribDictionary.LevelAttribDecimalDictionary["Objective1Value"];
+                levelOutput.Objective2Value = levelAttribDictionary.LevelAttribDecimalDictionary["Objective2Value"];
+                levelOutput.CostPlatMax = levelAttribDictionary.LevelAttribDecimalDictionary["CostPlatMax"];
+                levelOutput.CostGoldMax = levelAttribDictionary.LevelAttribDecimalDictionary["CostGoldMax"];
+                levelOutput.CostSilverMax = levelAttribDictionary.LevelAttribDecimalDictionary["CostSilverMax"];
+                levelOutput.CostBronzeMax = levelAttribDictionary.LevelAttribDecimalDictionary["CostBronzeMax"];
+                levelOutput.CostPassMax = levelAttribDictionary.LevelAttribDecimalDictionary["CostPassMax"];
+
+                /*
+                LevelAttribDecimalDictionary.Add("Capex", 0);
+            LevelAttribDecimalDictionary.Add("Objective1Value", 0);
+            LevelAttribDecimalDictionary.Add("Objective1Value", 0);
+            LevelAttribDecimalDictionary.Add("Objective2Value", 0);
+            LevelAttribDecimalDictionary.Add("Objective3Value", 0);
+            LevelAttribDecimalDictionary.Add("CostPlatMax", 0);
+            LevelAttribDecimalDictionary.Add("CostGoldMax", 0);
+            LevelAttribDecimalDictionary.Add("CostSilverMax", 0);
+            LevelAttribDecimalDictionary.Add("CostBronzeMax", 0);
+            LevelAttribDecimalDictionary.Add("CostPassMax", 0);
+                */
             }
 
             catch (Exception e)

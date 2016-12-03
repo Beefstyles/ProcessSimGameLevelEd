@@ -11,7 +11,7 @@ namespace ProcessSimLevelEditor
         public string Title;
         public int GridXSize;
         public int GridYSize;
-        public int Capex;
+        public decimal Capex;
         public int LevelInletTemp;
         public int LevelInletPress;
         public int AtmosphericTemp;
@@ -19,14 +19,14 @@ namespace ProcessSimLevelEditor
         public string Objective1Text;
         public string Objective2Text;
         public string Objective3Text;
-        public float Objective1Value;
-        public float Objective2Value;
-        public float Objective3Value;
-        public int CostPlatMax;
-        public int CostGoldMax;
-        public int CostSilverMax;
-        public int CostBronzeMax;
-        public int CostPassMax;
+        public decimal Objective1Value;
+        public decimal Objective2Value;
+        public decimal Objective3Value;
+        public decimal CostPlatMax;
+        public decimal CostGoldMax;
+        public decimal CostSilverMax;
+        public decimal CostBronzeMax;
+        public decimal CostPassMax;
         public char[] GridArray;
         public int Methane, Ethane, Propane, NButane, IButane, NPentane,
         IPentane, Hexane, Benzene, Heptane, Octane, Nonane, Decane,
