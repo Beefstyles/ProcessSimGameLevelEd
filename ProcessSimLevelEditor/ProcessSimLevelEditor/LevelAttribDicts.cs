@@ -10,7 +10,19 @@ namespace ProcessSimLevelEditor
     {
         public Dictionary<string, string> LevelAttribStringsDictionary = new Dictionary<string, string>();
         public Dictionary<string, decimal> LevelAttribDecimalDictionary = new Dictionary<string, decimal>();
-        public Dictionary<string, int> ComponentDictionary = new Dictionary<string, int>();
+        public Dictionary<string, int> ComponentsDictionary = new Dictionary<string, int>();
+        public Dictionary<string, int> ConditionsDictionary = new Dictionary<string, int>();
+
+        public void InitConditionsDictionary()
+        {
+            ConditionsDictionary.Add("Temperature", 0);
+            ConditionsDictionary.Add("Pressure", 0);
+            ConditionsDictionary.Add("AtmosphericTemp", 0);
+            ConditionsDictionary.Add("AtmosphericPress", 0);
+            ConditionsDictionary.Add("XGrid", 0);
+            ConditionsDictionary.Add("YGrid", 0);
+        }
+
 
         public void InitLevelAttribStringsDictionary()
         {
@@ -18,8 +30,7 @@ namespace ProcessSimLevelEditor
             LevelAttribStringsDictionary.Add("Objective1Text", "");
             LevelAttribStringsDictionary.Add("Objective2Text", "");
             LevelAttribStringsDictionary.Add("Objective3Text", "");
-            LevelAttribStringsDictionary.Add("XGrid", "");
-            LevelAttribStringsDictionary.Add("YGrid", "");
+            
         }
 
         public void InitLevelAttribDecimalDictionary()
@@ -38,23 +49,23 @@ namespace ProcessSimLevelEditor
 
         public void InitiliaseCompDictionary()
         {
-            ComponentDictionary.Add("Methane", 0);
-            ComponentDictionary.Add("Ethane", 0);
-            ComponentDictionary.Add("Propane", 0);
-            ComponentDictionary.Add("NButane", 0);
-            ComponentDictionary.Add("IButane", 0);
-            ComponentDictionary.Add("NPentane", 0);
-            ComponentDictionary.Add("IPentane", 0);
-            ComponentDictionary.Add("Hexane", 0);
-            ComponentDictionary.Add("Benzene", 0);
-            ComponentDictionary.Add("Heptane", 0);
-            ComponentDictionary.Add("Octane", 0);
-            ComponentDictionary.Add("Nonane", 0);
-            ComponentDictionary.Add("Decane", 0);
-            ComponentDictionary.Add("Water", 0);
-            ComponentDictionary.Add("Nitrogen", 0);
-            ComponentDictionary.Add("CO2", 0);
-            ComponentDictionary.Add("H2S", 0);
+            ComponentsDictionary.Add("Methane", 0);
+            ComponentsDictionary.Add("Ethane", 0);
+            ComponentsDictionary.Add("Propane", 0);
+            ComponentsDictionary.Add("NButane", 0);
+            ComponentsDictionary.Add("IButane", 0);
+            ComponentsDictionary.Add("NPentane", 0);
+            ComponentsDictionary.Add("IPentane", 0);
+            ComponentsDictionary.Add("Hexane", 0);
+            ComponentsDictionary.Add("Benzene", 0);
+            ComponentsDictionary.Add("Heptane", 0);
+            ComponentsDictionary.Add("Octane", 0);
+            ComponentsDictionary.Add("Nonane", 0);
+            ComponentsDictionary.Add("Decane", 0);
+            ComponentsDictionary.Add("Water", 0);
+            ComponentsDictionary.Add("Nitrogen", 0);
+            ComponentsDictionary.Add("CO2", 0);
+            ComponentsDictionary.Add("H2S", 0);
         }
     }
 }

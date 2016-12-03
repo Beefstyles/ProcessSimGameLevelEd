@@ -27,8 +27,6 @@ namespace ProcessSimLevelEditor
     public partial class MainWindow : Window
     {
         private int totalFlow = 0;
-
-        ConditionsDict conditionsDictionary = new ConditionsDict();
         LevelAttribDicts levelAttribDictionary = new LevelAttribDicts();
         JSONWriter jswriter = new JSONWriter();
         PhaseCalc phaseCalculation = new PhaseCalc();
@@ -53,7 +51,7 @@ namespace ProcessSimLevelEditor
         private void InitialiseAllDictionaries()
         {
             levelAttribDictionary.InitiliaseCompDictionary();
-            conditionsDictionary.InitCondDict();
+            levelAttribDictionary.InitConditionsDictionary();
             levelAttribDictionary.InitLevelAttribStringsDictionary();
             levelAttribDictionary.InitLevelAttribDecimalDictionary();
         }
@@ -135,7 +133,7 @@ namespace ProcessSimLevelEditor
 
         private void CalculateTotalFlow()
         {
-            totalFlow = levelAttribDictionary.ComponentDictionary.Sum(x => x.Value);
+            totalFlow = levelAttribDictionary.ComponentsDictionary.Sum(x => x.Value);
         }
 
     
@@ -144,32 +142,6 @@ namespace ProcessSimLevelEditor
         {
             Regex rgx = new Regex("[^0-9.0]+");
             e.Handled = rgx.IsMatch(e.Text);
-        }
-
-        private void GridValuesChanged(object sender, TextChangedEventArgs e)
-        {
-            int gridVal;
-            try
-            {
-                var textBox = sender as TextBox;
-                Int32.TryParse(textBox.Text, out gridVal);
-                try
-                {
-                    switch (textBox.Name)
-                    {
-                        
-                    }
-                    conditionsDictionary.ConditionsDictionary[textBox.Name] = gridVal;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error in parsing grid val " + ex.Message);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error in parsing " + ex.Message);
-            }
         }
 
         private void ConditionTextBoxChange(object sender, TextChangedEventArgs e)
@@ -187,7 +159,7 @@ namespace ProcessSimLevelEditor
                         {
                             Int32.TryParse(textBox.Text, out condition);
                             string outputComponent = textBox.Name.Remove(0, 5);
-                            levelAttribDictionary.ComponentDictionary[outputComponent] = condition;
+                            levelAttribDictionary.ComponentsDictionary[outputComponent] = condition;
                         }
                         catch (Exception ex)
                         {
@@ -199,7 +171,7 @@ namespace ProcessSimLevelEditor
                         {
                             Int32.TryParse(textBox.Text, out condition);
                             string outputComponent = textBox.Name.Remove(0, 5);
-                            conditionsDictionary.ConditionsDictionary[outputComponent] = condition;
+                            levelAttribDictionary.ConditionsDictionary[outputComponent] = condition;
                             switch (outputComponent)
                             {
                                 case ("Pressure"):
@@ -208,8 +180,11 @@ namespace ProcessSimLevelEditor
                                 case ("Temperature"):
                                     currentTemperature = condition;
                                     break;
-                                default:
-                                    MessageBox.Show("Error in altering currentTemperature or currentPressure");
+                                case ("XGrid"):
+                                    xGridValue = condition;
+                                    break;
+                                case ("YGrid"):
+                                    yGridValue = condition;
                                     break;
                             }
                         }
@@ -227,23 +202,6 @@ namespace ProcessSimLevelEditor
                             conditionString = textBox.Text;
                             string outputComponent = textBox.Name.Remove(0, 5);
                             levelAttribDictionary.LevelAttribStringsDictionary[outputComponent] = conditionString;
-
-                            switch (outputComponent)
-                            {
-                                case ("XGrid"):
-                                    int xGrid;
-                                    Int32.TryParse(conditionString, out xGrid);
-                                    xGridValue = xGrid;
-                                    break;
-                                case ("YGrid"):
-                                    int yGrid;
-                                    Int32.TryParse(conditionString, out yGrid);
-                                    yGridValue = yGrid;
-                                    break;
-                                default:
-                                    MessageBox.Show("Error in altering xGrid and YGrid");
-                                    break;
-                            }
                         }
                         catch (Exception ex)
                         {
@@ -271,30 +229,7 @@ namespace ProcessSimLevelEditor
                 MessageBox.Show("Error in parsing " + ex.Message);
             }
         }
-
       
-        private void LevelAttribStringTextBoxChange(object sender, TextChangedEventArgs e)
-        {
-            string attrib;
-            try
-            {
-                var textBox = sender as TextBox;
-                attrib = textBox.Text;
-                try
-                {
-                    levelAttribDictionary.LevelAttribStringsDictionary[textBox.Name] = attrib;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error in adding to level attribs string dictionary " + ex.Message);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error in parsing " + ex.Message);
-            }
-        }
-
         private void DisplayTotalFlow()
         {
             TotalFlowCalc.Text = totalFlow.ToString();
@@ -354,13 +289,20 @@ namespace ProcessSimLevelEditor
                 levelOutput.Objective1Text = levelAttribDictionary.LevelAttribStringsDictionary["Objective1Text"];
                 levelOutput.Objective1Text = levelAttribDictionary.LevelAttribStringsDictionary["Objective2Text"];
                 levelOutput.Objective1Text = levelAttribDictionary.LevelAttribStringsDictionary["Objective3Text"];
+
+                levelOutput.LevelInletTemp = levelAttribDictionary.ConditionsDictionary["Temperature"];
+                levelOutput.LevelInletPress = levelAttribDictionary.ConditionsDictionary["Pressure"];
+                levelOutput.AtmosphericTemp = levelAttribDictionary.ConditionsDictionary["AtmosphericTemp"];
+                levelOutput.AtmosphericPress = levelAttribDictionary.ConditionsDictionary["AtmosphericPress"];
+                levelOutput.GridXSize = levelAttribDictionary.ConditionsDictionary["XGrid"];
+                levelOutput.GridYSize = levelAttribDictionary.ConditionsDictionary["YGrid"];
             }
 
             catch (Exception e)
             {
                 MessageBox.Show("Error in setting the json details, look into the SetJsonDetails func: " + e.Message);
             }
-            
+
             /*
             public string Title;
             public int GridXSize;
@@ -368,6 +310,8 @@ namespace ProcessSimLevelEditor
             public int Capex;
             public int LevelInletTemp;
             public int LevelInletPress;
+            public int AtmosphericTemp;
+            public int AtmosphericPress;
             public string Objective1Text;
             public string Objective2Text;
             public string Objective3Text;
