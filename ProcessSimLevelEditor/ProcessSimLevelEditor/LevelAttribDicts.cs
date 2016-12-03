@@ -9,7 +9,7 @@ namespace ProcessSimLevelEditor
     class LevelAttribDicts
     {
         public Dictionary<string, string> LevelAttribStringsDictionary = new Dictionary<string, string>();
-        public Dictionary<string, float> LevelAttribFloatDictionary = new Dictionary<string, float>();
+        public Dictionary<string, decimal> LevelAttribDecimalDictionary = new Dictionary<string, decimal>();
 
         public void InitLevelAttribStringsDictionary()
         {
@@ -21,16 +21,18 @@ namespace ProcessSimLevelEditor
             LevelAttribStringsDictionary.Add("YGrid", "");
         }
 
-        public void InitLevelAttribFloatsDictionary()
+        public void InitLevelAttribDecimalDictionary()
         {
-            LevelAttribFloatDictionary.Add("Objective1Value", 0F);
-            LevelAttribFloatDictionary.Add("Objective2Value", 0F);
-            LevelAttribFloatDictionary.Add("Objective3Value", 0F);
-            LevelAttribFloatDictionary.Add("CostPlatMax", 0F);
-            LevelAttribFloatDictionary.Add("CostGoldMax", 0F);
-            LevelAttribFloatDictionary.Add("CostSilverMax", 0F);
-            LevelAttribFloatDictionary.Add("CostBronzeMax", 0F);
-            LevelAttribFloatDictionary.Add("CostPassMax", 0F);
+            LevelAttribDecimalDictionary.Add("Capex", 0);
+            LevelAttribDecimalDictionary.Add("Objective1Value", 0);
+            LevelAttribDecimalDictionary.Add("Objective1Value", 0);
+            LevelAttribDecimalDictionary.Add("Objective2Value", 0);
+            LevelAttribDecimalDictionary.Add("Objective3Value", 0);
+            LevelAttribDecimalDictionary.Add("CostPlatMax", 0);
+            LevelAttribDecimalDictionary.Add("CostGoldMax", 0);
+            LevelAttribDecimalDictionary.Add("CostSilverMax", 0);
+            LevelAttribDecimalDictionary.Add("CostBronzeMax", 0);
+            LevelAttribDecimalDictionary.Add("CostPassMax", 0);
         }
     }
 }

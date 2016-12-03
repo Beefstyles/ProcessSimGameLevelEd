@@ -55,7 +55,7 @@ namespace ProcessSimLevelEditor
             componentDictionary.InitiliaseCompDictionary();
             conditionsDictionary.InitCondDict();
             levelAttribDictionary.InitLevelAttribStringsDictionary();
-            levelAttribDictionary.InitLevelAttribFloatsDictionary();
+            levelAttribDictionary.InitLevelAttribDecimalDictionary();
         }
         private void InitGridArray(int maxX, int maxY)
         {
@@ -251,12 +251,12 @@ namespace ProcessSimLevelEditor
                         }
                         break;
 
-                case ("AtbF_"):
+                case ("AtbD_"):
                         try
                         {
                             Int32.TryParse(textBox.Text, out condition);
                             string outputComponent = textBox.Name.Remove(0, 5);
-                            levelAttribDictionary.LevelAttribFloatDictionary[outputComponent] = condition;
+                            levelAttribDictionary.LevelAttribDecimalDictionary[outputComponent] = condition;
                         }
                         catch (Exception ex)
                         {
