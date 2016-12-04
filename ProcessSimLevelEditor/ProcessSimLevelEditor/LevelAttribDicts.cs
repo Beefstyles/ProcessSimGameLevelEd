@@ -75,23 +75,31 @@ namespace ProcessSimLevelEditor
 
         public void InitiliaseCompDictionary()
         {
-            ComponentsDictionary.Add("Methane", 0);
-            ComponentsDictionary.Add("Ethane", 0);
-            ComponentsDictionary.Add("Propane", 0);
-            ComponentsDictionary.Add("NButane", 0);
-            ComponentsDictionary.Add("IButane", 0);
-            ComponentsDictionary.Add("NPentane", 0);
-            ComponentsDictionary.Add("IPentane", 0);
-            ComponentsDictionary.Add("Hexane", 0);
-            ComponentsDictionary.Add("Benzene", 0);
-            ComponentsDictionary.Add("Heptane", 0);
-            ComponentsDictionary.Add("Octane", 0);
-            ComponentsDictionary.Add("Nonane", 0);
-            ComponentsDictionary.Add("Decane", 0);
-            ComponentsDictionary.Add("Water", 0);
-            ComponentsDictionary.Add("Nitrogen", 0);
-            ComponentsDictionary.Add("CO2", 0);
-            ComponentsDictionary.Add("H2S", 0);
+            try
+            {
+                ComponentsDictionary.Add("Methane", 0);
+                ComponentsDictionary.Add("Ethane", 0);
+                ComponentsDictionary.Add("Propane", 0);
+                ComponentsDictionary.Add("NButane", 0);
+                ComponentsDictionary.Add("IButane", 0);
+                ComponentsDictionary.Add("NPentane", 0);
+                ComponentsDictionary.Add("IPentane", 0);
+                ComponentsDictionary.Add("Hexane", 0);
+                ComponentsDictionary.Add("Benzene", 0);
+                ComponentsDictionary.Add("Heptane", 0);
+                ComponentsDictionary.Add("Octane", 0);
+                ComponentsDictionary.Add("Nonane", 0);
+                ComponentsDictionary.Add("Decane", 0);
+                ComponentsDictionary.Add("Water", 0);
+                ComponentsDictionary.Add("Nitrogen", 0);
+                ComponentsDictionary.Add("CO2", 0);
+                ComponentsDictionary.Add("H2S", 0);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in InitiliaseCompDictionary " + ex.Message);
+            }
         }
     }
 }

@@ -32,7 +32,6 @@ namespace ProcessSimLevelEditor
         PhaseCalc phaseCalculation = new PhaseCalc();
         private List<List<int>> lsts = new List<List<int>>();
         private bool settingJsonValuesFailed;
-        //private int[,] m_intArray = new int[10, 10];
         private char[,] m_charArray = new char[10, 10];
         private int xGridValue = 10;
         private int yGridValue = 10;
@@ -56,18 +55,6 @@ namespace ProcessSimLevelEditor
             levelAttribDictionary.InitLevelAttribStringsDictionary();
             levelAttribDictionary.InitLevelAttribDecimalDictionary();
         }
-        /* private void InitGridArray(int maxX, int maxY)
-         {
-             for (int i = 0; i < maxX; i++)
-             {
-                 for (int j = 0; j < maxY; j++)
-                 {
-                     m_intArray[i, j] = (i * 10 + j);
-                 }
-             }
-             levelGrid.ItemsSource = GetBindable2DArray<int>(m_intArray);
-         }
-         */
 
         private void InitGridLevelArray(int maxX, int maxY)
         {
@@ -75,7 +62,7 @@ namespace ProcessSimLevelEditor
             {
                 for (int j = 0; j < maxY; j++)
                 {
-                    m_charArray[i, j] = 'X';
+                    m_charArray[i, j] = '.';
                 }
             }
             levelGrid.ItemsSource = GetBindable2DArray<char>(m_charArray);
