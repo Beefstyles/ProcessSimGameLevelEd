@@ -32,7 +32,8 @@ namespace ProcessSimLevelEditor
         PhaseCalc phaseCalculation = new PhaseCalc();
         private List<List<int>> lsts = new List<List<int>>();
         private bool settingJsonValuesFailed;
-        private int[,] m_intArray = new int[10, 10];
+        //private int[,] m_intArray = new int[10, 10];
+        private char[,] m_charArray = new char[10, 10];
         private int xGridValue = 10;
         private int yGridValue = 10;
         private int currentTemperature, currentPressure;
@@ -55,16 +56,29 @@ namespace ProcessSimLevelEditor
             levelAttribDictionary.InitLevelAttribStringsDictionary();
             levelAttribDictionary.InitLevelAttribDecimalDictionary();
         }
-        private void InitGridArray(int maxX, int maxY)
+        /* private void InitGridArray(int maxX, int maxY)
+         {
+             for (int i = 0; i < maxX; i++)
+             {
+                 for (int j = 0; j < maxY; j++)
+                 {
+                     m_intArray[i, j] = (i * 10 + j);
+                 }
+             }
+             levelGrid.ItemsSource = GetBindable2DArray<int>(m_intArray);
+         }
+         */
+
+        private void InitGridLevelArray(int maxX, int maxY)
         {
             for (int i = 0; i < maxX; i++)
             {
                 for (int j = 0; j < maxY; j++)
                 {
-                    m_intArray[i, j] = (i * 10 + j);
+                    m_charArray[i, j] = 'X';
                 }
             }
-            levelGrid.ItemsSource = GetBindable2DArray<int>(m_intArray);
+            levelGrid.ItemsSource = GetBindable2DArray<char>(m_charArray);
         }
 
         private void DataGrid()
@@ -100,8 +114,8 @@ namespace ProcessSimLevelEditor
 
         private void ResizeGrid()
         {
-            m_intArray = new int[xGridValue, yGridValue];
-            InitGridArray(xGridValue, yGridValue);
+            m_charArray = new char[xGridValue, yGridValue];
+            InitGridLevelArray(xGridValue, yGridValue);
         }
 
         public static DataView GetBindable2DArray<T>(T[,] array)
@@ -237,16 +251,16 @@ namespace ProcessSimLevelEditor
 
         private void IterateThroughList(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(m_intArray[0, 0].ToString());
+            MessageBox.Show(m_charArray[0, 0].ToString());
         }
 
         private void ClearGraphValues(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < m_intArray.GetLength(0); i++)
+            for (int i = 0; i < m_charArray.GetLength(0); i++)
             {
-                for (int j = 0; j < m_intArray.GetLength(1); j++)
+                for (int j = 0; j < m_charArray.GetLength(1); j++)
                 {
-                    m_intArray[i, j] = 0;
+                    m_charArray[i, j] = '.';
                 }
             }
             levelGrid.Items.Refresh();
@@ -331,32 +345,6 @@ namespace ProcessSimLevelEditor
             {
                 MessageBox.Show("Error in setting the json details, look into the SetJsonDetails func: " + e.Message);
             }
-
-            /*
-            public string Title;
-            public int GridXSize;
-            public int GridYSize;
-            public int Capex;
-            public int LevelInletTemp;
-            public int LevelInletPress;
-            public int AtmosphericTemp;
-            public int AtmosphericPress;
-            public string Objective1Text;
-            public string Objective2Text;
-            public string Objective3Text;
-            public float Objective1Value;
-            public float Objective2Value;
-            public float Objective3Value;
-            public int CostPlatMax;
-            public int CostGoldMax;
-            public int CostSilverMax;
-            public int CostBronzeMax;
-            public int CostPassMax;
-            public char[] GridArray;
-            public int Methane, Ethane, Propane, NButane, IButane, NPentane,
-            IPentane, Hexane, Benzene, Heptane, Octane, Nonane, Decane,
-            Water, Nitrogen, CO2, H2S;
-            */
         }
 
         private void OpenFileButton(object sender, RoutedEventArgs e)

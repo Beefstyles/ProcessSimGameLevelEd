@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ProcessSimLevelEditor
 {
@@ -15,36 +16,61 @@ namespace ProcessSimLevelEditor
 
         public void InitConditionsDictionary()
         {
-            ConditionsDictionary.Add("Temperature", 0);
-            ConditionsDictionary.Add("Pressure", 0);
-            ConditionsDictionary.Add("AtmosphericTemp", 0);
-            ConditionsDictionary.Add("AtmosphericPress", 0);
-            ConditionsDictionary.Add("XGrid", 0);
-            ConditionsDictionary.Add("YGrid", 0);
+            try
+            {
+                ConditionsDictionary.Add("Temperature", 0);
+                ConditionsDictionary.Add("Pressure", 0);
+                ConditionsDictionary.Add("AtmosphericTemp", 0);
+                ConditionsDictionary.Add("AtmosphericPress", 0);
+                ConditionsDictionary.Add("XGrid", 0);
+                ConditionsDictionary.Add("YGrid", 0);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in InitConditionsDictionary " + ex.Message);
+            }
         }
 
 
         public void InitLevelAttribStringsDictionary()
         {
-            LevelAttribStringsDictionary.Add("Title", "");
-            LevelAttribStringsDictionary.Add("Objective1Text", "");
-            LevelAttribStringsDictionary.Add("Objective2Text", "");
-            LevelAttribStringsDictionary.Add("Objective3Text", "");
-            
+            try
+            {
+                LevelAttribStringsDictionary.Add("Title", "");
+                LevelAttribStringsDictionary.Add("Objective1Text", "");
+                LevelAttribStringsDictionary.Add("Objective2Text", "");
+                LevelAttribStringsDictionary.Add("Objective3Text", "");
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in InitLevelAttribStringsDictionary " + ex.Message);
+            }
+
         }
 
         public void InitLevelAttribDecimalDictionary()
         {
-            LevelAttribDecimalDictionary.Add("Capex", 0);
-            LevelAttribDecimalDictionary.Add("Objective1Value", 0);
-            LevelAttribDecimalDictionary.Add("Objective1Value", 0);
-            LevelAttribDecimalDictionary.Add("Objective2Value", 0);
-            LevelAttribDecimalDictionary.Add("Objective3Value", 0);
-            LevelAttribDecimalDictionary.Add("CostPlatMax", 0);
-            LevelAttribDecimalDictionary.Add("CostGoldMax", 0);
-            LevelAttribDecimalDictionary.Add("CostSilverMax", 0);
-            LevelAttribDecimalDictionary.Add("CostBronzeMax", 0);
-            LevelAttribDecimalDictionary.Add("CostPassMax", 0);
+            try
+            {
+                LevelAttribDecimalDictionary.Add("Capex", 0M);
+                LevelAttribDecimalDictionary.Add("Objective1Value", 0M);
+                LevelAttribDecimalDictionary.Add("Objective2Value", 0M);
+                LevelAttribDecimalDictionary.Add("Objective3Value", 0M);
+                LevelAttribDecimalDictionary.Add("CostPlatMax", 0M);
+                LevelAttribDecimalDictionary.Add("CostGoldMax", 0M);
+                LevelAttribDecimalDictionary.Add("CostSilverMax", 0M);
+                LevelAttribDecimalDictionary.Add("CostBronzeMax", 0M);
+                LevelAttribDecimalDictionary.Add("CostPassMax", 0M);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in InitLevelAttribDecimalDictionary " + ex.Message);
+            }
+
+            
         }
 
         public void InitiliaseCompDictionary()
