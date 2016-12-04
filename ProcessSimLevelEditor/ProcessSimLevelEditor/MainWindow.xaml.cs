@@ -222,6 +222,12 @@ namespace ProcessSimLevelEditor
                             MessageBox.Show("Error in adding to component dictionary " + ex.Message);
                         }
                         break;
+
+                    default:
+                        {
+                            MessageBox.Show("This textbox has no recognisable prefix: " + textBox.Name);
+                        }
+                        break;
             }
 
             }
