@@ -306,18 +306,25 @@ namespace ProcessSimLevelEditor
                 levelOutput.CostBronzeMax = levelAttribDictionary.LevelAttribDecimalDictionary["CostBronzeMax"];
                 levelOutput.CostPassMax = levelAttribDictionary.LevelAttribDecimalDictionary["CostPassMax"];
 
-                /*
-                LevelAttribDecimalDictionary.Add("Capex", 0);
-            LevelAttribDecimalDictionary.Add("Objective1Value", 0);
-            LevelAttribDecimalDictionary.Add("Objective1Value", 0);
-            LevelAttribDecimalDictionary.Add("Objective2Value", 0);
-            LevelAttribDecimalDictionary.Add("Objective3Value", 0);
-            LevelAttribDecimalDictionary.Add("CostPlatMax", 0);
-            LevelAttribDecimalDictionary.Add("CostGoldMax", 0);
-            LevelAttribDecimalDictionary.Add("CostSilverMax", 0);
-            LevelAttribDecimalDictionary.Add("CostBronzeMax", 0);
-            LevelAttribDecimalDictionary.Add("CostPassMax", 0);
-                */
+                levelOutput.Methane = levelAttribDictionary.ComponentsDictionary["Methane"];
+                levelOutput.Ethane = levelAttribDictionary.ComponentsDictionary["Ethane"];
+                levelOutput.Propane = levelAttribDictionary.ComponentsDictionary["Propane"];
+                levelOutput.NButane = levelAttribDictionary.ComponentsDictionary["NButane"];
+                levelOutput.IButane = levelAttribDictionary.ComponentsDictionary["IButane"];
+                levelOutput.NPentane = levelAttribDictionary.ComponentsDictionary["NPentane"];
+                levelOutput.NPentane = levelAttribDictionary.ComponentsDictionary["NPentane"];
+                levelOutput.IPentane = levelAttribDictionary.ComponentsDictionary["IPentane"];
+                levelOutput.Hexane = levelAttribDictionary.ComponentsDictionary["Hexane"];
+                levelOutput.Benzene = levelAttribDictionary.ComponentsDictionary["Benzene"];
+                levelOutput.Heptane = levelAttribDictionary.ComponentsDictionary["Heptane"];
+                levelOutput.Heptane = levelAttribDictionary.ComponentsDictionary["Heptane"];
+                levelOutput.Octane = levelAttribDictionary.ComponentsDictionary["Octane"];
+                levelOutput.Nonane = levelAttribDictionary.ComponentsDictionary["Nonane"];
+                levelOutput.Decane = levelAttribDictionary.ComponentsDictionary["Decane"];
+                levelOutput.Water = levelAttribDictionary.ComponentsDictionary["Water"];
+                levelOutput.Nitrogen = levelAttribDictionary.ComponentsDictionary["Nitrogen"];
+                levelOutput.CO2 = levelAttribDictionary.ComponentsDictionary["CO2"];
+                levelOutput.H2S = levelAttribDictionary.ComponentsDictionary["H2S"];
             }
 
             catch (Exception e)
