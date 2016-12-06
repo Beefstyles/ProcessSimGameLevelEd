@@ -332,6 +332,8 @@ namespace ProcessSimLevelEditor
                 levelOutput.Nitrogen = levelAttribDictionary.ComponentsDictionary["Nitrogen"];
                 levelOutput.CO2 = levelAttribDictionary.ComponentsDictionary["CO2"];
                 levelOutput.H2S = levelAttribDictionary.ComponentsDictionary["H2S"];
+
+                levelOutput.GridArray = m_charArray;
             }
 
             catch (Exception e)
