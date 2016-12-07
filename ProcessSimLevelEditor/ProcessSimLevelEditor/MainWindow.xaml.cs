@@ -270,22 +270,29 @@ namespace ProcessSimLevelEditor
         {
             LevelOutputJSON levelOutput = new LevelOutputJSON();
 
-            try
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text files (*.json*)|All files (*.*)";
+            if (saveFileDialog.ShowDialog() == true)
             {
-                SetJsonDetails(levelOutput);
-                settingJsonValuesFailed = false;
+                try
+                {
+                    SetJsonDetails(levelOutput);
+                    settingJsonValuesFailed = false;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Setting Json Details failed horribly: " + ex.Message);
+                    settingJsonValuesFailed = true;
+                }
+
+                if (!settingJsonValuesFailed)
+                {
+                    jswriter.OutputJson(levelOutput);
+                }
             }
 
-            catch(Exception ex)
-            {
-                MessageBox.Show("Setting Json Details failed horribly: " + ex.Message);
-                settingJsonValuesFailed = true;
-            }
-
-            if (!settingJsonValuesFailed)
-            {
-                jswriter.OutputJson(levelOutput);
-            }
+            
         }
 
         private void SetJsonDetails(LevelOutputJSON levelOutput)
