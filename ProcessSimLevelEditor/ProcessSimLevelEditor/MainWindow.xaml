@@ -52,7 +52,7 @@
                 <MenuItem Header="_File">
                     <MenuItem Header="_New" />
                     <MenuItem Header="_Open" Click="OpenFileButton"/>
-                    <MenuItem Header="_Save" Click ="OutputJson"/>
+                    <MenuItem Header="_Save" Click ="SaveAndOutputJson"/>
                     <Separator />
                     <MenuItem Header="_Exit" />
                 </MenuItem>

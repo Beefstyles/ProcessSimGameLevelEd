@@ -11,12 +11,12 @@ namespace ProcessSimLevelEditor
 {
     class JSONWriter
     {
-        public void OutputJson(LevelOutputJSON levelOutput)
+        public void OutputJson(LevelOutputJSON levelOutput, string fileName)
         {
 
             try
             {
-                WriteJsonFile(levelOutput);
+                WriteJsonFile(levelOutput, fileName);
             }
             catch (Exception error)
             {
@@ -24,12 +24,14 @@ namespace ProcessSimLevelEditor
             }
         }
 
-        private void WriteJsonFile(LevelOutputJSON levelOutput)
+        private void WriteJsonFile(LevelOutputJSON levelOutput, string filename)
         {
             JsonSerializer serialiser = new JsonSerializer();
             serialiser.NullValueHandling = NullValueHandling.Ignore;
             string myDocsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            using (StreamWriter sw = new StreamWriter(myDocsPath + @"\ProcessSimGameEd\jsonTest.txt"))
+            //using (StreamWriter sw = new StreamWriter(myDocsPath + @"\ProcessSimGameEd\jsonTest.txt"))
+            string savePath = (@"\ProcessSimGameEd\" + filename + ".txt");
+            using (StreamWriter sw = new StreamWriter(myDocsPath + savePath))
             using (JsonWriter writer = new JsonTextWriter(sw))
             {
                 serialiser.Formatting = Formatting.Indented;

@@ -266,14 +266,18 @@ namespace ProcessSimLevelEditor
             binding.Path = new PropertyPath(binding.Path.Path + ".Value");
         } 
 
-        private void OutputJson(object sender, RoutedEventArgs e)
+        private void SaveAndOutputJson(object sender, RoutedEventArgs e)
         {
             LevelOutputJSON levelOutput = new LevelOutputJSON();
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Text files (*.json*)|All files (*.*)";
-            if (saveFileDialog.ShowDialog() == true)
+            saveFileDialog.FileName = "Level";
+            saveFileDialog.DefaultExt = ".txt";
+            //saveFileDialog.Filter = "Text files (*.json*)|All files (*.*)";
+            bool? result = saveFileDialog.ShowDialog();
+            if (result == true)
             {
+                string fileName = saveFileDialog.FileName;
                 try
                 {
                     SetJsonDetails(levelOutput);
@@ -288,7 +292,7 @@ namespace ProcessSimLevelEditor
 
                 if (!settingJsonValuesFailed)
                 {
-                    jswriter.OutputJson(levelOutput);
+                    jswriter.OutputJson(levelOutput, fileName);
                 }
             }
 
