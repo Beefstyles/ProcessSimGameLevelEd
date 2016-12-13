@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ProcessSimLevelEditor
 {
+    
     class LevelOutputJSON
     {
         public string Title;
@@ -27,9 +29,12 @@ namespace ProcessSimLevelEditor
         public decimal CostSilverMax;
         public decimal CostBronzeMax;
         public decimal CostPassMax;
+        public string LevelGrid;
         public char[,] GridArray;
         public int Methane, Ethane, Propane, NButane, IButane, NPentane,
         IPentane, Hexane, Benzene, Heptane, Octane, Nonane, Decane,
         Water, Nitrogen, CO2, H2S;
     }
+
+
 }
