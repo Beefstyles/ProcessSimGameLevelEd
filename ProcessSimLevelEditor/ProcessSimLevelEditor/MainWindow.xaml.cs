@@ -379,6 +379,12 @@ namespace ProcessSimLevelEditor
             MethaneVapFrac.Text = phaseCalculation.ReturnPhase("Methane", currentTemperature, currentPressure).ToString();
             EthaneVapFrac.Text = phaseCalculation.ReturnPhase("Ethane", currentTemperature, currentPressure).ToString();
             PropaneVapFrac.Text = phaseCalculation.ReturnPhase("Propane", currentTemperature, currentPressure).ToString();
+            NButaneVapFrac.Text = phaseCalculation.ReturnPhase("nButane", currentTemperature, currentPressure).ToString();
+        }
+
+        private int MethaneTest(int testTemp, int testPressure)
+        {
+            return phaseCalculation.ReturnPhase("Methane", testTemp, testPressure);
         }
     }
 }

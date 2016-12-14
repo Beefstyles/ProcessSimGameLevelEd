@@ -15,6 +15,11 @@ namespace ProcessSimLevelEditor
         {
             string gridArray = JsonConvert.SerializeObject(levelOutput.GridArray, Formatting.None);
             levelOutput.LevelGrid = gridArray;
+
+            for(int i = 0; i < levelOutput.GridArray.GetLength(0); i++)
+            {
+
+            }
             try
             {
                 WriteJsonFile(levelOutput, fileName);
