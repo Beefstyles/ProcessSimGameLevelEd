@@ -380,6 +380,14 @@ namespace ProcessSimLevelEditor
             EthaneVapFrac.Text = phaseCalculation.ReturnPhase("Ethane", currentTemperature, currentPressure).ToString();
             PropaneVapFrac.Text = phaseCalculation.ReturnPhase("Propane", currentTemperature, currentPressure).ToString();
             NButaneVapFrac.Text = phaseCalculation.ReturnPhase("nButane", currentTemperature, currentPressure).ToString();
+            IButaneVapFrac.Text = phaseCalculation.ReturnPhase("iButane", currentTemperature, currentPressure).ToString();
+            NPentaneVapFrac.Text = phaseCalculation.ReturnPhase("nPentane", currentTemperature, currentPressure).ToString();
+            IPentaneVapFrac.Text = phaseCalculation.ReturnPhase("iPentane", currentTemperature, currentPressure).ToString();
+            BenzeneVapFrac.Text = phaseCalculation.ReturnPhase("Benzene", currentTemperature, currentPressure).ToString();
+            HexaneVapFrac.Text = phaseCalculation.ReturnPhase("Hexane", currentTemperature, currentPressure).ToString();
+            HeptaneVapFrac.Text = phaseCalculation.ReturnPhase("Heptane", currentTemperature, currentPressure).ToString();
+            OctaneVapFrac.Text = phaseCalculation.ReturnPhase("Octane", currentTemperature, currentPressure).ToString();
+            NonaneVapFrac.Text = phaseCalculation.ReturnPhase("Nonane", currentTemperature, currentPressure).ToString();
         }
 
         private int MethaneTest(int testTemp, int testPressure)
