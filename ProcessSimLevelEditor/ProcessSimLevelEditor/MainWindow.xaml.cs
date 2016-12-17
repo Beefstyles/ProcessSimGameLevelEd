@@ -305,8 +305,12 @@ namespace ProcessSimLevelEditor
             {
                 levelOutput.Title = levelAttribDictionary.LevelAttribStringsDictionary["Title"];
                 levelOutput.Objective1Text = levelAttribDictionary.LevelAttribStringsDictionary["Objective1Text"];
-                levelOutput.Objective1Text = levelAttribDictionary.LevelAttribStringsDictionary["Objective2Text"];
-                levelOutput.Objective1Text = levelAttribDictionary.LevelAttribStringsDictionary["Objective3Text"];
+                levelOutput.Objective2Text = levelAttribDictionary.LevelAttribStringsDictionary["Objective2Text"];
+                levelOutput.Objective3Text = levelAttribDictionary.LevelAttribStringsDictionary["Objective3Text"];
+
+                levelOutput.Objective1Value = levelAttribDictionary.LevelAttribDecimalDictionary["Objective1Value"];
+                levelOutput.Objective2Value = levelAttribDictionary.LevelAttribDecimalDictionary["Objective2Value"];
+                levelOutput.Objective3Value = levelAttribDictionary.LevelAttribDecimalDictionary["Objective3Value"];
 
                 levelOutput.LevelInletTemp = levelAttribDictionary.ConditionsDictionary["Temperature"];
                 levelOutput.LevelInletPress = levelAttribDictionary.ConditionsDictionary["Pressure"];
@@ -391,11 +395,6 @@ namespace ProcessSimLevelEditor
             NitrogenVapFrac.Text = phaseCalculation.ReturnPhase("Nitrogen", currentTemperature, currentPressure).ToString();
             CO2VapFrac.Text = phaseCalculation.ReturnPhase("CO2", currentTemperature, currentPressure).ToString();
             H2SVapFrac.Text = phaseCalculation.ReturnPhase("H2S", currentTemperature, currentPressure).ToString();
-        }
-
-        private int MethaneTest(int testTemp, int testPressure)
-        {
-            return phaseCalculation.ReturnPhase("Methane", testTemp, testPressure);
         }
     }
 }
