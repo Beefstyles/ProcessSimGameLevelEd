@@ -45,7 +45,7 @@ namespace ProcessSimLevelEditor
         }
       
 
-        //Splits the 2D char array to a single string
+        //Splits the 2D char array for the level grid to a single string
         private string CharArrayToString(char[,] array)
         {
             StringBuilder sb = new StringBuilder();
@@ -60,7 +60,7 @@ namespace ProcessSimLevelEditor
             return sb.ToString();
         }
 
-        //Splits the string created above to a List<string>
+        //Splits the string created above for the level grid to a List<string> so it can be serialised properly into JSON
         private List<string> GridArrayToStringList(string stringToSplit, int splitSize)
         {
             List<string> StringList = new List<string>();
