@@ -32,7 +32,7 @@ namespace ProcessSimLevelEditor
         PhaseCalc phaseCalculation = new PhaseCalc();
         private List<List<int>> lsts = new List<List<int>>();
         private bool settingJsonValuesFailed;
-        private char[,] m_charArray = new char[10, 10];
+        private char[,] gameLevelArray = new char[10, 10];
         private int xGridValue = 10;
         private int yGridValue = 10;
         private int currentTemperature, currentPressure;
@@ -62,10 +62,10 @@ namespace ProcessSimLevelEditor
             {
                 for (int j = 0; j < maxY; j++)
                 {
-                    m_charArray[i, j] = '.';
+                    gameLevelArray[i, j] = '.';
                 }
             }
-            levelGrid.ItemsSource = GetBindable2DArray<char>(m_charArray);
+            levelGrid.ItemsSource = GetBindable2DArray<char>(gameLevelArray);
         }
 
         private void DataGrid()
@@ -101,7 +101,7 @@ namespace ProcessSimLevelEditor
 
         private void ResizeGrid()
         {
-            m_charArray = new char[xGridValue, yGridValue];
+            gameLevelArray = new char[xGridValue, yGridValue];
             InitGridLevelArray(xGridValue, yGridValue);
         }
 
@@ -244,16 +244,16 @@ namespace ProcessSimLevelEditor
 
         private void IterateThroughList(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(m_charArray[0, 0].ToString());
+            MessageBox.Show(gameLevelArray[0, 0].ToString());
         }
 
         private void ClearGraphValues(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < m_charArray.GetLength(0); i++)
+            for (int i = 0; i < gameLevelArray.GetLength(0); i++)
             {
-                for (int j = 0; j < m_charArray.GetLength(1); j++)
+                for (int j = 0; j < gameLevelArray.GetLength(1); j++)
                 {
-                    m_charArray[i, j] = '.';
+                    gameLevelArray[i, j] = '.';
                 }
             }
             levelGrid.Items.Refresh();
@@ -292,7 +292,7 @@ namespace ProcessSimLevelEditor
 
                 if (!settingJsonValuesFailed)
                 {
-                    jswriter.OutputJson(levelOutput, fileName);
+                    jswriter.OutputJson(levelOutput, gameLevelArray, fileName);
                 }
             }
 
@@ -343,8 +343,6 @@ namespace ProcessSimLevelEditor
                 levelOutput.Nitrogen = levelAttribDictionary.ComponentsDictionary["Nitrogen"];
                 levelOutput.CO2 = levelAttribDictionary.ComponentsDictionary["CO2"];
                 levelOutput.H2S = levelAttribDictionary.ComponentsDictionary["H2S"];
-
-                levelOutput.GridArray = m_charArray;
             }
 
             catch (Exception e)

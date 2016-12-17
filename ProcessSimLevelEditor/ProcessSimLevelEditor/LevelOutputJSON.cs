@@ -29,8 +29,7 @@ namespace ProcessSimLevelEditor
         public decimal CostSilverMax;
         public decimal CostBronzeMax;
         public decimal CostPassMax;
-        public string LevelGrid;
-        public char[,] GridArray;
+        public List<string> LevelGridArray;
         public int Methane, Ethane, Propane, NButane, IButane, NPentane,
         IPentane, Hexane, Benzene, Heptane, Octane, Nonane, Decane,
         Water, Nitrogen, CO2, H2S;
