@@ -358,10 +358,19 @@ namespace ProcessSimLevelEditor
         private void OpenFileButton(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Text files (*.json*)|All files (*.*)";
+            //openFileDialog.Filter = "Text files (*.txt*)|All files (*.*)";
             if (openFileDialog.ShowDialog() == true)
             {
-                MessageBox.Show("Open!");
+                var readFile = File.ReadAllText(openFileDialog.FileName);
+                try
+                {
+                    LevelOutputJSON level = JsonConvert.DeserializeObject<LevelOutputJSON>(readFile);
+                    MessageBox.Show(level.LevelInletTemp.ToString());
+                }
+                catch(Exception ex)
+                {
+
+                }
             }
         }
 
