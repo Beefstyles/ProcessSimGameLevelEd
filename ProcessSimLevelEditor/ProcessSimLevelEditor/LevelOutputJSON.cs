@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace ProcessSimLevelEditor
 {
-    
+
     class LevelOutputJSON
     {
+
         public string Title;
         public int GridXSize;
         public int GridYSize;
@@ -33,6 +34,10 @@ namespace ProcessSimLevelEditor
         public int Methane, Ethane, Propane, NButane, IButane, NPentane,
         IPentane, Hexane, Benzene, Heptane, Octane, Nonane, Decane,
         Water, Nitrogen, CO2, H2S;
+
+       
+
+      
     }
 
 
