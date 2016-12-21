@@ -402,11 +402,17 @@ namespace ProcessSimLevelEditor
         IPentane, Hexane, Benzene, Heptane, Octane, Nonane, Decane,
         Water, Nitrogen, CO2, H2S;
             */
-            AtbS_Title.Text = level.Title;
+            
             Cond_Temperature.Text = level.LevelInletTemp.ToString();
             Cond_Pressure.Text = level.LevelInletPress.ToString();
             Cond_AtmosphericTemp.Text = level.AtmosphericTemp.ToString();
             Cond_AtmosphericPress.Text = level.AtmosphericPress.ToString();
+            AtbS_Title.Text = level.Title;
+            AtbD_Capex.Text = level.Capex.ToString();
+            AtbS_Objective1Text.Text = level.Objective1Text.ToString();
+            AtbS_Objective2Text.Text = level.Objective2Text.ToString();
+            AtbS_Objective3Text.Text = level.Objective3Text.ToString();
+
             Cond_XGrid.Text = level.GridXSize.ToString();
             Cond_YGrid.Text = level.GridYSize.ToString();
             Comp_Methane.Text = level.Methane.ToString();
