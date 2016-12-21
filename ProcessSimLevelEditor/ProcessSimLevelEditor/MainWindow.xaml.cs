@@ -403,7 +403,12 @@ namespace ProcessSimLevelEditor
         Water, Nitrogen, CO2, H2S;
             */
             AtbS_Title.Text = level.Title;
-           
+            Cond_Temperature.Text = level.LevelInletTemp.ToString();
+            Cond_Pressure.Text = level.LevelInletPress.ToString();
+            Cond_AtmosphericTemp.Text = level.AtmosphericTemp.ToString();
+            Cond_AtmosphericPress.Text = level.AtmosphericPress.ToString();
+            Cond_XGrid.Text = level.GridXSize.ToString();
+            Cond_YGrid.Text = level.GridYSize.ToString();
             Comp_Methane.Text = level.Methane.ToString();
 
         }

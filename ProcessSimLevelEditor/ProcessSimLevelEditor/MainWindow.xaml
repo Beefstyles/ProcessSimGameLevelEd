@@ -180,9 +180,9 @@
                         <TextBox Grid.Column ="1" Grid.Row ="1" AcceptsReturn="False" TextWrapping="NoWrap"  PreviewTextInput="NunberValTextBox" Name="Cond_Temperature" TextChanged="ConditionTextBoxChange" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column ="0" Grid.Row ="2">Pressure</TextBlock>
                         <TextBox  Grid.Column ="1" Grid.Row ="2" AcceptsReturn="False" TextWrapping="NoWrap" PreviewTextInput="NunberValTextBox" Name="Cond_Pressure" TextChanged="ConditionTextBoxChange" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        <TextBlock Grid.Column ="0" Grid.Row ="3">Amb Press</TextBlock>
+                        <TextBlock Grid.Column ="0" Grid.Row ="3">Amb Temp</TextBlock>
                         <TextBox  Grid.Column ="1" Grid.Row ="3" AcceptsReturn="False" TextWrapping="NoWrap" PreviewTextInput="NunberValTextBox" Name="Cond_AtmosphericTemp" TextChanged="ConditionTextBoxChange" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        <TextBlock Grid.Column ="0" Grid.Row ="4">Amb Temp</TextBlock>
+                        <TextBlock Grid.Column ="0" Grid.Row ="4">Amb Press</TextBlock>
                         <TextBox  Grid.Column ="1" Grid.Row ="4" AcceptsReturn="False" TextWrapping="NoWrap" PreviewTextInput="NunberValTextBox" Name="Cond_AtmosphericPress" TextChanged="ConditionTextBoxChange" Style="{StaticResource TextBoxStyle}"></TextBox>
 
                         <TextBlock Grid.Column ="0" Grid.Row ="5">XGrid</TextBlock>
