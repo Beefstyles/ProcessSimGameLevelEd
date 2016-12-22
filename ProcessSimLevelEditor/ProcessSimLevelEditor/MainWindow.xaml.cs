@@ -412,10 +412,12 @@ namespace ProcessSimLevelEditor
             AtbS_Objective1Text.Text = level.Objective1Text.ToString();
             AtbS_Objective2Text.Text = level.Objective2Text.ToString();
             AtbS_Objective3Text.Text = level.Objective3Text.ToString();
+            AtbD_Objective1Value.Text = level.Objective1Value.ToString();
 
             Cond_XGrid.Text = level.GridXSize.ToString();
             Cond_YGrid.Text = level.GridYSize.ToString();
             Comp_Methane.Text = level.Methane.ToString();
+
 
         }
 
