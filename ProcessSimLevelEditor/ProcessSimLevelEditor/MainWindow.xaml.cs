@@ -402,23 +402,45 @@ namespace ProcessSimLevelEditor
         IPentane, Hexane, Benzene, Heptane, Octane, Nonane, Decane,
         Water, Nitrogen, CO2, H2S;
             */
-            
+            //TODO - Replace this with something better. Databinding to a class would be good.
             Cond_Temperature.Text = level.LevelInletTemp.ToString();
             Cond_Pressure.Text = level.LevelInletPress.ToString();
             Cond_AtmosphericTemp.Text = level.AtmosphericTemp.ToString();
             Cond_AtmosphericPress.Text = level.AtmosphericPress.ToString();
+            Cond_XGrid.Text = level.GridXSize.ToString();
+            Cond_YGrid.Text = level.GridYSize.ToString();
             AtbS_Title.Text = level.Title;
             AtbD_Capex.Text = level.Capex.ToString();
             AtbS_Objective1Text.Text = level.Objective1Text.ToString();
             AtbS_Objective2Text.Text = level.Objective2Text.ToString();
             AtbS_Objective3Text.Text = level.Objective3Text.ToString();
             AtbD_Objective1Value.Text = level.Objective1Value.ToString();
+            AtbD_Objective2Value.Text = level.Objective2Value.ToString();
+            AtbD_Objective3Value.Text = level.Objective3Value.ToString();
+            AtbD_CostPlatMax.Text = level.CostPlatMax.ToString();
+            AtbD_CostGoldMax.Text = level.CostGoldMax.ToString();
+            AtbD_CostSilverMax.Text = level.CostSilverMax.ToString();
+            AtbD_CostBronzeMax.Text = level.CostBronzeMax.ToString();
+            AtbD_CostPassMax.Text = level.CostPassMax.ToString();
 
-            Cond_XGrid.Text = level.GridXSize.ToString();
-            Cond_YGrid.Text = level.GridYSize.ToString();
+            
             Comp_Methane.Text = level.Methane.ToString();
-
-
+            Comp_Ethane.Text = level.Ethane.ToString();
+            Comp_Propane.Text = level.Propane.ToString();
+            Comp_NButane.Text = level.NButane.ToString();
+            Comp_IButane.Text = level.IButane.ToString();
+            Comp_NPentane.Text = level.NPentane.ToString();
+            Comp_IPentane.Text = level.IPentane.ToString();
+            Comp_Hexane.Text = level.Hexane.ToString();
+            Comp_Benzene.Text = level.Benzene.ToString();
+            Comp_Heptane.Text = level.Heptane.ToString();
+            Comp_Octane.Text = level.Octane.ToString();
+            Comp_Nonane.Text = level.Nonane.ToString();
+            Comp_Decane.Text = level.Decane.ToString();
+            Comp_Water.Text = level.Water.ToString();
+            Comp_Nitrogen.Text = level.Nitrogen.ToString();
+            Comp_CO2.Text = level.CO2.ToString();
+            Comp_H2S.Text = level.H2S.ToString();
         }
 
 
