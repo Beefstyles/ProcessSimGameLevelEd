@@ -443,6 +443,47 @@ namespace ProcessSimLevelEditor
             Comp_H2S.Text = level.H2S.ToString();
         }
 
+        private void ClearLevel()
+        {
+            Cond_Temperature.Text = 0.ToString();
+            Cond_Pressure.Text = 0.ToString();
+            Cond_AtmosphericTemp.Text = 0.ToString();
+            Cond_AtmosphericPress.Text = 0.ToString();
+            Cond_XGrid.Text = 0.ToString();
+            Cond_YGrid.Text = 0.ToString();
+            AtbS_Title.Text = 0.ToString();
+            AtbD_Capex.Text = 0.ToString();
+            AtbS_Objective1Text.Text = 0.ToString();
+            AtbS_Objective2Text.Text = 0.ToString();
+            AtbS_Objective3Text.Text = 0.ToString();
+            AtbD_Objective1Value.Text = 0.ToString();
+            AtbD_Objective2Value.Text = 0.ToString();
+            AtbD_Objective3Value.Text = 0.ToString();
+            AtbD_CostPlatMax.Text = 0.ToString();
+            AtbD_CostGoldMax.Text = 0.ToString();
+            AtbD_CostSilverMax.Text = 0.ToString();
+            AtbD_CostBronzeMax.Text = 0.ToString();
+            AtbD_CostPassMax.Text = 0.ToString();
+
+
+            Comp_Methane.Text = 0.ToString();
+            Comp_Ethane.Text = 0.ToString();
+            Comp_Propane.Text = 0.ToString();
+            Comp_NButane.Text = 0.ToString();
+            Comp_IButane.Text = 0.ToString();
+            Comp_NPentane.Text = 0.ToString();
+            Comp_IPentane.Text = 0.ToString();
+            Comp_Hexane.Text = 0.ToString();
+            Comp_Benzene.Text = 0.ToString();
+            Comp_Heptane.Text = 0.ToString();
+            Comp_Octane.Text = 0.ToString();
+            Comp_Nonane.Text = 0.ToString();
+            Comp_Decane.Text = 0.ToString();
+            Comp_Water.Text = 0.ToString();
+            Comp_Nitrogen.Text = 0.ToString();
+            Comp_CO2.Text = 0.ToString();
+            Comp_H2S.Text = 0.ToString();
+        }
 
         private void DisplayGridLegend(object sender, RoutedEventArgs e)
         {
