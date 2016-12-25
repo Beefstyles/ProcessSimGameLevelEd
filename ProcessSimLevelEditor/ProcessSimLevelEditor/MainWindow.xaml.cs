@@ -443,19 +443,19 @@ namespace ProcessSimLevelEditor
             Comp_H2S.Text = level.H2S.ToString();
         }
 
-        private void ClearLevel()
+        private void ClearLevel(object sender, RoutedEventArgs e)
         {
             Cond_Temperature.Text = 0.ToString();
             Cond_Pressure.Text = 0.ToString();
             Cond_AtmosphericTemp.Text = 0.ToString();
             Cond_AtmosphericPress.Text = 0.ToString();
-            Cond_XGrid.Text = 0.ToString();
-            Cond_YGrid.Text = 0.ToString();
-            AtbS_Title.Text = 0.ToString();
+            Cond_XGrid.Text = 10.ToString();
+            Cond_YGrid.Text = 10.ToString();
+            AtbS_Title.Text = "New Level";
             AtbD_Capex.Text = 0.ToString();
-            AtbS_Objective1Text.Text = 0.ToString();
-            AtbS_Objective2Text.Text = 0.ToString();
-            AtbS_Objective3Text.Text = 0.ToString();
+            AtbS_Objective1Text.Text = "";
+            AtbS_Objective2Text.Text = "";
+            AtbS_Objective3Text.Text = "";
             AtbD_Objective1Value.Text = 0.ToString();
             AtbD_Objective2Value.Text = 0.ToString();
             AtbD_Objective3Value.Text = 0.ToString();
