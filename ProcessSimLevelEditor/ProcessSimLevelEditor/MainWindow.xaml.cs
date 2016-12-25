@@ -322,6 +322,8 @@ namespace ProcessSimLevelEditor
                 levelOutput.Capex = levelAttribDictionary.LevelAttribDecimalDictionary["Capex"];
                 levelOutput.Objective1Value = levelAttribDictionary.LevelAttribDecimalDictionary["Objective1Value"];
                 levelOutput.Objective2Value = levelAttribDictionary.LevelAttribDecimalDictionary["Objective2Value"];
+                levelOutput.Objective3Value = levelAttribDictionary.LevelAttribDecimalDictionary["Objective3Value"];
+
                 levelOutput.CostPlatMax = levelAttribDictionary.LevelAttribDecimalDictionary["CostPlatMax"];
                 levelOutput.CostGoldMax = levelAttribDictionary.LevelAttribDecimalDictionary["CostGoldMax"];
                 levelOutput.CostSilverMax = levelAttribDictionary.LevelAttribDecimalDictionary["CostSilverMax"];
