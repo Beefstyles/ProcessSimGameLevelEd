@@ -266,6 +266,31 @@ namespace ProcessSimLevelEditor
             binding.Path = new PropertyPath(binding.Path.Path + ".Value");
         } 
 
+        private void ObjectiveValComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<string> values = new List<string>();
+            values.Add(">");
+            values.Add(">=");
+            values.Add("==");
+            values.Add("<");
+            values.Add("<=");
+
+            var comboBox = sender as ComboBox;
+
+            comboBox.ItemsSource = values;
+            comboBox.SelectedIndex = 0;
+        }
+
+        private void ObjectiveValComboBox_SelChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // ... Get the ComboBox.
+            var comboBox = sender as ComboBox;
+
+            // ... Set SelectedItem as Window Title.
+            string value = comboBox.SelectedItem as string;
+            this.Title = "Selected: " + value;
+        }
+
         private void SaveAndOutputJson(object sender, RoutedEventArgs e)
         {
             LevelOutputJSON levelOutput = new LevelOutputJSON();

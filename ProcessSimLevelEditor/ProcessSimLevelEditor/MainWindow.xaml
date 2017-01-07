@@ -253,6 +253,7 @@
                         <TextBox Grid.Column="1" Grid.Row="9" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="AtbD_Objective2Value" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="10">Objective 3 Val</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="10" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="AtbD_Objective3Value" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="11" Loaded="ObjectiveValComboBox_Loaded" SelectionChanged="ObjectiveValComboBox_SelChanged"/>
                         <TextBlock Grid.Column="0" Grid.Row="11">Cost Plat Max</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="11" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="AtbD_CostPlatMax" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="12">Cost Gold Max</TextBlock>
