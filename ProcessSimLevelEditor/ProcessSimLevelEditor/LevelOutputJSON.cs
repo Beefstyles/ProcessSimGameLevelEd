@@ -25,6 +25,9 @@ namespace ProcessSimLevelEditor
         public decimal Objective1Value;
         public decimal Objective2Value;
         public decimal Objective3Value;
+        public string Objective1Comparision; //i.e. <, <=, =, >= or >
+        public string Objective2Comparision;
+        public string Objective3Comparision;
         public decimal CostPlatMax;
         public decimal CostGoldMax;
         public decimal CostSilverMax;

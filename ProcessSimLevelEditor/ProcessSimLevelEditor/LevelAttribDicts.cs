@@ -41,6 +41,9 @@ namespace ProcessSimLevelEditor
                 LevelAttribStringsDictionary.Add("Objective1Text", "");
                 LevelAttribStringsDictionary.Add("Objective2Text", "");
                 LevelAttribStringsDictionary.Add("Objective3Text", "");
+                LevelAttribStringsDictionary.Add("Objective1Comparision", "");
+                LevelAttribStringsDictionary.Add("Objective2Comparision", "");
+                LevelAttribStringsDictionary.Add("Objective3Comparision", "");
             }
 
             catch (Exception ex)

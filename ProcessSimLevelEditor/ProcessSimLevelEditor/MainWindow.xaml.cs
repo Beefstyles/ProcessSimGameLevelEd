@@ -338,6 +338,10 @@ namespace ProcessSimLevelEditor
                 levelOutput.Objective2Value = levelAttribDictionary.LevelAttribDecimalDictionary["Objective2Value"];
                 levelOutput.Objective3Value = levelAttribDictionary.LevelAttribDecimalDictionary["Objective3Value"];
 
+                levelOutput.Objective1Comparision = levelAttribDictionary.LevelAttribStringsDictionary["Objective1Comparision"];
+                levelOutput.Objective2Comparision = levelAttribDictionary.LevelAttribStringsDictionary["Objective2Comparision"];
+                levelOutput.Objective3Comparision = levelAttribDictionary.LevelAttribStringsDictionary["Objective3Comparision"];
+
                 levelOutput.LevelInletTemp = levelAttribDictionary.ConditionsDictionary["Temperature"];
                 levelOutput.LevelInletPress = levelAttribDictionary.ConditionsDictionary["Pressure"];
                 levelOutput.AtmosphericTemp = levelAttribDictionary.ConditionsDictionary["AtmosphericTemp"];
@@ -540,7 +544,17 @@ namespace ProcessSimLevelEditor
 
         private void ObjCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var comboBox = sender as ComboBox;
 
+            string val = comboBox.SelectedItem as string;
+            try
+            {
+                levelAttribDictionary.LevelAttribStringsDictionary[comboBox.Name] = val;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in combobox selection " + ex.Message);
+            }
         }
 
         private void CalculatePhaseForComponents(object sender, RoutedEventArgs e)
