@@ -36,6 +36,7 @@ namespace ProcessSimLevelEditor
         private int xGridValue = 10;
         private int yGridValue = 10;
         private int currentTemperature, currentPressure;
+        private string obj1ComboBoxVal, obj2ComboBoxVal, obj3ComboBoxVal;
         GridLegend gridLegend;
        
 
@@ -521,6 +522,25 @@ namespace ProcessSimLevelEditor
         public void SetDisplayGridLegend()
         {
             gridLegend = new GridLegend();
+        }
+
+        private void ObjComboCheck(object sender, RoutedEventArgs e)
+        {
+            List<string> objCheckValues = new List<string>();
+            objCheckValues.Add(">");
+            objCheckValues.Add(">=");
+            objCheckValues.Add("=");
+            objCheckValues.Add("<=");
+            objCheckValues.Add("<");
+            var objComboBox = sender as ComboBox;
+            objComboBox.ItemsSource = objCheckValues;
+            objComboBox.SelectedIndex = 0;
+
+        }
+
+        private void ObjCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
         private void CalculatePhaseForComponents(object sender, RoutedEventArgs e)
