@@ -214,6 +214,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
@@ -249,13 +250,13 @@
                         <TextBox Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" TextChanged="ConditionTextBoxChange" Name ="AtbS_Objective3Text" Style="{StaticResource TextBoxStyle}" Margin="0,10,5,10" Width="139" Height="Auto"/>
                         <TextBlock Grid.Column="0" Grid.Row="8">Objective 1 Val</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="8" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="AtbD_Objective1Value" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        <TextBlock Grid.Column="0" Grid.Row="9">Objective 1 Val Check</TextBlock>
-                        <ComboBox Grid.Column="1" Grid.Row="9" HorizontalAlignment="Left" Loaded ="ObjComboCheck" SelectionChanged="ObjCombobox_SelectionChanged"/>
-                        <TextBlock Grid.Column="0" Grid.Row="10">Objective 2 Val</TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="10" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="AtbD_Objective2Value" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <ComboBox Grid.Column="2" Grid.Row="8" HorizontalAlignment="Left" Name ="Obj1CB" Loaded ="ObjComboCheck" SelectionChanged="ObjCombobox_SelectionChanged"/>
+                        <TextBlock Grid.Column="0" Grid.Row="9">Objective 2 Val</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="9" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="AtbD_Objective2Value" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
+                        <ComboBox Grid.Column="2" Grid.Row="9" HorizontalAlignment="Left" Name ="Obj2CB" Loaded ="ObjComboCheck" SelectionChanged="ObjCombobox_SelectionChanged"/>
                         <TextBlock Grid.Column="0" Grid.Row="10">Objective 3 Val</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="10" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="AtbD_Objective3Value" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
-                        <ComboBox Grid.Column="1" Grid.Row="11" Loaded="ObjectiveValComboBox_Loaded" SelectionChanged="ObjectiveValComboBox_SelChanged"/>
+                        <ComboBox Grid.Column="2" Grid.Row="10" HorizontalAlignment="Left" Name ="Obj3CB" Loaded ="ObjComboCheck" SelectionChanged="ObjCombobox_SelectionChanged"/>
                         <TextBlock Grid.Column="0" Grid.Row="11">Cost Plat Max</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="11" AcceptsReturn="False" TextChanged="ConditionTextBoxChange" Name ="AtbD_CostPlatMax" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="12">Cost Gold Max</TextBlock>
