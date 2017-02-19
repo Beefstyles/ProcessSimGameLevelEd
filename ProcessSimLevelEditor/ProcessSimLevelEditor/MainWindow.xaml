@@ -243,7 +243,8 @@
                         <TextBlock Grid.Column="0" Grid.Row="1">Capex</TextBlock>
                         <TextBox Grid.Column="1" Grid.Row="1" AcceptsReturn="False" TextWrapping="Wrap" TextChanged="ConditionTextBoxChange" Name ="AtbD_Capex" Style="{StaticResource TextBoxStyle}"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">Objective 1 Text</TextBlock>
-                        <TextBox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" TextChanged="ConditionTextBoxChange" Name ="AtbS_Objective1Text" AcceptsReturn="False" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="10,5" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"></TextBox>
+                        <ComboBox Grid.Column="0" Grid.Row="3" Grid.ColumnSpan ="3" HorizontalAlignment="Left" Name ="Objective1Text" Loaded ="ObjTextComboBox_Load" SelectionChanged="ObjCombobox_SelectionChanged"/>
+                      
                         <TextBlock Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" >Objective 2 Text</TextBlock>
                         <TextBox Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" TextChanged="ConditionTextBoxChange" Name ="AtbS_Objective2Text"  AcceptsReturn="False" TextWrapping="Wrap" Style="{StaticResource TextBoxStyle}" Margin="0,10,5,10" Width="139" Height="Auto"></TextBox>
                         <TextBlock Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2">Objective 3 Text</TextBlock>

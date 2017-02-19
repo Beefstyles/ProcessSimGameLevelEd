@@ -443,9 +443,9 @@ namespace ProcessSimLevelEditor
             Cond_YGrid.Text = level.GridYSize.ToString();
             AtbS_Title.Text = level.Title;
             AtbD_Capex.Text = level.Capex.ToString();
-            AtbS_Objective1Text.Text = level.Objective1Text.ToString();
-            AtbS_Objective2Text.Text = level.Objective2Text.ToString();
-            AtbS_Objective3Text.Text = level.Objective3Text.ToString();
+            //AtbS_Objective1Text.Text = level.Objective1Text.ToString();
+            //AtbS_Objective2Text.Text = level.Objective2Text.ToString();
+            //AtbS_Objective3Text.Text = level.Objective3Text.ToString();
             AtbD_Objective1Value.Text = level.Objective1Value.ToString();
             AtbD_Objective2Value.Text = level.Objective2Value.ToString();
             AtbD_Objective3Value.Text = level.Objective3Value.ToString();
@@ -485,7 +485,7 @@ namespace ProcessSimLevelEditor
             Cond_YGrid.Text = 10.ToString();
             AtbS_Title.Text = "New Level";
             AtbD_Capex.Text = 0.ToString();
-            AtbS_Objective1Text.Text = "";
+            //AtbS_Objective1Text.Text = "";
             AtbS_Objective2Text.Text = "";
             AtbS_Objective3Text.Text = "";
             AtbD_Objective1Value.Text = 0.ToString();
@@ -540,6 +540,21 @@ namespace ProcessSimLevelEditor
             objComboBox.ItemsSource = objCheckValues;
             objComboBox.SelectedIndex = 0;
 
+        }
+
+        private void ObjTextComboBox_Load(object sender, RoutedEventArgs e)
+        {
+            List<string> objTextValues = new List<string>();
+            objTextValues.Add("Temperature");
+            objTextValues.Add("Pressure");
+            objTextValues.Add("Vapour Frac");
+            objTextValues.Add("Wobbe");
+            objTextValues.Add("Methane");
+            objTextValues.Add("Ethane");
+            objTextValues.Add("Propane");
+            var objComboBox = sender as ComboBox;
+            objComboBox.ItemsSource = objTextValues;
+            objComboBox.SelectedIndex = 0;
         }
 
         private void ObjCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
