@@ -485,9 +485,7 @@ namespace ProcessSimLevelEditor
             Cond_YGrid.Text = 10.ToString();
             AtbS_Title.Text = "New Level";
             AtbD_Capex.Text = 0.ToString();
-            //AtbS_Objective1Text.Text = "";
-            AtbS_Objective2Text.Text = "";
-            AtbS_Objective3Text.Text = "";
+
             AtbD_Objective1Value.Text = 0.ToString();
             AtbD_Objective2Value.Text = 0.ToString();
             AtbD_Objective3Value.Text = 0.ToString();
