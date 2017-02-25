@@ -17,6 +17,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0">Legend Symbol</TextBlock>
         <TextBlock Grid.Column="1" Grid.Row="0">Legend Description</TextBlock>
@@ -28,5 +32,13 @@
         <TextBlock Grid.Column="1" Grid.Row="3">Random Rock Block</TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="4">.</TextBlock>
         <TextBlock Grid.Column="1" Grid.Row="4">Empty grid square</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="5">P</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="5">Pipe</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="6">C</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="6">Compressor</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="7">E</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="7">Expander</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="8">T</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="8">Power Turbine</TextBlock>
     </Grid>
 </Window>
