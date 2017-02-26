@@ -21,6 +21,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0">Legend Symbol</TextBlock>
         <TextBlock Grid.Column="1" Grid.Row="0">Legend Description</TextBlock>
@@ -40,5 +41,7 @@
         <TextBlock Grid.Column="1" Grid.Row="7">Expander</TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="8">T</TextBlock>
         <TextBlock Grid.Column="1" Grid.Row="8">Power Turbine</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="9">L</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="9">Pump</TextBlock>
     </Grid>
 </Window>
