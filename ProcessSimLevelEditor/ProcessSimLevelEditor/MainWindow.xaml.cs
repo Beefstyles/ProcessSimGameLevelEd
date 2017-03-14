@@ -540,6 +540,11 @@ namespace ProcessSimLevelEditor
 
         }
 
+        private void ExitProgram(object sender, RoutedEventArgs e)
+        {
+            //TODO - Implement exiting of program
+        }
+
         private void ObjTextComboBox_Load(object sender, RoutedEventArgs e)
         {
             List<string> objTextValues = new List<string>();

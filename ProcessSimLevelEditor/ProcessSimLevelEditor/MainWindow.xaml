@@ -27,7 +27,7 @@
         <Style x:Key="MinorHeading" TargetType="{x:Type TextBlock}">
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Padding" Value="5"/>
-            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
         <DataTemplate x:Key="DataTemplate_Level2">
@@ -54,7 +54,7 @@
                     <MenuItem Header="_Open" Click="OpenFileButton"/>
                     <MenuItem Header="_Save" Click ="SaveAndOutputJson"/>
                     <Separator />
-                    <MenuItem Header="_Exit" />
+                    <MenuItem Header="_Exit" Click="ExitProgram"/>
                 </MenuItem>
                 <MenuItem Header="_Edit">
                     <MenuItem Header="_Clear Grid Values" Click="ClearGraphValues" />
@@ -203,10 +203,10 @@
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Column ="0" Grid.Row ="0" Grid.ColumnSpan ="2" Style="{StaticResource MinorHeading}">Caclulated Values</TextBlock>
 
-                        <TextBlock Grid.Column ="0" Grid.Row ="1">TotalFlow</TextBlock>
+                        <TextBlock Grid.Column ="0" Grid.Row ="1">Total Flow (kg/hr)</TextBlock>
                         <TextBox Grid.Column ="1" Grid.Row ="1" Name="TotalFlowCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
 
-                        <TextBlock Grid.Column ="0" Grid.Row ="2">Phase</TextBlock>
+                        <TextBlock Grid.Column ="0" Grid.Row ="2">Vapour Frac</TextBlock>
                         <TextBox Grid.Column ="1" Grid.Row ="2" Name="PhaseCalc" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"></TextBox>
                     </Grid>
                     <TextBlock Style="{StaticResource MinorHeading}">Level Attributes</TextBlock>
