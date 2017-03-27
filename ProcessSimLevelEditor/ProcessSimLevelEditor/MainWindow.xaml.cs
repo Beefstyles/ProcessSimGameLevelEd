@@ -550,6 +550,7 @@ namespace ProcessSimLevelEditor
             List<string> objTextValues = new List<string>();
             objTextValues.Add("Temperature");
             objTextValues.Add("Pressure");
+            objTextValues.Add("Mass Flow");
             objTextValues.Add("Vapour Frac");
             objTextValues.Add("Wobbe");
             objTextValues.Add("Methane");
